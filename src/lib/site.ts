@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "Know your real take-home pay",
   description:
     "A free, privacy-first Malaysian salary calculator. See your exact take-home pay after EPF, SOCSO, EIS and PCB/MTD — calculated entirely in your browser, with every number explained.",
-  url: "https://gajijelas.vercel.app",
+  url: "https://gajijelas.com",
 } as const;
 
 export const NAV_LINKS = [
