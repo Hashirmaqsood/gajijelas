@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, type CSSProperties } from "react";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { Card } from "@/components/ui/Field";
 import { calculateSalary } from "@/lib/calc/salary";
@@ -68,7 +68,8 @@ export default function WhatIfSlider({
           step={50}
           value={Math.min(Math.max(input.grossMonthly, min), max)}
           onChange={(e) => onChange(Number(e.target.value))}
-          className="w-full accent-[#0d7d6f]"
+          className="w-full"
+          style={{ "--range-progress": `${((Math.min(Math.max(input.grossMonthly, min), max) - min) / (max - min)) * 100}%` } as CSSProperties}
         />
         <div className="mt-1 flex justify-between text-xs text-muted tabular-nums">
           <span>{formatRM(min, { decimals: 0 })}</span>

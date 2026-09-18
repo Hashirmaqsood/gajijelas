@@ -4,7 +4,6 @@ export const SITE = {
   description:
     "A free, privacy-first Malaysian salary calculator. See your exact take-home pay after EPF, SOCSO, EIS and PCB/MTD — calculated entirely in your browser, with every number explained.",
   url: "https://gajijelas.vercel.app",
-  ogImage: "/og-image.png",
 } as const;
 
 /** Feedback/corrections channel — deliberately not a personal email. */

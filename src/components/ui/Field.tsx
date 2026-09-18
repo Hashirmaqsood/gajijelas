@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 export function Card({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <div className={clsx("rounded-2xl border border-border bg-surface p-5 shadow-sm sm:p-6", className)}>
+    <div className={clsx("rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-soft)] sm:p-6", className)}>
       {children}
     </div>
   );
@@ -130,10 +130,10 @@ export function PillGroup<T extends string>({
               aria-checked={active}
               onClick={() => onChange(o.value)}
               className={clsx(
-                "rounded-full border px-3.5 py-1.5 text-sm font-medium transition",
+                "rounded-full border px-3.5 py-1.5 text-sm font-medium transition-all duration-150 active:scale-95",
                 active
-                  ? "border-brand bg-brand text-white"
-                  : "border-border bg-background text-foreground hover:border-brand"
+                  ? "border-brand bg-brand text-white shadow-sm shadow-brand/25"
+                  : "border-border bg-background text-foreground hover:border-brand hover:bg-brand-light"
               )}
             >
               {o.label}

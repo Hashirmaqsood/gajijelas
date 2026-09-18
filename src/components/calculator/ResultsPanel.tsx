@@ -21,11 +21,14 @@ function StatTile({ label, value, sub, icon }: { label: string; value: string; s
   );
 }
 
-function DeductionRow({ label, value }: { label: string; value: number }) {
+function DeductionRow({ label, value, dotColor, bold }: { label: string; value: number; dotColor?: string; bold?: boolean }) {
   return (
-    <div className="flex items-center justify-between py-1.5 text-sm">
-      <span className="text-foreground">{label}</span>
-      <span className="tabular-nums font-medium text-foreground">{formatRM(value)}</span>
+    <div className={`flex items-center justify-between py-2 text-sm ${bold ? "pt-2.5" : ""}`}>
+      <span className={`flex items-center gap-2 ${bold ? "font-semibold text-foreground" : "text-foreground"}`}>
+        {dotColor && <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: dotColor }} aria-hidden="true" />}
+        {label}
+      </span>
+      <span className={`tabular-nums ${bold ? "font-semibold text-foreground" : "font-medium text-foreground"}`}>{formatRM(value)}</span>
     </div>
   );
 }
@@ -79,20 +82,20 @@ export default function ResultsPanel({ result }: { result: SalaryCalculationResu
           <div>
             <h3 className="text-sm font-semibold text-muted">{t("results.yourDeductions")}</h3>
             <div className="mt-2 divide-y divide-border">
-              <DeductionRow label={t("results.epf")} value={m.epf.employee} />
-              <DeductionRow label={t("results.socso")} value={m.socso.employee} />
-              <DeductionRow label={t("results.eis")} value={m.eis.employee} />
-              <DeductionRow label={t("results.pcb")} value={m.pcb} />
-              <DeductionRow label={t("results.totalDeductions")} value={m.totalEmployeeDeductions} />
+              <DeductionRow label={t("results.epf")} value={m.epf.employee} dotColor="#b5760a" />
+              <DeductionRow label={t("results.socso")} value={m.socso.employee} dotColor="#5b8a80" />
+              <DeductionRow label={t("results.eis")} value={m.eis.employee} dotColor="#c8935a" />
+              <DeductionRow label={t("results.pcb")} value={m.pcb} dotColor="#8ea79d" />
+              <DeductionRow label={t("results.totalDeductions")} value={m.totalEmployeeDeductions} bold />
             </div>
           </div>
           <div>
             <h3 className="text-sm font-semibold text-muted">{t("results.employerPaysOnTop")}</h3>
             <div className="mt-2 divide-y divide-border">
-              <DeductionRow label={t("results.epfEmployer")} value={m.epf.employer} />
-              <DeductionRow label={t("results.socsoEmployer")} value={m.socso.employer} />
-              <DeductionRow label={t("results.eisEmployer")} value={m.eis.employer} />
-              <DeductionRow label={t("results.totalCostToEmployer")} value={m.totalEmployerCost} />
+              <DeductionRow label={t("results.epfEmployer")} value={m.epf.employer} dotColor="#b5760a" />
+              <DeductionRow label={t("results.socsoEmployer")} value={m.socso.employer} dotColor="#5b8a80" />
+              <DeductionRow label={t("results.eisEmployer")} value={m.eis.employer} dotColor="#c8935a" />
+              <DeductionRow label={t("results.totalCostToEmployer")} value={m.totalEmployerCost} bold />
             </div>
           </div>
         </div>

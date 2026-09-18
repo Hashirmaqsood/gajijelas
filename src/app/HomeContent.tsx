@@ -79,7 +79,7 @@ export default function HomeContent({ rates }: { rates: StatutoryRates }) {
         <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {TOOL_LINKS.filter((link) => link.href !== "/").map((link) => (
             <Link key={link.href} href={link.href} className="block">
-              <Card className="h-full transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:shadow-lg">
+              <Card className="h-full transition-all duration-200 hover:-translate-y-0.5 hover:border-brand hover:shadow-[var(--shadow-lifted)]">
                 <h3 className="font-semibold text-foreground">{toolMeta[link.href]?.title ?? link.label}</h3>
                 <p className="mt-1 text-sm text-muted">{toolMeta[link.href]?.desc ?? link.description}</p>
               </Card>

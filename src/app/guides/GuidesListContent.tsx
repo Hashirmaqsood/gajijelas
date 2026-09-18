@@ -16,7 +16,7 @@ export default function GuidesListContent() {
       <div className="mt-8 space-y-4">
         {GUIDES.map((g) => (
           <Link key={g.slug} href={`/guides/${g.slug}`} className="block">
-            <Card className="transition hover:border-brand hover:shadow-md">
+            <Card className="transition-all duration-200 hover:-translate-y-0.5 hover:border-brand hover:shadow-[var(--shadow-lifted)]">
               <p className="text-xs font-medium uppercase tracking-wide text-muted">
                 {new Date(g.publishedDate).toLocaleDateString("en-MY", { year: "numeric", month: "long", day: "numeric" })}
                 {lang === "ms" && <span className="ml-2 text-muted/70">{t("guidesPage.englishOnlyNote")}</span>}
