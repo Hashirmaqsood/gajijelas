@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import Analytics from "@/components/layout/Analytics";
+import { GoogleTagManagerScript, GoogleTagManagerNoscript } from "@/components/layout/Analytics";
 import { SITE } from "@/lib/site";
 import { LanguageProvider } from "@/lib/i18n/context";
 
@@ -38,7 +38,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <head>
+        <GoogleTagManagerScript />
+      </head>
       <body className="min-h-full flex flex-col">
+        <GoogleTagManagerNoscript />
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-2 focus:rounded focus:bg-brand focus:px-3 focus:py-2 focus:text-white">
           Skip to content
         </a>
@@ -55,7 +59,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </main>
           <Footer />
         </LanguageProvider>
-        <Analytics />
       </body>
     </html>
   );
