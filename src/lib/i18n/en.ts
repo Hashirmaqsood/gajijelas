@@ -28,6 +28,7 @@ const en = {
     guides: "Guides",
     rateChanges: "Rate change history",
     privacyPolicy: "Privacy Policy",
+    contactLinkText: "Report an issue or send feedback",
     disclaimer:
       "Rates last checked {lastUpdated}, effective from {effectiveFrom}. All figures are estimates for planning purposes only and are not a substitute for official payroll, tax or financial advice. Calculations run entirely in your browser — your salary details are never sent to or stored on any server.",
     copyright: "© {year} {siteName}. Not affiliated with KWSP, PERKESO or LHDN.",
@@ -249,7 +250,7 @@ const en = {
     correctionsBody:
       "If a rate looks outdated or a calculation seems off, we want to know. Statutory rates change with almost every Budget, and we'd rather fix a mistake fast than leave it live.",
     contactHeading: "Contact",
-    contactBody: "Questions, corrections, or feedback on any calculator:",
+    contactBody: "Spotted an outdated rate, a calculation that looks off, or have general feedback?",
   },
   privacyPage: {
     title: "Privacy Policy",

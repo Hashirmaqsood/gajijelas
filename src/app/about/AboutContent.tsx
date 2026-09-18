@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/Field";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { CONTACT_URL } from "@/lib/site";
 import { useLanguage } from "@/lib/i18n/context";
 
 export default function AboutContent() {
@@ -32,8 +32,8 @@ export default function AboutContent() {
           <h2 className="text-lg font-semibold text-foreground">{t("aboutPage.contactHeading")}</h2>
           <p className="mt-2 text-[15px] leading-relaxed text-foreground/90">
             {t("aboutPage.contactBody")}{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-brand underline">
-              {CONTACT_EMAIL}
+            <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="text-brand underline">
+              {t("footer.contactLinkText")}
             </a>
           </p>
         </Card>

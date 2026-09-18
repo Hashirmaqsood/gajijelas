@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
-import { CONTACT_EMAIL, SITE, TOOL_LINKS } from "@/lib/site";
+import { CONTACT_URL, SITE, TOOL_LINKS } from "@/lib/site";
 import { useLanguage } from "@/lib/i18n/context";
 
 export default function Footer() {
@@ -29,8 +29,8 @@ export default function Footer() {
               {SITE.name}
             </div>
             <p className="mt-3 text-sm text-muted">{t("footer.tagline")}</p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="mt-3 inline-block text-sm text-brand hover:underline">
-              {CONTACT_EMAIL}
+            <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-brand hover:underline">
+              {t("footer.contactLinkText")}
             </a>
           </div>
 

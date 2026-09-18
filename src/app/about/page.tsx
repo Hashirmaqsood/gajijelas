@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import AboutContent from "./AboutContent";
-import { CONTACT_EMAIL, SITE } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -15,7 +15,6 @@ export default function AboutPage() {
     name: SITE.name,
     url: SITE.url,
     description: SITE.description,
-    email: CONTACT_EMAIL,
     areaServed: "MY",
   };
 

@@ -29,6 +29,7 @@ const ms: Dictionary = {
     guides: "Panduan",
     rateChanges: "Sejarah perubahan kadar",
     privacyPolicy: "Dasar Privasi",
+    contactLinkText: "Laporkan isu atau hantar maklum balas",
     disclaimer:
       "Kadar terakhir disemak pada {lastUpdated}, berkuat kuasa dari {effectiveFrom}. Semua angka adalah anggaran untuk tujuan perancangan sahaja dan bukan pengganti nasihat rasmi berkaitan gaji, cukai atau kewangan. Semua pengiraan berjalan sepenuhnya dalam pelayar anda — butiran gaji anda tidak pernah dihantar ke atau disimpan pada mana-mana pelayan.",
     copyright: "© {year} {siteName}. Tidak berafiliasi dengan KWSP, PERKESO atau LHDN.",
@@ -250,7 +251,7 @@ const ms: Dictionary = {
     correctionsBody:
       "Jika kadar kelihatan lapuk atau pengiraan kelihatan tidak kena, kami mahu tahu. Kadar statutori berubah dengan hampir setiap Bajet, dan kami lebih rela membetulkan kesilapan dengan cepat daripada membiarkannya kekal.",
     contactHeading: "Hubungi kami",
-    contactBody: "Soalan, pembetulan, atau maklum balas mengenai mana-mana kalkulator:",
+    contactBody: "Jumpa kadar yang lapuk, pengiraan yang kelihatan tidak kena, atau ada maklum balas umum?",
   },
   privacyPage: {
     title: "Dasar Privasi",

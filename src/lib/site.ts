@@ -7,7 +7,8 @@ export const SITE = {
   ogImage: "/og-image.png",
 } as const;
 
-export const CONTACT_EMAIL = "hashirmaqsood64@gmail.com";
+/** Feedback/corrections channel — deliberately not a personal email. */
+export const CONTACT_URL = "https://github.com/Hashirmaqsood/gajijelas/issues/new";
 
 export const NAV_LINKS = [
   { href: "/", label: "Salary Calculator" },
