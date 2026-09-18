@@ -14,7 +14,7 @@ const FAQ_EN: FaqItem[] = [
   {
     question: "Do you store or see my salary information?",
     answer:
-      "No. Every calculation runs in JavaScript inside your own browser tab. Nothing you type is sent to a server, logged, or saved anywhere — refresh the page and it's gone. The only exception would be if you explicitly choose a feature that emails you a report, which always asks for clear, separate consent first.",
+      "No. Every calculation runs in JavaScript inside your own browser tab. Nothing you type is sent to a server, logged, or saved anywhere — refresh the page and it's gone.",
   },
   {
     question: "Why does my PCB show RM0?",
@@ -57,7 +57,7 @@ const FAQ_MS: FaqItem[] = [
   {
     question: "Adakah anda menyimpan atau melihat maklumat gaji saya?",
     answer:
-      "Tidak. Setiap pengiraan berjalan dalam JavaScript di dalam tab pelayar anda sendiri. Tidak ada apa-apa yang anda taip dihantar ke pelayan, direkodkan, atau disimpan di mana-mana — segar semula halaman dan semuanya hilang. Satu-satunya pengecualian adalah jika anda memilih secara jelas ciri yang menghantar laporan melalui e-mel, yang sentiasa meminta persetujuan yang jelas dan berasingan terlebih dahulu.",
+      "Tidak. Setiap pengiraan berjalan dalam JavaScript di dalam tab pelayar anda sendiri. Tidak ada apa-apa yang anda taip dihantar ke pelayan, direkodkan, atau disimpan di mana-mana — segar semula halaman dan semuanya hilang.",
   },
   {
     question: "Mengapa PCB saya menunjukkan RM0?",

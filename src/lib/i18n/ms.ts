@@ -38,7 +38,7 @@ const ms: Dictionary = {
     heroTitle: "Ketahui gaji bawa balik sebenar anda di Malaysia",
     heroSubtitle:
       "Masukkan gaji kasar anda sekali dan lihat dengan tepat apa yang ditolak oleh EPF, SOCSO, EIS dan PCB — dengan setiap Ringgit dijelaskan, dikira secara langsung dalam pelayar anda.",
-    trustNoSignup: "Tanpa pendaftaran, tanpa e-mel diperlukan",
+    trustNoSignup: "Tanpa pendaftaran diperlukan",
     trustNoServer: "Tidak ada data dihantar ke pelayan",
     trustRatesChecked: "Kadar terakhir disemak {date}",
     moreCalculators: "Lebih banyak kalkulator",
@@ -233,7 +233,7 @@ const ms: Dictionary = {
   aboutPage: {
     title: "Tentang GajiJelas",
     intro:
-      "GajiJelas wujud kerana terlalu banyak kalkulator gaji yang menyembunyikan cara kiraannya atau meminta e-mel sebelum menunjukkan keputusan. Kami membina ini untuk menjadi sebaliknya: telus tentang pengiraan, dan percuma digunakan tanpa perlu menukar data anda.",
+      "GajiJelas wujud kerana terlalu banyak kalkulator gaji yang menyembunyikan cara kiraannya atau menyekat keputusan di belakang borang sebelum menunjukkannya. Kami membina ini untuk menjadi sebaliknya: telus tentang pengiraan, dan percuma digunakan tanpa perlu menukar data anda.",
     missionHeading: "Apa yang kami cuba lakukan",
     missionBody:
       "Memberi pekerja Malaysia, pencari kerja, kakitangan HR dan pemilik perniagaan kecil cara yang cepat dan tepat untuk melihat gaji bawa balik selepas EPF, SOCSO, EIS dan PCB — dan menunjukkan cara kiraan di sebalik setiap nombor, bukan hanya jumlah akhir.",

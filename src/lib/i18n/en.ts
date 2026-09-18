@@ -37,7 +37,7 @@ const en = {
     heroTitle: "Know your real take-home pay in Malaysia",
     heroSubtitle:
       "Enter your gross salary once and see exactly what EPF, SOCSO, EIS and PCB take out — with every Ringgit explained, calculated live in your browser.",
-    trustNoSignup: "No sign-up, no email required",
+    trustNoSignup: "No sign-up required",
     trustNoServer: "Nothing sent to a server",
     trustRatesChecked: "Rates last checked {date}",
     moreCalculators: "More calculators",
@@ -232,7 +232,7 @@ const en = {
   aboutPage: {
     title: "About GajiJelas",
     intro:
-      "GajiJelas exists because too many salary calculators either hide their working or ask for an email before showing a result. We built this to be the opposite: transparent about the math, and free to use without a trade of your data.",
+      "GajiJelas exists because too many salary calculators either hide their working or lock the result behind a form before showing it. We built this to be the opposite: transparent about the math, and free to use without a trade of your data.",
     missionHeading: "What we're trying to do",
     missionBody:
       "Give Malaysian employees, job seekers, HR staff and small business owners a fast, accurate way to see take-home pay after EPF, SOCSO, EIS and PCB — and show the working behind every number, not just the total.",
