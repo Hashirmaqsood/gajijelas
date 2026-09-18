@@ -1,7 +1,6 @@
 "use client";
 
 import { Card } from "@/components/ui/Field";
-import { CONTACT_URL } from "@/lib/site";
 import { useLanguage } from "@/lib/i18n/context";
 
 export default function AboutContent() {
@@ -12,7 +11,6 @@ export default function AboutContent() {
     { heading: t("aboutPage.sourcingHeading"), body: t("aboutPage.sourcingBody") },
     { heading: t("aboutPage.methodologyHeading"), body: t("aboutPage.methodologyBody") },
     { heading: t("aboutPage.privacyHeading"), body: t("aboutPage.privacyBody") },
-    { heading: t("aboutPage.correctionsHeading"), body: t("aboutPage.correctionsBody") },
   ];
 
   return (
@@ -27,16 +25,6 @@ export default function AboutContent() {
             <p className="mt-2 text-[15px] leading-relaxed text-foreground/90">{s.body}</p>
           </Card>
         ))}
-
-        <Card>
-          <h2 className="text-lg font-semibold text-foreground">{t("aboutPage.contactHeading")}</h2>
-          <p className="mt-2 text-[15px] leading-relaxed text-foreground/90">
-            {t("aboutPage.contactBody")}{" "}
-            <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="text-brand underline">
-              {t("footer.contactLinkText")}
-            </a>
-          </p>
-        </Card>
       </div>
     </div>
   );

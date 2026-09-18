@@ -25,15 +25,11 @@ function buildEn(siteName: string): PrivacySection[] {
     },
     {
       heading: "Your rights under the PDPA",
-      body: "If we ever do hold personal data about you (for example, because you emailed us directly or opted into a report-by-email feature), you have the right under the PDPA to access, correct, or request deletion of that data. Contact us using the details below to exercise these rights.",
+      body: "If a future feature ever does collect personal data from you (for example, an opt-in report-by-email feature), you would have the right under the PDPA to access, correct, or request deletion of that data. Today, no such feature is active, and no personal data is collected in the first place.",
     },
     {
       heading: "Changes to this policy",
       body: 'If this policy changes — for example, if we introduce a new feature that does collect personal data — we\'ll update this page and the "last updated" date above before that feature goes live.',
-    },
-    {
-      heading: "Contact",
-      body: "Questions about this policy or your data can be sent to the contact details listed in the footer of this site.",
     },
   ];
 }
@@ -58,15 +54,11 @@ function buildMs(siteName: string): PrivacySection[] {
     },
     {
       heading: "Hak anda di bawah PDPA",
-      body: "Jika kami pernah menyimpan data peribadi tentang anda (contohnya, kerana anda menghantar e-mel kepada kami secara terus atau memilih ciri laporan-melalui-e-mel), anda mempunyai hak di bawah PDPA untuk mengakses, membetulkan, atau memohon pemadaman data tersebut. Hubungi kami menggunakan butiran di bawah untuk menggunakan hak-hak ini.",
+      body: "Jika ciri masa depan pernah mengumpul data peribadi daripada anda (contohnya, ciri laporan-melalui-e-mel pilihan), anda akan mempunyai hak di bawah PDPA untuk mengakses, membetulkan, atau memohon pemadaman data tersebut. Pada masa ini, tiada ciri sedemikian aktif, dan tiada data peribadi dikumpul pada mulanya.",
     },
     {
       heading: "Perubahan kepada dasar ini",
       body: 'Jika dasar ini berubah — contohnya, jika kami memperkenalkan ciri baharu yang mengumpul data peribadi — kami akan mengemas kini halaman ini dan tarikh "terakhir dikemas kini" di atas sebelum ciri tersebut dilancarkan.',
-    },
-    {
-      heading: "Hubungi kami",
-      body: "Soalan mengenai dasar ini atau data anda boleh dihantar kepada butiran hubungan yang disenaraikan di bahagian bawah (footer) laman ini.",
     },
   ];
 }

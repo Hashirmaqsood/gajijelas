@@ -6,9 +6,6 @@ export const SITE = {
   url: "https://gajijelas.vercel.app",
 } as const;
 
-/** Feedback/corrections channel — deliberately not a personal email. */
-export const CONTACT_URL = "https://github.com/Hashirmaqsood/gajijelas/issues/new";
-
 export const NAV_LINKS = [
   { href: "/", label: "Salary Calculator" },
   { href: "/compare", label: "Compare Offers" },
