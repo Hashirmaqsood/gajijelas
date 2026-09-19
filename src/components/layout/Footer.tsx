@@ -12,6 +12,7 @@ export default function Footer() {
   const toolLabels: Record<string, string> = {
     "/": t("tools.fullCalcTitle"),
     "/epf-calculator": t("tools.epfTitle"),
+    "/epf-retirement-calculator": t("tools.epfRetirementTitle"),
     "/socso-calculator": t("tools.socsoTitle"),
     "/pcb-calculator": t("tools.pcbTitle"),
     "/hourly-rate-calculator": t("tools.hourlyTitle"),

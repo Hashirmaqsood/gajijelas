@@ -193,6 +193,8 @@ const ms: Dictionary = {
     fullCalcDesc: "Pecahan lengkap: EPF, SOCSO, EIS, PCB, dan gaji bersih.",
     epfTitle: "Kalkulator EPF / KWSP",
     epfDesc: "Caruman EPF pekerja & majikan mengikut umur dan gaji.",
+    epfRetirementTitle: "Kalkulator Persaraan & Dividen EPF",
+    epfRetirementDesc: "Unjurkan pertumbuhan simpanan EPF anda dari sekarang hingga persaraan.",
     socsoTitle: "Kalkulator SOCSO / PERKESO",
     socsoDesc: "Caruman kemalangan pekerjaan & hilang upaya.",
     pcbTitle: "Kalkulator PCB / MTD",
@@ -394,6 +396,32 @@ const ms: Dictionary = {
     minMore5Desc: "16 hari setahun",
     footnote:
       "Ini adalah minimum yang hanya dikenakan kepada pekerja yang dilindungi Akta Kerja (pada masa ini mereka yang berpendapatan RM4,000/bulan atau kurang, serta pekerja buruh kasar/pengendali jentera tanpa mengira gaji). Ramai majikan menawarkan cuti yang lebih baik dalam kontrak pekerjaan — sentiasa semak kontrak anda dahulu.",
+  },
+  epfRetirementPage: {
+    title: "Kalkulator Persaraan & Dividen EPF",
+    intro:
+      "Unjurkan bagaimana simpanan EPF (KWSP) anda boleh berkembang dari sekarang hingga persaraan, dengan mengambil kira kenaikan gaji dan dividen tahunan yang berkompaun.",
+    currentAge: "Umur semasa",
+    retirementAge: "Umur persaraan",
+    currentBalance: "Baki EPF semasa",
+    currentSalary: "Gaji bulanan semasa",
+    salaryIncrement: "Jangkaan kenaikan gaji tahunan",
+    percentSign: "% setahun",
+    dividendRate: "Jangkaan kadar dividen EPF tahunan",
+    dividendHint: "Dividen EPF secara sejarah sekitar 5-6% — tidak dijamin, boleh disesuaikan",
+    projectionTitle: "Unjuran anda",
+    balanceAt: "Baki unjuran pada umur {age}",
+    totalContributions: "Jumlah caruman",
+    totalDividends: "Jumlah dividen diperoleh",
+    disclaimer:
+      "Ini adalah anggaran ringkas: caruman menggunakan peratusan EPF tepat tahun ini dan beralih ke jalur 60+ secara automatik, manakala dividen berkompaun setiap bulan pada 1/12 daripada kadar tahunan yang anda pilih. Dividen EPF sebenar diisytiharkan sekali setahun berdasarkan purata baki bulanan dan berbeza dari tahun ke tahun — anggap ini sebagai unjuran hala tuju, bukan jaminan.",
+    yearByYearTitle: "Unjuran tahun demi tahun",
+    age: "Umur",
+    contributionsCol: "Caruman",
+    dividendsCol: "Dividen",
+    balanceCol: "Baki",
+    sourceNote: "Semak kadar dividen sejarah sebenar EPF sebelum menganggap sebarang angka untuk tujuan perancangan.",
+    sourceLinkText: "sejarah dividen KWSP",
   },
 };
 

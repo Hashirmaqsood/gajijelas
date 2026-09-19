@@ -192,6 +192,8 @@ const en = {
     fullCalcDesc: "Complete breakdown: EPF, SOCSO, EIS, PCB, and net pay.",
     epfTitle: "EPF / KWSP Calculator",
     epfDesc: "Employee & employer EPF contributions by age and wage.",
+    epfRetirementTitle: "EPF Retirement & Dividend Calculator",
+    epfRetirementDesc: "Project your EPF savings growth from today to retirement.",
     socsoTitle: "SOCSO / PERKESO Calculator",
     socsoDesc: "Employment injury & invalidity contributions.",
     pcbTitle: "PCB / MTD Calculator",
@@ -393,6 +395,32 @@ const en = {
     minMore5Desc: "16 days a year",
     footnote:
       "These are minimums that only apply to employees covered by the Employment Act (currently those earning RM4,000/month or less, plus manual/machinery-operating workers regardless of wage). Many employers offer more generous leave in the employment contract — always check yours first.",
+  },
+  epfRetirementPage: {
+    title: "EPF Retirement & Dividend Calculator",
+    intro:
+      "Project how your EPF (KWSP) savings could grow from today until retirement, factoring in salary increments and compounding annual dividends.",
+    currentAge: "Current age",
+    retirementAge: "Retirement age",
+    currentBalance: "Current EPF balance",
+    currentSalary: "Current monthly salary",
+    salaryIncrement: "Expected annual salary increment",
+    percentSign: "% per year",
+    dividendRate: "Expected annual EPF dividend rate",
+    dividendHint: "EPF's dividend has historically been around 5-6% — not guaranteed, adjust freely",
+    projectionTitle: "Your projection",
+    balanceAt: "Projected balance at age {age}",
+    totalContributions: "Total contributions",
+    totalDividends: "Total dividends earned",
+    disclaimer:
+      "This is a simplified estimate: contributions use this year's exact EPF percentages and switch to the 60+ band automatically, while dividends compound monthly at 1/12th of your chosen annual rate. Real EPF dividends are declared once a year based on average monthly balances and vary year to year — treat this as a directional projection, not a guarantee.",
+    yearByYearTitle: "Year-by-year projection",
+    age: "Age",
+    contributionsCol: "Contributions",
+    dividendsCol: "Dividends",
+    balanceCol: "Balance",
+    sourceNote: "Check EPF's actual historical dividend rates before assuming any figure for planning purposes.",
+    sourceLinkText: "KWSP dividend history",
   },
 };
 

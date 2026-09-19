@@ -16,6 +16,7 @@ export const NAV_LINKS = [
 export const TOOL_LINKS = [
   { href: "/", label: "Full Take-Home Salary Calculator", description: "Complete breakdown: EPF, SOCSO, EIS, PCB, and net pay." },
   { href: "/epf-calculator", label: "EPF / KWSP Calculator", description: "Employee & employer EPF contributions by age and wage." },
+  { href: "/epf-retirement-calculator", label: "EPF Retirement & Dividend Calculator", description: "Project your EPF savings growth from today to retirement." },
   { href: "/socso-calculator", label: "SOCSO / PERKESO Calculator", description: "Employment injury & invalidity contributions." },
   { href: "/pcb-calculator", label: "PCB / MTD Calculator", description: "Monthly tax deduction with reliefs applied." },
   { href: "/hourly-rate-calculator", label: "Hourly & Daily Rate Calculator", description: "Convert monthly salary to daily and hourly rates." },
