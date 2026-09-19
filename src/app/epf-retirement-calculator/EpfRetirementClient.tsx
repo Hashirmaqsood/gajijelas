@@ -14,7 +14,7 @@ export default function EpfRetirementClient() {
   const [currentBalance, setCurrentBalance] = useState(20000);
   const [currentMonthlySalary, setCurrentMonthlySalary] = useState(5000);
   const [annualSalaryIncrementPct, setAnnualSalaryIncrementPct] = useState(5);
-  const [annualDividendRatePct, setAnnualDividendRatePct] = useState(5.5);
+  const [annualDividendRatePct, setAnnualDividendRatePct] = useState(6.15);
   const { t } = useLanguage();
 
   const rates = useMemo(() => getRates(CURRENT_RATE_YEAR).epf, []);

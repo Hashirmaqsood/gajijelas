@@ -397,9 +397,9 @@ const en = {
       "These are minimums that only apply to employees covered by the Employment Act (currently those earning RM4,000/month or less, plus manual/machinery-operating workers regardless of wage). Many employers offer more generous leave in the employment contract — always check yours first.",
   },
   epfRetirementPage: {
-    title: "EPF Retirement & Dividend Calculator",
+    title: "EPF Retirement Goal Calculator",
     intro:
-      "Project how your EPF (KWSP) savings could grow from today until retirement, factoring in salary increments and compounding annual dividends.",
+      "Project how your EPF (KWSP) savings could grow from today until your retirement goal, factoring in salary increments and compounding annual dividends.",
     currentAge: "Current age",
     retirementAge: "Retirement age",
     currentBalance: "Current EPF balance",
@@ -407,7 +407,7 @@ const en = {
     salaryIncrement: "Expected annual salary increment",
     percentSign: "% per year",
     dividendRate: "Expected annual EPF dividend rate",
-    dividendHint: "EPF's dividend has historically been around 5-6% — not guaranteed, adjust freely",
+    dividendHint: "The 2025/2026 declared EPF dividend was 6.15% — not guaranteed for future years, adjust freely",
     projectionTitle: "Your projection",
     balanceAt: "Projected balance at age {age}",
     totalContributions: "Total contributions",

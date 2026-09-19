@@ -398,9 +398,9 @@ const ms: Dictionary = {
       "Ini adalah minimum yang hanya dikenakan kepada pekerja yang dilindungi Akta Kerja (pada masa ini mereka yang berpendapatan RM4,000/bulan atau kurang, serta pekerja buruh kasar/pengendali jentera tanpa mengira gaji). Ramai majikan menawarkan cuti yang lebih baik dalam kontrak pekerjaan — sentiasa semak kontrak anda dahulu.",
   },
   epfRetirementPage: {
-    title: "Kalkulator Persaraan & Dividen EPF",
+    title: "Kalkulator Sasaran Persaraan EPF",
     intro:
-      "Unjurkan bagaimana simpanan EPF (KWSP) anda boleh berkembang dari sekarang hingga persaraan, dengan mengambil kira kenaikan gaji dan dividen tahunan yang berkompaun.",
+      "Unjurkan bagaimana simpanan EPF (KWSP) anda boleh berkembang dari sekarang hingga sasaran persaraan anda, dengan mengambil kira kenaikan gaji dan dividen tahunan yang berkompaun.",
     currentAge: "Umur semasa",
     retirementAge: "Umur persaraan",
     currentBalance: "Baki EPF semasa",
@@ -408,7 +408,7 @@ const ms: Dictionary = {
     salaryIncrement: "Jangkaan kenaikan gaji tahunan",
     percentSign: "% setahun",
     dividendRate: "Jangkaan kadar dividen EPF tahunan",
-    dividendHint: "Dividen EPF secara sejarah sekitar 5-6% — tidak dijamin, boleh disesuaikan",
+    dividendHint: "Dividen EPF diisytiharkan 2025/2026 ialah 6.15% — tidak dijamin untuk tahun akan datang, boleh disesuaikan",
     projectionTitle: "Unjuran anda",
     balanceAt: "Baki unjuran pada umur {age}",
     totalContributions: "Jumlah caruman",
