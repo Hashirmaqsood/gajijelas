@@ -41,6 +41,7 @@ export default function HomeContent({ rates }: { rates: StatutoryRates }) {
     "/": { title: t("tools.fullCalcTitle"), desc: t("tools.fullCalcDesc") },
     "/epf-calculator": { title: t("tools.epfTitle"), desc: t("tools.epfDesc") },
     "/epf-retirement-calculator": { title: t("tools.epfRetirementTitle"), desc: t("tools.epfRetirementDesc") },
+    "/epf-account-split-calculator": { title: t("tools.epfSplitTitle"), desc: t("tools.epfSplitDesc") },
     "/socso-calculator": { title: t("tools.socsoTitle"), desc: t("tools.socsoDesc") },
     "/pcb-calculator": { title: t("tools.pcbTitle"), desc: t("tools.pcbDesc") },
     "/hourly-rate-calculator": { title: t("tools.hourlyTitle"), desc: t("tools.hourlyDesc") },

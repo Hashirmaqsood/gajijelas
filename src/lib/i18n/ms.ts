@@ -195,6 +195,8 @@ const ms: Dictionary = {
     epfDesc: "Caruman EPF pekerja & majikan mengikut umur dan gaji.",
     epfRetirementTitle: "Kalkulator Persaraan & Dividen EPF",
     epfRetirementDesc: "Unjurkan pertumbuhan simpanan EPF anda dari sekarang hingga persaraan.",
+    epfSplitTitle: "Kalkulator Pecahan Akaun EPF",
+    epfSplitDesc: "Lihat pecahan caruman EPF anda merentasi Akaun Persaraan, Sejahtera dan Fleksibel.",
     socsoTitle: "Kalkulator SOCSO / PERKESO",
     socsoDesc: "Caruman kemalangan pekerjaan & hilang upaya.",
     pcbTitle: "Kalkulator PCB / MTD",
@@ -422,6 +424,25 @@ const ms: Dictionary = {
     balanceCol: "Baki",
     sourceNote: "Semak kadar dividen sejarah sebenar EPF sebelum menganggap sebarang angka untuk tujuan perancangan.",
     sourceLinkText: "sejarah dividen KWSP",
+  },
+  epfSplitPage: {
+    title: "Kalkulator Pecahan Akaun EPF",
+    intro:
+      "Sejak Penstrukturan Semula Akaun EPF Mei 2024, setiap caruman dipecahkan kepada tiga akaun berbanding dua — lihat dengan tepat berapa banyak pergi ke mana.",
+    monthlyWage: "Gaji bulanan",
+    splitTitle: "Pecahan akaun bulanan anda",
+    totalMonthly: "Jumlah caruman EPF bulanan (pekerja + majikan):",
+    persaraan: "Akaun Persaraan",
+    persaraanDesc: "Simpanan persaraan jangka panjang — paling sukar dikeluarkan sebelum 55, dahulunya dikenali sebagai Akaun 1.",
+    sejahtera: "Akaun Sejahtera",
+    sejahteraDesc: "Keperluan pra-persaraan: perumahan, pendidikan, kesihatan, insurans/takaful, Haji, dan pengeluaran umur 50. Dahulunya Akaun 2.",
+    fleksibel: "Akaun Fleksibel",
+    fleksibelDesc: "Boleh dikeluarkan pada bila-bila masa sebelum umur 55, minimum RM50 setiap pengeluaran, tiada had tujuan — bertujuan untuk kecemasan.",
+    aboutTitle: "Apa yang berubah pada 2024",
+    aboutBody:
+      "EPF menstruktur semula daripada sistem dua akaun (Akaun 1 / Akaun 2) kepada tiga akaun berkuat kuasa 11 Mei 2024. Baki Akaun 1 dan Akaun 2 sedia ada dipindahkan masing-masing ke Akaun Persaraan dan Akaun Sejahtera, manakala Akaun Fleksibel bermula dengan RM0 dan kini berkembang dengan setiap caruman baharu. Pada umur 55, ketiga-tiga akaun disatukan ke Akaun 55; caruman selepas umur 55 masuk ke Akaun Emas yang berasingan, dikunci sehingga umur 60.",
+    sourceNote: "Sentiasa sahkan baki akaun sebenar dan kelayakan pengeluaran anda terus dengan EPF sebelum membuat sebarang keputusan kewangan.",
+    sourceLinkText: "Halaman Penstrukturan Semula Akaun KWSP",
   },
 };
 

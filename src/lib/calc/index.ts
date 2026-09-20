@@ -8,3 +8,4 @@ export * from "./overtime";
 export * from "./leave";
 export * from "./hourlyRate";
 export * from "./epfRetirement";
+export * from "./epfAccountSplit";

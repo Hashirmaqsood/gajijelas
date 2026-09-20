@@ -7,6 +7,7 @@ const staticRoutes = [
   "/compare",
   "/epf-calculator",
   "/epf-retirement-calculator",
+  "/epf-account-split-calculator",
   "/socso-calculator",
   "/pcb-calculator",
   "/hourly-rate-calculator",

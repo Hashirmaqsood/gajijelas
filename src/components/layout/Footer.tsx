@@ -13,6 +13,7 @@ export default function Footer() {
     "/": t("tools.fullCalcTitle"),
     "/epf-calculator": t("tools.epfTitle"),
     "/epf-retirement-calculator": t("tools.epfRetirementTitle"),
+    "/epf-account-split-calculator": t("tools.epfSplitTitle"),
     "/socso-calculator": t("tools.socsoTitle"),
     "/pcb-calculator": t("tools.pcbTitle"),
     "/hourly-rate-calculator": t("tools.hourlyTitle"),

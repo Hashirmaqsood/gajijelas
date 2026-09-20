@@ -194,6 +194,8 @@ const en = {
     epfDesc: "Employee & employer EPF contributions by age and wage.",
     epfRetirementTitle: "EPF Retirement & Dividend Calculator",
     epfRetirementDesc: "Project your EPF savings growth from today to retirement.",
+    epfSplitTitle: "EPF Account Split Calculator",
+    epfSplitDesc: "See your EPF contribution split across Akaun Persaraan, Sejahtera and Fleksibel.",
     socsoTitle: "SOCSO / PERKESO Calculator",
     socsoDesc: "Employment injury & invalidity contributions.",
     pcbTitle: "PCB / MTD Calculator",
@@ -421,6 +423,25 @@ const en = {
     balanceCol: "Balance",
     sourceNote: "Check EPF's actual historical dividend rates before assuming any figure for planning purposes.",
     sourceLinkText: "KWSP dividend history",
+  },
+  epfSplitPage: {
+    title: "EPF Account Split Calculator",
+    intro:
+      "Since the May 2024 EPF Account Restructuring, every contribution splits across three accounts instead of two — see exactly how much goes where.",
+    monthlyWage: "Monthly wage",
+    splitTitle: "Your monthly account split",
+    totalMonthly: "Total monthly EPF contribution (employee + employer):",
+    persaraan: "Akaun Persaraan",
+    persaraanDesc: "Long-term retirement savings — the hardest to withdraw before 55, formerly known as Account 1.",
+    sejahtera: "Akaun Sejahtera",
+    sejahteraDesc: "Pre-retirement needs: housing, education, health, insurance/takaful, Hajj, and an age-50 withdrawal. Formerly Account 2.",
+    fleksibel: "Akaun Fleksibel",
+    fleksibelDesc: "Withdrawable any time below age 55, minimum RM50 per withdrawal, no restriction on purpose — intended for emergencies.",
+    aboutTitle: "What changed in 2024",
+    aboutBody:
+      "EPF restructured from a two-account system (Account 1 / Account 2) to three accounts effective 11 May 2024. Existing Account 1 and Account 2 balances carried over into Akaun Persaraan and Akaun Sejahtera respectively, while Akaun Fleksibel started fresh at RM0 and now grows with every new contribution. At age 55, all three consolidate into Akaun 55; contributions made after 55 go into a separate Akaun Emas, locked until age 60.",
+    sourceNote: "Always confirm your actual account balances and withdrawal eligibility directly with EPF before making any financial decision.",
+    sourceLinkText: "KWSP Account Restructuring page",
   },
 };
 
