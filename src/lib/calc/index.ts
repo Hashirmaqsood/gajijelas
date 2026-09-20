@@ -10,3 +10,4 @@ export * from "./hourlyRate";
 export * from "./epfRetirement";
 export * from "./epfAccountSplit";
 export * from "./mortgage";
+export * from "./zakat";

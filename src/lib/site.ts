@@ -25,4 +25,5 @@ export const TOOL_LINKS = [
   { href: "/overtime-calculator", label: "Overtime Pay Calculator", description: "Normal day, rest day and public holiday OT rates." },
   { href: "/annual-leave-calculator", label: "Annual Leave Calculator", description: "Entitlement and pro-rating under the Employment Act." },
   { href: "/mortgage-calculator", label: "Mortgage Calculator", description: "Home loan installment and Debt Service Ratio against your take-home pay." },
+  { href: "/zakat-calculator", label: "Zakat Pendapatan Calculator", description: "Estimate your income zakat against an adjustable nisab threshold." },
 ] as const;

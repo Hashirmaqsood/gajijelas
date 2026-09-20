@@ -199,6 +199,8 @@ const en = {
     epfSplitDesc: "See your EPF contribution split across Akaun Persaraan, Sejahtera and Fleksibel.",
     mortgageTitle: "Mortgage Calculator",
     mortgageDesc: "Home loan installment and Debt Service Ratio against your take-home pay.",
+    zakatTitle: "Zakat Pendapatan Calculator",
+    zakatDesc: "Estimate your income zakat against an adjustable nisab threshold.",
     socsoTitle: "SOCSO / PERKESO Calculator",
     socsoDesc: "Employment injury & invalidity contributions.",
     pcbTitle: "PCB / MTD Calculator",
@@ -468,6 +470,24 @@ const en = {
     dsrHigh: "High — this loan alone takes up a large share of your take-home pay",
     dsrNote: "This only counts this loan against your take-home pay. Banks calculate DSR using gross income and all your existing debts (car loans, credit cards, other mortgages) combined, so your actual bank-assessed DSR will differ from this estimate.",
     disclaimer: "This is a planning estimate using the standard amortising loan formula. Actual bank approval, interest rates and DSR calculations depend on the specific bank, your credit profile, and all your existing financial commitments — always confirm with a bank or licensed financial advisor before making a purchase decision.",
+  },
+  zakatPage: {
+    title: "Zakat Pendapatan Calculator",
+    intro: "Estimate your income zakat (zakat pendapatan) — 2.5% of annual income once it meets your nisab threshold.",
+    monthlyIncome: "Monthly income",
+    nisabThreshold: "Nisab threshold (annual)",
+    nisabHint: "Varies by state and by time of year — check your state zakat authority for the exact current figure",
+    resultsTitle: "Your zakat estimate",
+    annualIncome: "Annual income:",
+    zakatDue: "Zakat due (2.5%)",
+    liableNote: "Your income meets the nisab threshold, so zakat pendapatan applies.",
+    belowNisab: "Your income is below the nisab threshold you entered, so no zakat pendapatan is due on it.",
+    rebateNote: "Zakat paid is generally claimable as a rebate against your income tax (PCB/annual filing) in Malaysia — keep your official zakat receipt for this.",
+    aboutTitle: "How this is calculated",
+    aboutBody:
+      "This uses the commonly cited gross method: 2.5% of total annual income, once that income meets or exceeds the nisab (a wealth threshold based on the value of 85g of gold). Nisab is set and updated by each state's zakat authority and changes with the gold price, so it isn't a single fixed number nationally — that's why it's an adjustable input here rather than a hardcoded figure. Some state authorities also offer a net-income method with additional deductions; check with your state authority for which method and figure applies to you.",
+    sourceNote: "This estimate uses a simplified method. Confirm your exact nisab and preferred calculation method with your state zakat authority, such as",
+    sourceLinkText: "PPZ-MAIWP",
   },
 };
 

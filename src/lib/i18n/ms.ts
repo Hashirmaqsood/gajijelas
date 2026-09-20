@@ -200,6 +200,8 @@ const ms: Dictionary = {
     epfSplitDesc: "Lihat pecahan caruman EPF anda merentasi Akaun Persaraan, Sejahtera dan Fleksibel.",
     mortgageTitle: "Kalkulator Gadai Janji",
     mortgageDesc: "Ansuran pinjaman rumah dan Nisbah Khidmat Hutang berbanding gaji bawa balik anda.",
+    zakatTitle: "Kalkulator Zakat Pendapatan",
+    zakatDesc: "Anggarkan zakat pendapatan anda berbanding paras nisab yang boleh disesuaikan.",
     socsoTitle: "Kalkulator SOCSO / PERKESO",
     socsoDesc: "Caruman kemalangan pekerjaan & hilang upaya.",
     pcbTitle: "Kalkulator PCB / MTD",
@@ -469,6 +471,24 @@ const ms: Dictionary = {
     dsrHigh: "Tinggi — pinjaman ini sahaja mengambil bahagian besar gaji bawa balik anda",
     dsrNote: "Ini hanya mengira pinjaman ini berbanding gaji bawa balik anda. Bank mengira DSR menggunakan pendapatan kasar dan semua hutang sedia ada (pinjaman kereta, kad kredit, gadai janji lain) secara gabungan, jadi DSR sebenar yang dinilai bank akan berbeza daripada anggaran ini.",
     disclaimer: "Ini adalah anggaran perancangan menggunakan formula pinjaman berkurtasi standard. Kelulusan bank sebenar, kadar faedah dan pengiraan DSR bergantung kepada bank tertentu, profil kredit anda, dan semua komitmen kewangan sedia ada anda — sentiasa sahkan dengan bank atau penasihat kewangan berlesen sebelum membuat keputusan pembelian.",
+  },
+  zakatPage: {
+    title: "Kalkulator Zakat Pendapatan",
+    intro: "Anggarkan zakat pendapatan anda — 2.5% daripada pendapatan tahunan sebaik sahaja mencapai paras nisab anda.",
+    monthlyIncome: "Pendapatan bulanan",
+    nisabThreshold: "Paras nisab (tahunan)",
+    nisabHint: "Berbeza mengikut negeri dan masa dalam tahun — semak dengan pihak berkuasa zakat negeri anda untuk angka semasa yang tepat",
+    resultsTitle: "Anggaran zakat anda",
+    annualIncome: "Pendapatan tahunan:",
+    zakatDue: "Zakat kena bayar (2.5%)",
+    liableNote: "Pendapatan anda mencapai paras nisab, jadi zakat pendapatan dikenakan.",
+    belowNisab: "Pendapatan anda di bawah paras nisab yang anda masukkan, jadi tiada zakat pendapatan dikenakan.",
+    rebateNote: "Zakat yang dibayar secara amnya boleh dituntut sebagai rebet terhadap cukai pendapatan anda (PCB/pemfailan tahunan) di Malaysia — simpan resit zakat rasmi anda untuk tujuan ini.",
+    aboutTitle: "Bagaimana ini dikira",
+    aboutBody:
+      "Ini menggunakan kaedah kasar yang biasa digunakan: 2.5% daripada jumlah pendapatan tahunan, sebaik sahaja pendapatan itu mencapai atau melebihi nisab (paras kekayaan berdasarkan nilai 85g emas). Nisab ditetapkan dan dikemas kini oleh setiap pihak berkuasa zakat negeri dan berubah mengikut harga emas, jadi ia bukan satu angka tetap secara kebangsaan — itulah sebabnya ia adalah input yang boleh disesuaikan di sini dan bukan angka tetap. Sesetengah pihak berkuasa negeri turut menawarkan kaedah pendapatan bersih dengan potongan tambahan — semak dengan pihak berkuasa negeri anda untuk kaedah dan angka yang berkenaan.",
+    sourceNote: "Anggaran ini menggunakan kaedah ringkas. Sahkan nisab tepat dan kaedah pengiraan pilihan anda dengan pihak berkuasa zakat negeri anda, seperti",
+    sourceLinkText: "PPZ-MAIWP",
   },
 };
 
