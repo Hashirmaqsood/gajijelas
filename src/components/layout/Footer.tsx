@@ -16,6 +16,7 @@ export default function Footer() {
     "/epf-account-split-calculator": t("tools.epfSplitTitle"),
     "/mortgage-calculator": t("tools.mortgageTitle"),
     "/zakat-calculator": t("tools.zakatTitle"),
+    "/bonus-calculator": t("tools.bonusTitle"),
     "/socso-calculator": t("tools.socsoTitle"),
     "/pcb-calculator": t("tools.pcbTitle"),
     "/hourly-rate-calculator": t("tools.hourlyTitle"),

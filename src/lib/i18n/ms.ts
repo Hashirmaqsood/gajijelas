@@ -202,6 +202,8 @@ const ms: Dictionary = {
     mortgageDesc: "Ansuran pinjaman rumah dan Nisbah Khidmat Hutang berbanding gaji bawa balik anda.",
     zakatTitle: "Kalkulator Zakat Pendapatan",
     zakatDesc: "Anggarkan zakat pendapatan anda berbanding paras nisab yang boleh disesuaikan.",
+    bonusTitle: "Kalkulator Cukai Bonus",
+    bonusDesc: "Lihat bonus bersih anda selepas EPF dan PCB tambahan yang dicetuskannya.",
     socsoTitle: "Kalkulator SOCSO / PERKESO",
     socsoDesc: "Caruman kemalangan pekerjaan & hilang upaya.",
     pcbTitle: "Kalkulator PCB / MTD",
@@ -489,6 +491,21 @@ const ms: Dictionary = {
       "Ini menggunakan kaedah kasar yang biasa digunakan: 2.5% daripada jumlah pendapatan tahunan, sebaik sahaja pendapatan itu mencapai atau melebihi nisab (paras kekayaan berdasarkan nilai 85g emas). Nisab ditetapkan dan dikemas kini oleh setiap pihak berkuasa zakat negeri dan berubah mengikut harga emas, jadi ia bukan satu angka tetap secara kebangsaan — itulah sebabnya ia adalah input yang boleh disesuaikan di sini dan bukan angka tetap. Sesetengah pihak berkuasa negeri turut menawarkan kaedah pendapatan bersih dengan potongan tambahan — semak dengan pihak berkuasa negeri anda untuk kaedah dan angka yang berkenaan.",
     sourceNote: "Anggaran ini menggunakan kaedah ringkas. Sahkan nisab tepat dan kaedah pengiraan pilihan anda dengan pihak berkuasa zakat negeri anda, seperti",
     sourceLinkText: "PPZ-MAIWP",
+  },
+  bonusPage: {
+    title: "Kalkulator Cukai Bonus",
+    intro: "Lihat berapa sebenarnya bonus anda selepas EPF dan cukai PCB tambahan yang dicetuskannya — bukan sekadar angka kasar.",
+    monthlySalary: "Gaji bulanan",
+    bonusAmount: "Jumlah bonus",
+    resultsTitle: "Bonus bersih anda",
+    netBonus: "Bonus bersih yang akan anda terima",
+    fromGross: "Daripada bonus kasar {gross}",
+    extraEpf: "EPF tambahan (bahagian anda)",
+    extraPcb: "PCB tambahan bulan ini",
+    footnote: "Ini mengasingkan kesan bonus sahaja dengan membandingkan slip gaji bulan bonus anda dengan bulan biasa — kaedah yang sama digunakan dalam kalkulator gaji penuh kami.",
+    aboutTitle: "Mengapa bonus memotong lebih daripada biasa",
+    aboutBody:
+      "Tiada 'kadar cukai bonus' khas di Malaysia — bonus dikenakan cukai pada kadar progresif yang sama seperti gaji anda. Ia kelihatan seperti lebih banyak dipotong kerana kaedah formula LHDN menahan keseluruhan cukai tahunan tambahan yang disebabkan oleh bonus itu dalam bulan tersebut sahaja, bukannya diagihkan sepanjang tahun. EPF juga dikenakan ke atas bonus (bahagian anda dan majikan), tidak seperti SOCSO dan EIS yang mengecualikan bonus sepenuhnya.",
   },
 };
 

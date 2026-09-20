@@ -18,6 +18,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/annual-leave-calculator", lastModified: "2026-09-20" },
   { path: "/mortgage-calculator", lastModified: "2026-09-20" },
   { path: "/zakat-calculator", lastModified: "2026-09-20" },
+  { path: "/bonus-calculator", lastModified: "2026-09-20" },
   { path: "/rate-changes", lastModified: "2026-09-18" },
   { path: "/glossary", lastModified: "2026-09-18" },
   { path: "/faq", lastModified: "2026-09-18" },

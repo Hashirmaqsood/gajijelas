@@ -11,3 +11,4 @@ export * from "./epfRetirement";
 export * from "./epfAccountSplit";
 export * from "./mortgage";
 export * from "./zakat";
+export * from "./bonusImpact";

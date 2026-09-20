@@ -201,6 +201,8 @@ const en = {
     mortgageDesc: "Home loan installment and Debt Service Ratio against your take-home pay.",
     zakatTitle: "Zakat Pendapatan Calculator",
     zakatDesc: "Estimate your income zakat against an adjustable nisab threshold.",
+    bonusTitle: "Bonus Tax Calculator",
+    bonusDesc: "See your net bonus after the extra EPF and PCB it triggers.",
     socsoTitle: "SOCSO / PERKESO Calculator",
     socsoDesc: "Employment injury & invalidity contributions.",
     pcbTitle: "PCB / MTD Calculator",
@@ -488,6 +490,21 @@ const en = {
       "This uses the commonly cited gross method: 2.5% of total annual income, once that income meets or exceeds the nisab (a wealth threshold based on the value of 85g of gold). Nisab is set and updated by each state's zakat authority and changes with the gold price, so it isn't a single fixed number nationally — that's why it's an adjustable input here rather than a hardcoded figure. Some state authorities also offer a net-income method with additional deductions; check with your state authority for which method and figure applies to you.",
     sourceNote: "This estimate uses a simplified method. Confirm your exact nisab and preferred calculation method with your state zakat authority, such as",
     sourceLinkText: "PPZ-MAIWP",
+  },
+  bonusPage: {
+    title: "Bonus Tax Calculator",
+    intro: "See what your bonus actually nets you after the extra EPF and PCB tax it triggers — not just the headline figure.",
+    monthlySalary: "Monthly salary",
+    bonusAmount: "Bonus amount",
+    resultsTitle: "Your net bonus",
+    netBonus: "Net bonus you'll actually receive",
+    fromGross: "From a gross bonus of {gross}",
+    extraEpf: "Extra EPF (your share)",
+    extraPcb: "Extra PCB this month",
+    footnote: "This isolates just the bonus's effect by comparing your bonus-month payslip to a regular month — same method used in our full salary calculator.",
+    aboutTitle: "Why a bonus deducts more than usual",
+    aboutBody:
+      "There's no special 'bonus tax rate' in Malaysia — a bonus is taxed at the exact same progressive rates as your salary. It looks like more is deducted because LHDN's formula method withholds the entire extra annual tax the bonus causes in that single month, rather than spreading it across the year. EPF also applies to bonuses (both your and your employer's share), unlike SOCSO and EIS, which exclude bonuses entirely.",
   },
 };
 
