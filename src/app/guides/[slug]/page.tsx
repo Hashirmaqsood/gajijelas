@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GUIDES } from "@/lib/content/guides";
 import GuideMeta from "./GuideMeta";
+import { articleJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
 export function generateStaticParams() {
   return GUIDES.map((g) => ({ slug: g.slug }));
@@ -25,6 +26,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
   return (
     <article className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
+      <script
+        {...jsonLdScriptProps(
+          articleJsonLd({
+            title: guide.title,
+            description: guide.description,
+            path: `/guides/${guide.slug}`,
+            publishedDate: guide.publishedDate,
+          })
+        )}
+      />
       <GuideMeta />
       <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted">
         {new Date(guide.publishedDate).toLocaleDateString("en-MY", { year: "numeric", month: "long", day: "numeric" })}
