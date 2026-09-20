@@ -2,30 +2,32 @@ import type { MetadataRoute } from "next";
 import { GUIDES } from "@/lib/content/guides";
 import { SITE } from "@/lib/site";
 
-const staticRoutes = [
-  "",
-  "/compare",
-  "/epf-calculator",
-  "/epf-retirement-calculator",
-  "/epf-account-split-calculator",
-  "/socso-calculator",
-  "/pcb-calculator",
-  "/hourly-rate-calculator",
-  "/overtime-calculator",
-  "/annual-leave-calculator",
-  "/rate-changes",
-  "/glossary",
-  "/faq",
-  "/guides",
-  "/about",
-  "/privacy-policy",
+// lastModified reflects each route's actual last content change (from git
+// history), not build time — an always-"now" lastmod is a freshness signal
+// Google explicitly says it learns to distrust and ignore.
+const staticRoutes: { path: string; lastModified: string }[] = [
+  { path: "", lastModified: "2026-09-20" },
+  { path: "/compare", lastModified: "2026-09-18" },
+  { path: "/epf-calculator", lastModified: "2026-09-20" },
+  { path: "/epf-retirement-calculator", lastModified: "2026-09-20" },
+  { path: "/epf-account-split-calculator", lastModified: "2026-09-20" },
+  { path: "/socso-calculator", lastModified: "2026-09-20" },
+  { path: "/pcb-calculator", lastModified: "2026-09-20" },
+  { path: "/hourly-rate-calculator", lastModified: "2026-09-20" },
+  { path: "/overtime-calculator", lastModified: "2026-09-20" },
+  { path: "/annual-leave-calculator", lastModified: "2026-09-20" },
+  { path: "/rate-changes", lastModified: "2026-09-18" },
+  { path: "/glossary", lastModified: "2026-09-18" },
+  { path: "/faq", lastModified: "2026-09-18" },
+  { path: "/guides", lastModified: "2026-09-20" },
+  { path: "/about", lastModified: "2026-09-18" },
+  { path: "/privacy-policy", lastModified: "2026-09-18" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-  const staticEntries = staticRoutes.map((path) => ({
+  const staticEntries = staticRoutes.map(({ path, lastModified }) => ({
     url: `${SITE.url}${path}`,
-    lastModified: now,
+    lastModified: new Date(lastModified),
     changeFrequency: "monthly" as const,
     priority: path === "" ? 1 : 0.7,
   }));
