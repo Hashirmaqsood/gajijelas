@@ -16,7 +16,7 @@ import type { StatutoryRates } from "./types";
  */
 const rates2026: StatutoryRates = {
   year: 2026,
-  lastUpdated: "2026-09-18",
+  lastUpdated: "2026-09-20",
   effectiveFrom: "2025-10-01",
   epf: {
     malaysianBelow60: {
