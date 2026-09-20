@@ -5,6 +5,10 @@ import { GUIDES } from "@/lib/content/guides";
 import { Card } from "@/components/ui/Field";
 import { useLanguage } from "@/lib/i18n/context";
 
+const SORTED_GUIDES = [...GUIDES].sort(
+  (a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+);
+
 export default function GuidesListContent() {
   const { t, lang } = useLanguage();
 
@@ -14,7 +18,7 @@ export default function GuidesListContent() {
       <p className="mt-2 text-base text-muted">{t("guidesPage.subtitle")}</p>
 
       <div className="mt-8 space-y-4">
-        {GUIDES.map((g) => (
+        {SORTED_GUIDES.map((g) => (
           <Link key={g.slug} href={`/guides/${g.slug}`} className="block">
             <Card className="transition-all duration-200 hover:-translate-y-0.5 hover:border-brand hover:shadow-[var(--shadow-lifted)]">
               <p className="text-xs font-medium uppercase tracking-wide text-muted">
