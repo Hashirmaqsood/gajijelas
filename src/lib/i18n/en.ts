@@ -28,6 +28,7 @@ const en = {
     guides: "Guides",
     rateChanges: "Rate change history",
     privacyPolicy: "Privacy Policy",
+    contactLinkText: "Contact",
     disclaimer:
       "Rates last checked {lastUpdated}, effective from {effectiveFrom}. All figures are estimates for planning purposes only and are not a substitute for official payroll, tax or financial advice. Calculations run entirely in your browser — your salary details are never sent to or stored on any server.",
     copyright: "© {year} {siteName}. Not affiliated with KWSP, PERKESO or LHDN.",
@@ -251,6 +252,8 @@ const en = {
     privacyHeading: "Why nothing you type ever reaches a server",
     privacyBody:
       "Every calculation on this site runs in JavaScript inside your own browser tab. We built it this way on purpose — a salary calculator is exactly the kind of tool that shouldn't need to know who you are to do its job. See our Privacy Policy for the full detail.",
+    contactHeading: "Get in touch",
+    contactBody: "Spotted an incorrect number, have feedback, or want to suggest a new calculator? Email us at",
   },
   privacyPage: {
     title: "Privacy Policy",

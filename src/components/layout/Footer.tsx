@@ -56,6 +56,7 @@ export default function Footer() {
               <li><Link href="/guides" className="text-sm text-muted hover:text-brand">{t("footer.guides")}</Link></li>
               <li><Link href="/rate-changes" className="text-sm text-muted hover:text-brand">{t("footer.rateChanges")}</Link></li>
               <li><Link href="/privacy-policy" className="text-sm text-muted hover:text-brand">{t("footer.privacyPolicy")}</Link></li>
+              <li><a href={`mailto:${SITE.contactEmail}`} className="text-sm text-muted hover:text-brand">{t("footer.contactLinkText")}</a></li>
             </ul>
           </div>
 
