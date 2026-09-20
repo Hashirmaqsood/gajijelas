@@ -16,6 +16,7 @@ export default function AboutPage() {
     url: SITE.url,
     description: SITE.description,
     areaServed: "MY",
+    email: SITE.contactEmail,
   };
 
   return (
