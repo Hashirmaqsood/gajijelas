@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import EpfCalculatorClient from "./EpfCalculatorClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "EPF / KWSP Calculator Malaysia";
-const DESCRIPTION = "Calculate your monthly EPF (KWSP) employee and employer contributions based on age, wage and nationality, using the current Third Schedule rates.";
+const TITLE = "EPF Calculator (KWSP) Malaysia";
+const DESCRIPTION = "Free EPF calculator for Malaysia — work out your monthly KWSP employee and employer contributions by age, wage and nationality, using the current Third Schedule rates.";
 
 export const metadata: Metadata = {
   title: TITLE,
