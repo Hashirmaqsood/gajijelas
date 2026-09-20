@@ -47,9 +47,11 @@ export const GUIDES: Guide[] = [
     slug: "minimum-wage-updates-malaysia",
     title: "Minimum Wage in Malaysia: What's Changed and What It Affects",
     description: "A plain-language look at how Malaysia's minimum wage policy works, who it covers, and how it ripples into EPF and SOCSO contributions.",
-    publishedDate: "2026-03-10",
+    publishedDate: "2026-09-20",
     body: [
       "Malaysia's minimum wage is set nationally and applies to almost all employees, with a specific carve-out historically given to smaller employers on a delayed timeline. It's reviewed periodically, and when it changes, the ripple effects go beyond just the headline number.",
+      "## The current RM1,700 rate is under active review",
+      "As of August 2026, the government has publicly confirmed it is reviewing the current RM1,700 monthly minimum wage, with a possible increase under discussion based on factors like cost of living and wage levels. This isn't a confirmed new figure yet — just an active review — and Malaysia's minimum wage is set to be revisited on a roughly two-year cycle, so a review at this point in the cycle isn't unusual. If you're budgeting payroll costs for the coming year, this is worth watching rather than acting on, since nothing changes until an actual gazetted rate is announced.",
       "## It's not just about the paycheck",
       "Because EPF, SOCSO and EIS contributions are all calculated as a percentage (or banded amount) of wages, any minimum wage increase automatically increases the statutory contributions tied to it too — both what the employee sees deducted and what the employer has to budget for on top. A minimum wage worker's real 'cost to the company' has always been noticeably higher than their gross pay alone once you add the employer's EPF, SOCSO and EIS shares.",
       "## Who's actually covered",
