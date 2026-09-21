@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
+import RelatedGuides from "@/components/content/RelatedGuides";
 import { Card, NumberField, PillGroup } from "@/components/ui/Field";
 import { calculateEpf } from "@/lib/calc/epf";
 import type { AgeGroup, Nationality } from "@/lib/calc/types";
@@ -117,6 +118,13 @@ export default function EpfCalculatorClient() {
           {t("epfPage.sourceNote")}
         </p>
       </Card>
+
+      <RelatedGuides
+        links={[
+          { href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" },
+          { href: "/guides/epf-employer-contribution-guide-malaysia", label: "EPF Employer Contribution Guide" },
+        ]}
+      />
     </ToolPageShell>
   );
 }

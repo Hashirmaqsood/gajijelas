@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
+import RelatedGuides from "@/components/content/RelatedGuides";
 import { Card, NumberField } from "@/components/ui/Field";
 import { calculateHourlyRate } from "@/lib/calc/hourlyRate";
 import { formatRM } from "@/lib/format";
@@ -49,6 +50,10 @@ export default function HourlyRateClient() {
           </p>
         </Card>
       </div>
+
+      <RelatedGuides
+        links={[{ href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" }]}
+      />
     </ToolPageShell>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
+import RelatedGuides from "@/components/content/RelatedGuides";
 import { Card, NumberField, PillGroup } from "@/components/ui/Field";
 import { calculateEpf } from "@/lib/calc/epf";
 import { calculateEpfAccountSplit } from "@/lib/calc/epfAccountSplit";
@@ -92,6 +93,10 @@ export default function EpfAccountSplitClient() {
           .
         </p>
       </Card>
+
+      <RelatedGuides
+        links={[{ href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" }]}
+      />
     </ToolPageShell>
   );
 }

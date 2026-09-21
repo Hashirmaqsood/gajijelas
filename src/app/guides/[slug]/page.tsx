@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GUIDES } from "@/lib/content/guides";
 import GuideMeta from "./GuideMeta";
@@ -56,6 +57,24 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           )
         )}
       </div>
+
+      {guide.relatedLinks && guide.relatedLinks.length > 0 && (
+        <div className="mt-10 border-t border-border pt-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">Related calculators</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {guide.relatedLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="inline-block rounded-full border border-border bg-surface px-3 py-1.5 text-sm text-brand-dark hover:border-brand hover:bg-brand-light"
+                >
+                  {link.label} →
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </article>
   );
 }

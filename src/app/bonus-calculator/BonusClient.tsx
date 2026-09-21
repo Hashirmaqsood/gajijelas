@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
+import RelatedGuides from "@/components/content/RelatedGuides";
 import { Card, NumberField, PillGroup } from "@/components/ui/Field";
 import { calculateBonusImpact } from "@/lib/calc/bonusImpact";
 import type { AgeGroup, MaritalStatus, Nationality } from "@/lib/calc/types";
@@ -87,6 +88,10 @@ export default function BonusClient() {
         <h2 className="text-lg font-semibold text-foreground">{t("bonusPage.aboutTitle")}</h2>
         <p className="mt-2 text-sm text-foreground/90">{t("bonusPage.aboutBody")}</p>
       </Card>
+
+      <RelatedGuides
+        links={[{ href: "/guides/how-bonuses-are-taxed-in-malaysia", label: "How Bonuses Are Actually Taxed" }]}
+      />
     </ToolPageShell>
   );
 }

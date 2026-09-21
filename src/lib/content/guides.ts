@@ -4,6 +4,7 @@ export interface Guide {
   description: string;
   publishedDate: string;
   body: string[];
+  relatedLinks?: { href: string; label: string }[];
 }
 
 export const GUIDES: Guide[] = [
@@ -22,6 +23,10 @@ export const GUIDES: Guide[] = [
       "Not for how much tax you eventually owe over the year — your total annual tax is the same whether a bonus arrives in January or December. What does change is your cash flow: a large bonus concentrated in one month means a large PCB deduction that same month, which can catch people off guard if they've already budgeted the gross amount.",
       "## A quick way to sanity-check your bonus payslip",
       "If your bonus month's PCB looks unusually high, it's worth separating the two questions: was the withholding correct given your annual income, or is your total annual tax burden itself high? The first is usually just the mechanics of the formula method working as designed. The second is a real reflection of your income level and reliefs claimed — which is exactly what our full salary calculator's one-off bonus toggle is built to show you before payday, not after.",
+    ],
+    relatedLinks: [
+      { href: "/bonus-calculator", label: "Bonus Tax Calculator" },
+      { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
     ],
   },
   {
@@ -42,6 +47,10 @@ export const GUIDES: Guide[] = [
       "## Where this calculator fits in",
       "Our PCB calculator lets you plug in the reliefs you expect to claim and see the effect on your monthly tax deduction immediately, rather than waiting for your annual filing to find out. It's not a substitute for LHDN's official relief list — always check the current year's gazette or MyTax portal for the definitive figures — but it's a fast way to see whether a relief you're planning to claim is actually worth adjusting your finances around.",
     ],
+    relatedLinks: [
+      { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
+      { href: "/", label: "Full Salary Calculator" },
+    ],
   },
   {
     slug: "minimum-wage-updates-malaysia",
@@ -61,6 +70,10 @@ export const GUIDES: Guide[] = [
       "## Checking today's figure",
       "Because this is a policy figure that changes with government announcements rather than a fixed formula, always confirm the current gazetted amount directly from the Ministry of Human Resources before using it for payroll decisions — our rate-changes page tracks the figure we've verified for the current and previous year, but a policy change can happen between our review cycles.",
     ],
+    relatedLinks: [
+      { href: "/", label: "Full Salary Calculator" },
+      { href: "/hourly-rate-calculator", label: "Hourly & Daily Rate Calculator" },
+    ],
   },
   {
     slug: "understanding-employment-act-overtime-rules",
@@ -77,6 +90,11 @@ export const GUIDES: Guide[] = [
       "These specific statutory multipliers are guaranteed to employees covered by the Employment Act's First Schedule — currently those earning RM4,000 a month or less, plus any manual labourer or machinery operator regardless of salary. If you earn above that threshold and aren't in a covered category, your overtime entitlement comes from your employment contract instead, which may match, exceed, or fall short of the statutory rates — so it's always worth checking your contract's actual wording rather than assuming the Act applies.",
       "## A common mistake worth flagging",
       "Some employers calculate all overtime — regardless of day type — at the normal-day 1.5x rate. If you've worked a rest day or public holiday, that likely underpays you relative to the statutory formula. Running the numbers through a dedicated calculator before raising it with HR is usually the fastest way to have a productive, fact-based conversation instead of a guessing match.",
+    ],
+    relatedLinks: [
+      { href: "/overtime-calculator", label: "Overtime Pay Calculator" },
+      { href: "/hourly-rate-calculator", label: "Hourly & Daily Rate Calculator" },
+      { href: "/annual-leave-calculator", label: "Annual Leave Calculator" },
     ],
   },
   {
@@ -99,6 +117,11 @@ export const GUIDES: Guide[] = [
       "## Why this matters even if you're nowhere near 55",
       "Every early withdrawal permanently reduces the base your retirement dividends compound on — pulling out RM20,000 in your 30s doesn't just cost you RM20,000, it costs you every year of dividends that amount would have earned for the next two or three decades. None of this is a reason to never withdraw early; housing and education withdrawals fund things that build wealth too. It's a reason to run the actual numbers before deciding, rather than assuming the money is either fully locked or free to take.",
     ],
+    relatedLinks: [
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/epf-account-split-calculator", label: "EPF Account Split Calculator" },
+      { href: "/epf-retirement-calculator", label: "EPF Retirement Goal Calculator" },
+    ],
   },
   {
     slug: "first-paycheck-malaysia-what-to-expect",
@@ -117,6 +140,11 @@ export const GUIDES: Guide[] = [
       "Because EPF's employer contribution and SOCSO/EIS's employer share are paid on top of your salary, your actual cost to a company is meaningfully higher than your gross pay — often 13-15% more. This matters when you're negotiating: a company weighing 'can we afford this hire' is looking at that fully-loaded number, not just the salary they're offering you.",
       "## Checking your own number before day one",
       "If you already know your offered salary, marital status and whether you have dependents, you can work out almost exactly what your first full paycheck will look like before you've even started — which makes budgeting for rent, transport and the rest of adult life considerably less of a guessing game.",
+    ],
+    relatedLinks: [
+      { href: "/", label: "Full Salary Calculator" },
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
     ],
   },
   {
@@ -137,6 +165,11 @@ export const GUIDES: Guide[] = [
       "## Budgeting it properly",
       "The cleanest way to budget a new hire isn't 'salary plus a rough buffer' — it's calculating the actual EPF, SOCSO and EIS employer contributions for that specific wage, age group and nationality, since the percentages genuinely differ across those variables. It takes under a minute per hire and removes the guesswork entirely.",
     ],
+    relatedLinks: [
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/guides/epf-employer-contribution-guide-malaysia", label: "EPF Employer Contribution Guide" },
+    ],
   },
   {
     slug: "epf-socso-eis-foreign-workers-2025-changes",
@@ -155,6 +188,11 @@ export const GUIDES: Guide[] = [
       "Payroll systems needed to add a new EPF contributor category (2% flat, any wage, any age) that didn't previously exist for this group, and HR teams needed to re-issue any employment cost projections that assumed foreign hires carried no EPF liability. For a business with a significant foreign workforce, this is a real, recurring cost increase — not a one-off compliance box to tick.",
       "## What to watch for next",
       "Rate changes affecting foreign worker contributions have moved faster and been debated more publicly than most other statutory adjustments in recent years, which makes this a category worth rechecking before every Budget rather than assuming it's settled. Our rate changes page tracks the current and previous rates we've verified, specifically so you don't have to re-research this from scratch each time.",
+    ],
+    relatedLinks: [
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/rate-changes", label: "Rate Change History" },
     ],
   },
   {
@@ -177,6 +215,10 @@ export const GUIDES: Guide[] = [
       "## Where PCB fits into all this",
       "The PCB deducted from your monthly paycheck is meant to be a running estimate of this exact bracket calculation, spread across the year so you're not hit with the full annual bill at filing time. When PCB is calculated correctly against your actual reliefs, your annual filing should show only a small top-up or refund — a large one in either direction usually means your declared reliefs changed mid-year, or your employer's payroll system is using outdated figures.",
     ],
+    relatedLinks: [
+      { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
+      { href: "/", label: "Full Salary Calculator" },
+    ],
   },
   {
     slug: "epf-employer-contribution-guide-malaysia",
@@ -197,6 +239,11 @@ export const GUIDES: Guide[] = [
       "EPF treats bonuses, commissions and most allowances as wages for contribution purposes, so a bonus run needs the same employer contribution applied as a regular payroll run — it's easy to forget this on an irregular, once-a-year payment and under-remit without realising it. Recalculating contributions for every payment type, not just base salary, is the safest way to avoid an unplanned shortfall showing up at your next EPF audit.",
       "## Keeping this simple in practice",
       "The actual math — employer share by category, total monthly liability across a mixed team of citizens, PR holders, seniors and foreign employees — is where most of the manual error creeps in, not the registration or payment process itself. Running each employee's wage through a calculator that already applies the correct category rate removes that risk, and is worth doing every time your headcount or wage bands change rather than relying on a rate you memorised once.",
+    ],
+    relatedLinks: [
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/epf-account-split-calculator", label: "EPF Account Split Calculator" },
+      { href: "/guides/real-cost-of-hiring-in-malaysia", label: "The Real Cost of Hiring in Malaysia" },
     ],
   },
 ];

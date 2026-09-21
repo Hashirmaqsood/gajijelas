@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import SalaryCalculatorApp from "@/components/calculator/SalaryCalculatorApp";
+import RelatedGuides from "@/components/content/RelatedGuides";
 import { Card } from "@/components/ui/Field";
 import { TOOL_LINKS } from "@/lib/site";
 import type { StatutoryRates } from "@/lib/rates/types";
@@ -105,6 +106,15 @@ export default function HomeContent({ rates }: { rates: StatutoryRates }) {
           </p>
           <p className="mt-3 text-xs text-muted">{t("home.sourcedDisclaimer")}</p>
         </Card>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-10 sm:px-6">
+        <RelatedGuides
+          links={[
+            { href: "/guides/first-paycheck-malaysia-what-to-expect", label: "What Your First Paycheck Actually Looks Like" },
+            { href: "/guides/minimum-wage-updates-malaysia", label: "Minimum Wage in Malaysia" },
+          ]}
+        />
       </section>
     </>
   );

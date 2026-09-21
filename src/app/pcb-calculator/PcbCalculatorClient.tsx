@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
+import RelatedGuides from "@/components/content/RelatedGuides";
 import { Card, NumberField, PillGroup, ToggleField } from "@/components/ui/Field";
 import { calculateSalary } from "@/lib/calc/salary";
 import { DEFAULT_SALARY_INPUT, type SalaryInput } from "@/lib/calc/types";
@@ -107,6 +108,13 @@ export default function PcbCalculatorClient() {
           Source: <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" className="underline">LHDN</a>. {t("pcbPage.footnote")}
         </p>
       </Card>
+
+      <RelatedGuides
+        links={[
+          { href: "/guides/malaysia-income-tax-rate-brackets-explained", label: "Malaysia Income Tax Rate Brackets Explained" },
+          { href: "/guides/annual-tax-relief-checklist", label: "Annual Tax Relief Checklist" },
+        ]}
+      />
     </ToolPageShell>
   );
 }
