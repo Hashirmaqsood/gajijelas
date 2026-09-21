@@ -38,7 +38,7 @@ const ms: Dictionary = {
     ratesBadge: "Kadar statutori {year}",
     heroTitle: "Ketahui gaji bawa balik sebenar anda di Malaysia",
     heroSubtitle:
-      "Masukkan gaji kasar anda sekali dan lihat dengan tepat apa yang ditolak oleh EPF, SOCSO, EIS dan PCB — dengan setiap Ringgit dijelaskan, dikira secara langsung dalam pelayar anda.",
+      "Masukkan gaji kasar anda sekali dan lihat gaji bersih (gaji bawa balik) sebenar anda selepas EPF, SOCSO, EIS dan PCB — dengan setiap Ringgit dijelaskan, dikira secara langsung dalam pelayar anda.",
     trustNoSignup: "Tanpa pendaftaran diperlukan",
     trustNoServer: "Tidak ada data dihantar ke pelayan",
     trustRatesChecked: "Kadar terakhir disemak {date}",
@@ -334,7 +334,7 @@ const ms: Dictionary = {
     reliefsNotePre: "Perlu menambah pelepasan insurans hayat, gaya hidup, perubatan atau SSPN? Gunakan",
     reliefsNoteLinkText: "kalkulator gaji penuh",
     reliefsNotePost: ", yang mempunyai bahagian pelepasan lanjutan.",
-    bracketsTitle: "Jadual cukai pemastautin ({year})",
+    bracketsTitle: "Jadual PCB & cukai pemastautin ({year})",
     chargeableIncomeCol: "Pendapatan bercukai (RM)",
     rateCol: "Kadar",
     footnote:

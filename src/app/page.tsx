@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Malaysia Salary Calculator — EPF, SOCSO, EIS & PCB",
   description:
-    "Calculate your exact Malaysian take-home pay after EPF, SOCSO, EIS and PCB/MTD deductions. Free, private, and updated with official KWSP, PERKESO and LHDN rates.",
+    "Free net salary calculator for Malaysia — work out your exact take-home pay after EPF, SOCSO, EIS and PCB/MTD deductions. Private, and updated with official KWSP, PERKESO and LHDN rates.",
   alternates: { canonical: "/" },
 };
 

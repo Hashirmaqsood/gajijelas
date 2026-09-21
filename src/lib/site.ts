@@ -2,7 +2,7 @@ export const SITE = {
   name: "GajiJelas",
   tagline: "Know your real take-home pay",
   description:
-    "A free, privacy-first Malaysian salary calculator. See your exact take-home pay after EPF, SOCSO, EIS and PCB/MTD — calculated entirely in your browser, with every number explained.",
+    "A free EPF, SOCSO, EIS and PCB calculator for Malaysia. See your exact take-home pay — calculated entirely in your browser, with every number explained, and nothing sent to a server.",
   url: "https://gajijelas.com",
   contactEmail: "gajijelas@gmail.com",
 } as const;
