@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import SocsoCalculatorClient from "./SocsoCalculatorClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "SOCSO / PERKESO Calculator Malaysia";
-const DESCRIPTION = "Calculate SOCSO (PERKESO) employment injury and invalidity contributions, with the RM6,000 wage ceiling applied automatically.";
+const TITLE = "SOCSO Calculator (PERKESO & EIS) Malaysia";
+const DESCRIPTION = "Free SOCSO calculator for Malaysia — work out your PERKESO employment injury, invalidity and EIS contributions, with the RM6,000 wage ceiling applied automatically.";
 
 export const metadata: Metadata = {
   title: TITLE,

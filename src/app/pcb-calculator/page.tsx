@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import PcbCalculatorClient from "./PcbCalculatorClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "PCB / MTD Calculator Malaysia";
-const DESCRIPTION = "Estimate your monthly tax deduction (PCB/MTD) with individual, spouse, child, EPF and other LHDN tax reliefs applied.";
+const TITLE = "PCB Calculator (MTD) Malaysia";
+const DESCRIPTION = "Free PCB calculator for Malaysia — estimate your monthly tax deduction (MTD) with individual, spouse, child, EPF and other LHDN tax reliefs applied.";
 
 export const metadata: Metadata = {
   title: TITLE,
