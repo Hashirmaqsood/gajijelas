@@ -316,6 +316,16 @@ const en = {
     categoryForeign: "Non-Malaysian employees: employer-only Employment Injury coverage at {employerPct}%.",
     footnote: "Want the full take-home picture including EPF and tax? Try the",
     footnoteLinkText: "full salary calculator",
+    exampleTitle: "Worked example",
+    exampleBody:
+      "A Malaysian employee below 60 earning RM3,000 a month falls under SOCSO Category 1. Employee share: 0.5% × RM3,000 = RM15.00. Employer share: 1.75% × RM3,000 = RM52.50. EIS adds another RM6.00 from each side (0.2%).",
+    faqTitle: "Common questions",
+    faqQ1: "What if my wage is above RM6,000?",
+    faqA1:
+      "SOCSO and EIS are both capped at a RM6,000 wage ceiling, so contributions are calculated on RM6,000 regardless of how much more you actually earn.",
+    faqQ2: "Is SOCSO the same as EPF?",
+    faqA2:
+      "No — EPF is a retirement savings scheme where contributions stay in your own account, while SOCSO and EIS are insurance schemes that pool contributions to pay out benefits (medical, disability, unemployment) when something goes wrong. You don't get SOCSO or EIS contributions back as savings.",
   },
   pcbPage: {
     title: "PCB Calculator (MTD)",
@@ -353,6 +363,16 @@ const en = {
     footnotePre: "Need to calculate overtime pay from this hourly rate? Use the",
     footnoteLinkText: "overtime calculator",
     footnotePost: ".",
+    exampleTitle: "Worked example",
+    exampleBody:
+      "Say your monthly salary is RM3,000, and you work 8 hours a day, 26 days a month (the Employment Act convention). Your daily rate is RM3,000 ÷ 26 = RM115.38. Your hourly rate is RM115.38 ÷ 8 = RM14.42.",
+    faqTitle: "Common questions",
+    faqQ1: "Why 26 days and not the actual number of days in the month?",
+    faqA1:
+      "The Employment Act uses 26 as a standard divisor regardless of whether the month has 28, 30 or 31 days, so your daily rate stays consistent year-round rather than fluctuating with the calendar.",
+    faqQ2: "Does this rate include overtime or allowances?",
+    faqA2:
+      "No — this converts your base monthly salary only. Bonuses, allowances and overtime pay are calculated separately and shouldn't be included in the salary figure you enter here.",
   },
   overtimePage: {
     title: "Overtime Pay Calculator",
@@ -385,6 +405,16 @@ const en = {
       "0.5 day's wages if you work half a normal day or less; 1 day's wages up to a full normal day; 1 day's wages plus 2× hourly rate for hours beyond that.",
     multiplierHolidayLabel: "Public holiday:",
     multiplierHolidayDesc: "2 days' wages for up to a normal day's work, plus 3× hourly rate for hours beyond that.",
+    exampleTitle: "Worked example",
+    exampleBody:
+      "Say your monthly salary is RM3,500 and your normal hours are 8 a day. Your hourly rate is RM3,500 ÷ 26 ÷ 8 = RM16.83. If you work 3 hours of overtime on a normal working day, you're owed 3 × 1.5 × RM16.83 = RM75.72 on top of your normal pay.",
+    faqTitle: "Common questions",
+    faqQ1: "Does overtime apply to salaries above RM4,000?",
+    faqA1:
+      "The statutory rates are guaranteed only to employees covered by the Employment Act's First Schedule — generally those earning RM4,000/month or less, plus manual/machinery-operating workers regardless of salary. Above that, your overtime entitlement comes from your employment contract instead.",
+    faqQ2: "What if I work overtime on a rest day and exceed my normal hours?",
+    faqA2:
+      "The rest-day calculation already accounts for this — up to a full normal day's hours earns a full day's wages, and any hours beyond that earn an additional 2× hourly rate on top, not the normal-day 1.5× multiplier.",
   },
   leavePage: {
     title: "Annual Leave Entitlement Calculator",
@@ -406,6 +436,16 @@ const en = {
     minMore5Desc: "16 days a year",
     footnote:
       "These are minimums that only apply to employees covered by the Employment Act (currently those earning RM4,000/month or less, plus manual/machinery-operating workers regardless of wage). Many employers offer more generous leave in the employment contract — always check yours first.",
+    exampleTitle: "Worked example",
+    exampleBody:
+      "If you've completed 3 years of service, you fall in the '2 to 5 years' tier, entitling you to 12 days of annual leave for that year. If you joined 4 months ago and haven't completed your first year yet, your pro-rated entitlement so far would be roughly 4/12 × 8 days ≈ 2.7 days, typically rounded per your employer's policy.",
+    faqTitle: "Common questions",
+    faqQ1: "Does unused annual leave carry over to the next year?",
+    faqA1:
+      "The Employment Act doesn't require it — carry-over depends on your employment contract or company policy. Some employers allow a limited carry-over, others don't; check your own contract for the specific rule.",
+    faqQ2: "Are public holidays counted as annual leave?",
+    faqA2:
+      "No, they're separate. Public holidays are a distinct statutory entitlement under the Employment Act and shouldn't be deducted from your annual leave balance.",
   },
   epfRetirementPage: {
     title: "EPF Retirement Goal Calculator",

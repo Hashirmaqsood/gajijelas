@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
 import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card, NumberField } from "@/components/ui/Field";
 import { calculateHourlyRate } from "@/lib/calc/hourlyRate";
 import { formatRM } from "@/lib/format";
@@ -50,6 +51,19 @@ export default function HourlyRateClient() {
           </p>
         </Card>
       </div>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("hourlyPage.exampleTitle")}</h2>
+        <p className="mt-2 text-sm text-foreground/90">{t("hourlyPage.exampleBody")}</p>
+      </Card>
+
+      <PageFaq
+        title={t("hourlyPage.faqTitle")}
+        items={[
+          { q: t("hourlyPage.faqQ1"), a: t("hourlyPage.faqA1") },
+          { q: t("hourlyPage.faqQ2"), a: t("hourlyPage.faqA2") },
+        ]}
+      />
 
       <RelatedGuides
         links={[{ href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" }]}

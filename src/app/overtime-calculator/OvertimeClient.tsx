@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
 import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card, NumberField, PillGroup } from "@/components/ui/Field";
 import { calculateHourlyRate } from "@/lib/calc/hourlyRate";
 import { calculateOvertime, type OvertimeDayType } from "@/lib/calc/overtime";
@@ -68,6 +69,19 @@ export default function OvertimeClient() {
           <li><strong className="text-foreground">{t("overtimePage.multiplierHolidayLabel")}</strong> {t("overtimePage.multiplierHolidayDesc")}</li>
         </ul>
       </Card>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("overtimePage.exampleTitle")}</h2>
+        <p className="mt-2 text-sm text-foreground/90">{t("overtimePage.exampleBody")}</p>
+      </Card>
+
+      <PageFaq
+        title={t("overtimePage.faqTitle")}
+        items={[
+          { q: t("overtimePage.faqQ1"), a: t("overtimePage.faqA1") },
+          { q: t("overtimePage.faqQ2"), a: t("overtimePage.faqA2") },
+        ]}
+      />
 
       <RelatedGuides
         links={[{ href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" }]}

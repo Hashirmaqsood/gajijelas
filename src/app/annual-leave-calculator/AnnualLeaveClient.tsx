@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
 import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card, NumberField, ToggleField } from "@/components/ui/Field";
 import { annualLeaveDaysByService, proRatedLeave } from "@/lib/calc/leave";
 import { useLanguage } from "@/lib/i18n/context";
@@ -60,6 +61,19 @@ export default function AnnualLeaveClient() {
         </ul>
         <p className="mt-4 text-xs text-muted">{t("leavePage.footnote")}</p>
       </Card>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("leavePage.exampleTitle")}</h2>
+        <p className="mt-2 text-sm text-foreground/90">{t("leavePage.exampleBody")}</p>
+      </Card>
+
+      <PageFaq
+        title={t("leavePage.faqTitle")}
+        items={[
+          { q: t("leavePage.faqQ1"), a: t("leavePage.faqA1") },
+          { q: t("leavePage.faqQ2"), a: t("leavePage.faqA2") },
+        ]}
+      />
 
       <RelatedGuides
         links={[{ href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" }]}

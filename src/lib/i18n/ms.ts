@@ -317,6 +317,16 @@ const ms: Dictionary = {
     categoryForeign: "Pekerja bukan warganegara Malaysia: perlindungan Bencana Pekerjaan oleh majikan sahaja pada {employerPct}%.",
     footnote: "Mahu gambaran gaji bawa balik penuh termasuk EPF dan cukai? Cuba",
     footnoteLinkText: "kalkulator gaji penuh",
+    exampleTitle: "Contoh pengiraan",
+    exampleBody:
+      "Pekerja warganegara Malaysia di bawah 60 tahun berpendapatan RM3,000 sebulan tergolong dalam Kategori 1 SOCSO. Bahagian pekerja: 0.5% × RM3,000 = RM15.00. Bahagian majikan: 1.75% × RM3,000 = RM52.50. EIS menambah RM6.00 lagi daripada setiap pihak (0.2%).",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Bagaimana jika gaji saya melebihi RM6,000?",
+    faqA1:
+      "SOCSO dan EIS kedua-duanya dihadkan pada siling gaji RM6,000, jadi caruman dikira berdasarkan RM6,000 tanpa mengira berapa lebih anda sebenarnya berpendapatan.",
+    faqQ2: "Adakah SOCSO sama seperti EPF?",
+    faqA2:
+      "Tidak — EPF adalah skim simpanan persaraan di mana caruman kekal dalam akaun anda sendiri, manakala SOCSO dan EIS adalah skim insurans yang mengumpul caruman untuk membayar faedah (perubatan, hilang upaya, pengangguran) apabila sesuatu berlaku. Anda tidak menerima semula caruman SOCSO atau EIS sebagai simpanan.",
   },
   pcbPage: {
     title: "Kalkulator PCB (MTD)",
@@ -354,6 +364,16 @@ const ms: Dictionary = {
     footnotePre: "Perlu mengira gaji lebih masa daripada kadar sejam ini? Gunakan",
     footnoteLinkText: "kalkulator lebih masa",
     footnotePost: ".",
+    exampleTitle: "Contoh pengiraan",
+    exampleBody:
+      "Katakan gaji bulanan anda RM3,000, dan anda bekerja 8 jam sehari, 26 hari sebulan (konvensyen Akta Kerja). Kadar harian anda ialah RM3,000 ÷ 26 = RM115.38. Kadar sejam anda ialah RM115.38 ÷ 8 = RM14.42.",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Mengapa 26 hari dan bukan bilangan hari sebenar dalam bulan itu?",
+    faqA1:
+      "Akta Kerja menggunakan 26 sebagai pembahagi standard tanpa mengira sama ada bulan itu mempunyai 28, 30 atau 31 hari, jadi kadar harian anda kekal konsisten sepanjang tahun tanpa berubah mengikut kalendar.",
+    faqQ2: "Adakah kadar ini termasuk lebih masa atau elaun?",
+    faqA2:
+      "Tidak — ini hanya menukar gaji bulanan asas anda. Bonus, elaun dan gaji lebih masa dikira secara berasingan dan tidak sepatutnya dimasukkan dalam angka gaji yang anda masukkan di sini.",
   },
   overtimePage: {
     title: "Kalkulator Gaji Lebih Masa",
@@ -386,6 +406,16 @@ const ms: Dictionary = {
       "0.5 gaji sehari jika anda bekerja separuh hari biasa atau kurang; 1 gaji sehari sehingga satu hari biasa penuh; 1 gaji sehari ditambah 2× kadar sejam untuk jam melebihi itu.",
     multiplierHolidayLabel: "Cuti umum:",
     multiplierHolidayDesc: "2 gaji sehari untuk sehingga kerja hari biasa, ditambah 3× kadar sejam untuk jam melebihi itu.",
+    exampleTitle: "Contoh pengiraan",
+    exampleBody:
+      "Katakan gaji bulanan anda RM3,500 dan jam biasa anda 8 jam sehari. Kadar sejam anda ialah RM3,500 ÷ 26 ÷ 8 = RM16.83. Jika anda bekerja 3 jam lebih masa pada hari bekerja biasa, anda berhak menerima 3 × 1.5 × RM16.83 = RM75.72 tambahan atas gaji biasa anda.",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Adakah lebih masa terpakai untuk gaji melebihi RM4,000?",
+    faqA1:
+      "Kadar statutori ini hanya dijamin kepada pekerja yang dilindungi Jadual Pertama Akta Kerja — secara umumnya mereka yang berpendapatan RM4,000/bulan atau kurang, serta pekerja buruh kasar/pengendali jentera tanpa mengira gaji. Melebihi itu, kelayakan lebih masa anda datang daripada kontrak pekerjaan anda pula.",
+    faqQ2: "Bagaimana jika saya bekerja lebih masa pada hari rehat dan melebihi jam biasa saya?",
+    faqA2:
+      "Pengiraan hari rehat sudah mengambil kira perkara ini — sehingga jam hari biasa penuh memperoleh gaji sehari penuh, dan sebarang jam melebihi itu memperoleh tambahan 2× kadar sejam, bukan gandaan 1.5× hari biasa.",
   },
   leavePage: {
     title: "Kalkulator Kelayakan Cuti Tahunan",
@@ -407,6 +437,16 @@ const ms: Dictionary = {
     minMore5Desc: "16 hari setahun",
     footnote:
       "Ini adalah minimum yang hanya dikenakan kepada pekerja yang dilindungi Akta Kerja (pada masa ini mereka yang berpendapatan RM4,000/bulan atau kurang, serta pekerja buruh kasar/pengendali jentera tanpa mengira gaji). Ramai majikan menawarkan cuti yang lebih baik dalam kontrak pekerjaan — sentiasa semak kontrak anda dahulu.",
+    exampleTitle: "Contoh pengiraan",
+    exampleBody:
+      "Jika anda telah melengkapkan 3 tahun perkhidmatan, anda berada dalam kategori '2 hingga 5 tahun', melayakkan anda 12 hari cuti tahunan bagi tahun itu. Jika anda menyertai syarikat 4 bulan lalu dan belum melengkapkan tahun pertama, kelayakan pro-rata anda setakat ini adalah lebih kurang 4/12 × 8 hari ≈ 2.7 hari, biasanya dibundarkan mengikut dasar majikan anda.",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Adakah cuti tahunan yang tidak digunakan dibawa ke tahun depan?",
+    faqA1:
+      "Akta Kerja tidak mewajibkannya — bawaan bergantung kepada kontrak pekerjaan atau dasar syarikat anda. Sesetengah majikan membenarkan bawaan terhad, yang lain tidak; semak kontrak anda sendiri untuk peraturan khusus.",
+    faqQ2: "Adakah cuti umum dikira sebagai cuti tahunan?",
+    faqA2:
+      "Tidak, ia berasingan. Cuti umum adalah kelayakan statutori yang berbeza di bawah Akta Kerja dan tidak sepatutnya ditolak daripada baki cuti tahunan anda.",
   },
   epfRetirementPage: {
     title: "Kalkulator Sasaran Persaraan EPF",

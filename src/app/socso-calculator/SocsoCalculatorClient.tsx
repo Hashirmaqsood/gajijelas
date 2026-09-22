@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
 import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card, NumberField, PillGroup } from "@/components/ui/Field";
 import { calculateSocso } from "@/lib/calc/socso";
 import { calculateEis } from "@/lib/calc/eis";
@@ -101,6 +102,19 @@ export default function SocsoCalculatorClient() {
           {t("socsoPage.footnote")} <Link href="/" className="text-brand underline">{t("socsoPage.footnoteLinkText")}</Link>.
         </p>
       </Card>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("socsoPage.exampleTitle")}</h2>
+        <p className="mt-2 text-sm text-foreground/90">{t("socsoPage.exampleBody")}</p>
+      </Card>
+
+      <PageFaq
+        title={t("socsoPage.faqTitle")}
+        items={[
+          { q: t("socsoPage.faqQ1"), a: t("socsoPage.faqA1") },
+          { q: t("socsoPage.faqQ2"), a: t("socsoPage.faqA2") },
+        ]}
+      />
 
       <RelatedGuides
         links={[{ href: "/guides/epf-socso-eis-foreign-workers-2025-changes", label: "EPF, SOCSO & EIS for Foreign Workers" }]}
