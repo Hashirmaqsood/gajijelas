@@ -11,12 +11,23 @@ import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
 import { formatRM } from "@/lib/format";
 import { useLanguage } from "@/lib/i18n/context";
 
+const LOOKUP_SALARIES = [2000, 3000, 5000, 8000, 10000, 15000, 20000];
+
 export default function PcbCalculatorClient() {
   const [input, setInput] = useState<SalaryInput>({ ...DEFAULT_SALARY_INPUT, rateYear: CURRENT_RATE_YEAR });
   const rates = getRates(CURRENT_RATE_YEAR);
   const result = useMemo(() => calculateSalary(input, rates), [input, rates]);
   const set = <K extends keyof SalaryInput>(key: K, v: SalaryInput[K]) => setInput({ ...input, [key]: v });
   const { t } = useLanguage();
+
+  const lookupRows = useMemo(
+    () =>
+      LOOKUP_SALARIES.map((salary) => {
+        const standardInput: SalaryInput = { ...DEFAULT_SALARY_INPUT, rateYear: CURRENT_RATE_YEAR, grossMonthly: salary };
+        return { salary, pcb: calculateSalary(standardInput, rates).regularMonth.pcb };
+      }),
+    [rates]
+  );
 
   return (
     <ToolPageShell title={t("pcbPage.title")} intro={t("pcbPage.intro")}>
@@ -83,6 +94,29 @@ export default function PcbCalculatorClient() {
           </p>
         </Card>
       )}
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("pcbPage.lookupTitle")}</h2>
+        <p className="mt-1 text-xs text-muted">{t("pcbPage.lookupHint")}</p>
+        <div className="mt-3 overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border text-left text-muted">
+                <th className="py-2 pr-4 font-medium">{t("pcbPage.lookupSalaryCol")}</th>
+                <th className="py-2 font-medium">{t("pcbPage.lookupPcbCol")}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {lookupRows.map((row) => (
+                <tr key={row.salary}>
+                  <td className="py-2 pr-4 tabular-nums">{formatRM(row.salary)}</td>
+                  <td className="py-2 tabular-nums font-medium">{formatRM(row.pcb)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Card>
 
       <Card className="mt-6">
         <h2 className="text-lg font-semibold text-foreground">{t("pcbPage.bracketsTitle", { year: rates.year })}</h2>
