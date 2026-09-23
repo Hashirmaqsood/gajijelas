@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
 import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card, NumberField } from "@/components/ui/Field";
 import { calculateEpfRetirement } from "@/lib/calc/epfRetirement";
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
@@ -124,6 +125,14 @@ export default function EpfRetirementClient() {
           </p>
         </Card>
       )}
+
+      <PageFaq
+        title={t("epfRetirementPage.faqTitle")}
+        items={[
+          { q: t("epfRetirementPage.faqQ1"), a: t("epfRetirementPage.faqA1") },
+          { q: t("epfRetirementPage.faqQ2"), a: t("epfRetirementPage.faqA2") },
+        ]}
+      />
 
       <RelatedGuides
         links={[{ href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" }]}

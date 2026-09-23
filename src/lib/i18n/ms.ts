@@ -465,7 +465,14 @@ const ms: Dictionary = {
     totalContributions: "Jumlah caruman",
     totalDividends: "Jumlah dividen diperoleh",
     disclaimer:
-      "Ini adalah anggaran ringkas: caruman menggunakan peratusan EPF tepat tahun ini dan beralih ke jalur 60+ secara automatik, manakala dividen berkompaun setiap bulan pada 1/12 daripada kadar tahunan yang anda pilih. Dividen EPF sebenar diisytiharkan sekali setahun berdasarkan purata baki bulanan dan berbeza dari tahun ke tahun — anggap ini sebagai unjuran hala tuju, bukan jaminan.",
+      "Ini adalah anggaran ringkas: caruman menggunakan peratusan EPF tepat tahun ini dan beralih ke jalur 60+ secara automatik, manakala dividen berkompaun setiap bulan pada 1/12 daripada kadar tahunan yang anda pilih untuk kemudahan. Pada sebenarnya, EPF mengira dividen berdasarkan baki agregat harian anda, dengan caruman baharu memperoleh dividen bermula bulan berikutnya — dan kadar itu sendiri diisytiharkan sekali setahun berdasarkan prestasi pelaburan sebenar EPF, jadi ia berbeza dari tahun ke tahun. Anggap ini sebagai unjuran hala tuju, bukan jaminan.",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Bagaimana dividen EPF saya sebenarnya dikira?",
+    faqA1:
+      "EPF mengira dividen anda berdasarkan baki agregat harian anda sepanjang tahun, bukan hanya satu baki pada satu tarikh. Caruman baharu mula memperoleh dividen bermula bulan selepas ia dikreditkan, dan pembayaran tahunan berdasarkan simpanan anda pada 1 Januari. Kadar yang diisytiharkan — ditetapkan sekali setahun berdasarkan prestasi pelaburan sebenar EPF — kemudian dikenakan pada baki harian tersebut.",
+    faqQ2: "Adakah kadar dividen EPF dijamin?",
+    faqA2:
+      "Hanya minimum sahaja — 2.50% setahun untuk Simpanan Konvensional, ditetapkan oleh undang-undang. Kadar sebenar yang diisytiharkan biasanya lebih tinggi dan bergantung kepada prestasi pelaburan sebenar EPF tahun itu, jadi ia berbeza setiap tahun dan bukan sesuatu yang boleh anda harapkan melebihi paras minimum berkanun itu untuk tujuan perancangan.",
     yearByYearTitle: "Unjuran tahun demi tahun",
     age: "Umur",
     contributionsCol: "Caruman",
@@ -516,7 +523,7 @@ const ms: Dictionary = {
   },
   zakatPage: {
     title: "Kalkulator Zakat Pendapatan",
-    intro: "Anggarkan zakat pendapatan anda — 2.5% daripada pendapatan tahunan sebaik sahaja mencapai paras nisab anda.",
+    intro: "Anggarkan zakat pendapatan anda — 2.5% daripada pendapatan tahunan sebaik sahaja mencapai paras nisab anda, menggunakan kaedah yang diterbitkan oleh pihak berkuasa zakat seperti PPZ-MAIWP.",
     monthlyIncome: "Pendapatan bulanan",
     nisabThreshold: "Paras nisab (tahunan)",
     nisabHint: "Berbeza mengikut negeri dan masa dalam tahun — semak dengan pihak berkuasa zakat negeri anda untuk angka semasa yang tepat",

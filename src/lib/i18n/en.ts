@@ -464,7 +464,14 @@ const en = {
     totalContributions: "Total contributions",
     totalDividends: "Total dividends earned",
     disclaimer:
-      "This is a simplified estimate: contributions use this year's exact EPF percentages and switch to the 60+ band automatically, while dividends compound monthly at 1/12th of your chosen annual rate. Real EPF dividends are declared once a year based on average monthly balances and vary year to year — treat this as a directional projection, not a guarantee.",
+      "This is a simplified estimate: contributions use this year's exact EPF percentages and switch to the 60+ band automatically, while dividends compound monthly at 1/12th of your chosen annual rate for simplicity. In reality, EPF calculates dividends on your actual daily aggregate balance, with new contributions earning dividends from the following month — and the rate itself is declared once a year based on EPF's actual investment performance, so it varies year to year. Treat this as a directional projection, not a guarantee.",
+    faqTitle: "Common questions",
+    faqQ1: "How is my EPF dividend actually calculated?",
+    faqA1:
+      "EPF calculates your dividend based on your daily aggregate balance throughout the year, not just a single balance snapshot. New contributions start earning dividends from the month after they're credited, and the annual payout is based on your savings as at 1 January. The declared rate — set once a year from EPF's actual investment performance — is then applied to that daily balance.",
+    faqQ2: "Is the EPF dividend rate guaranteed?",
+    faqA2:
+      "Only the minimum is — 2.50% a year for Simpanan Konvensional, set by law. The actual declared rate is usually higher and depends on EPF's real investment performance that year, so it varies annually and isn't something you can rely on beyond that legal floor for planning purposes.",
     yearByYearTitle: "Year-by-year projection",
     age: "Age",
     contributionsCol: "Contributions",
@@ -515,7 +522,7 @@ const en = {
   },
   zakatPage: {
     title: "Zakat Pendapatan Calculator",
-    intro: "Estimate your income zakat (zakat pendapatan) — 2.5% of annual income once it meets your nisab threshold.",
+    intro: "Estimate your income zakat (zakat pendapatan) — 2.5% of annual income once it meets your nisab threshold, using the method published by zakat authorities like PPZ-MAIWP.",
     monthlyIncome: "Monthly income",
     nisabThreshold: "Nisab threshold (annual)",
     nisabHint: "Varies by state and by time of year — check your state zakat authority for the exact current figure",
