@@ -301,6 +301,9 @@ const ms: Dictionary = {
     catAbove60: "Warganegara/PR, 60 dan ke atas",
     catNonMalaysian: "Bukan warganegara Malaysia (semua umur)",
     sourceNote: "Pekerja boleh memilih untuk menyumbang lebih secara sukarela pada bila-bila masa.",
+    lookupTitle: "Caruman EPF sepintas lalu, mengikut gaji",
+    lookupHint: "EPF bulanan untuk warganegara Malaysia atau PR di bawah 60 tahun — angka anda di atas akan berbeza untuk kumpulan umur atau kerakyatan lain.",
+    lookupWageCol: "Gaji bulanan",
   },
   socsoPage: {
     title: "Kalkulator SOCSO (PERKESO & EIS)",
@@ -333,6 +336,9 @@ const ms: Dictionary = {
     lindungMandatoryNote: "Mandatori untuk pekerja bukan warganegara Malaysia di bawah peraturan semasa — ditanggung sepenuhnya oleh pekerja, RM0 daripada majikan.",
     lindungSummary:
       "LINDUNG 24 Jam (dari 1 Jun 2026): melindungi kemalangan bukan berkaitan kerja 24 jam, caruman pekerja sahaja bermula {employeePct}% (meningkat secara berperingkat mengikut tahun), sukarela untuk warganegara/PR, mandatori untuk pekerja asing.",
+    lookupTitle: "SOCSO + EIS gabungan, mengikut gaji",
+    lookupHint: "SOCSO dan EIS gabungan untuk warganegara Malaysia atau PR di bawah 60 tahun — LINDUNG 24 Jam tidak termasuk kerana ia bergantung sama ada anda menyertainya.",
+    lookupWageCol: "Gaji bulanan",
   },
   pcbPage: {
     title: "Kalkulator PCB (MTD)",

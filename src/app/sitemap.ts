@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "", lastModified: "2026-09-21" },
   { path: "/compare", lastModified: "2026-09-18" },
-  { path: "/epf-calculator", lastModified: "2026-09-20" },
+  { path: "/epf-calculator", lastModified: "2026-09-23" },
   { path: "/epf-retirement-calculator", lastModified: "2026-09-23" },
   { path: "/epf-account-split-calculator", lastModified: "2026-09-20" },
   { path: "/socso-calculator", lastModified: "2026-09-23" },

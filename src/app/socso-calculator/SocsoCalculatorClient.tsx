@@ -14,6 +14,8 @@ import { formatRM } from "@/lib/format";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/context";
 
+const LOOKUP_WAGES = [2000, 3000, 5000, 6000, 8000, 10000];
+
 export default function SocsoCalculatorClient() {
   const [wage, setWage] = useState(3000);
   const [ageGroup, setAgeGroup] = useState<AgeGroup>("below60");
@@ -29,6 +31,15 @@ export default function SocsoCalculatorClient() {
     [rates, wage, nationality, lindungOptIn]
   );
   const insuredWage = Math.min(wage, rates.socso.wageCeiling);
+  const lookupRows = useMemo(
+    () =>
+      LOOKUP_WAGES.map((w) => {
+        const s = calculateSocso(rates.socso, w, "below60", "malaysian");
+        const e = calculateEis(rates.eis, w, "below60", "malaysian");
+        return { wage: w, employee: s.employee + e.employee, employer: s.employer + e.employer };
+      }),
+    [rates]
+  );
 
   return (
     <ToolPageShell title={t("socsoPage.title")} intro={t("socsoPage.intro")}>
@@ -131,6 +142,31 @@ export default function SocsoCalculatorClient() {
           <a href="https://www.perkeso.gov.my/skim-kemalangan-bukan-bencana-kerja-lindung-24-jam" target="_blank" rel="noopener noreferrer" className="underline">LINDUNG 24 Jam</a>.{" "}
           {t("socsoPage.footnote")} <Link href="/" className="text-brand underline">{t("socsoPage.footnoteLinkText")}</Link>.
         </p>
+      </Card>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("socsoPage.lookupTitle")}</h2>
+        <p className="mt-1 text-xs text-muted">{t("socsoPage.lookupHint")}</p>
+        <div className="mt-3 overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border text-left text-muted">
+                <th className="py-2 pr-4 font-medium">{t("socsoPage.lookupWageCol")}</th>
+                <th className="py-2 pr-4 font-medium">{t("epfPage.employee")}</th>
+                <th className="py-2 font-medium">{t("epfPage.employer")}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {lookupRows.map((row) => (
+                <tr key={row.wage}>
+                  <td className="py-2 pr-4 tabular-nums">{formatRM(row.wage)}</td>
+                  <td className="py-2 pr-4 tabular-nums font-medium">{formatRM(row.employee)}</td>
+                  <td className="py-2 tabular-nums font-medium">{formatRM(row.employer)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </Card>
 
       <Card className="mt-6">

@@ -300,6 +300,9 @@ const en = {
     catAbove60: "Malaysian/PR, 60 and above",
     catNonMalaysian: "Non-Malaysian (any age)",
     sourceNote: "Employees may always elect to contribute more voluntarily.",
+    lookupTitle: "EPF contribution at a glance, by wage",
+    lookupHint: "Monthly EPF for a Malaysian citizen or PR below 60 — your own figure above will differ for other age groups or nationalities.",
+    lookupWageCol: "Monthly wage",
   },
   socsoPage: {
     title: "SOCSO Calculator (PERKESO & EIS)",
@@ -332,6 +335,9 @@ const en = {
     lindungMandatoryNote: "Mandatory for non-Malaysian employees under current rules — fully paid by the employee, RM0 from the employer.",
     lindungSummary:
       "LINDUNG 24 Jam (from 1 June 2026): covers non-work-related accidents 24/7, employee-only contribution starting at {employeePct}% (phased up over the years), voluntary for citizens/PR, mandatory for foreign workers.",
+    lookupTitle: "SOCSO + EIS combined, by wage",
+    lookupHint: "Combined SOCSO and EIS for a Malaysian citizen or PR below 60 — LINDUNG 24 Jam isn't included since it depends on whether you opt in.",
+    lookupWageCol: "Monthly wage",
   },
   pcbPage: {
     title: "PCB Calculator (MTD)",

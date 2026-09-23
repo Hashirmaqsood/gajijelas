@@ -11,6 +11,8 @@ import { formatRM } from "@/lib/format";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/context";
 
+const LOOKUP_WAGES = [2000, 3000, 5000, 6000, 8000, 10000, 15000, 20000];
+
 export default function EpfCalculatorClient() {
   const [wage, setWage] = useState(5000);
   const [ageGroup, setAgeGroup] = useState<AgeGroup>("below60");
@@ -20,6 +22,10 @@ export default function EpfCalculatorClient() {
 
   const rates = useMemo(() => getRates(rateYear), [rateYear]);
   const result = useMemo(() => calculateEpf(rates.epf, wage, ageGroup, nationality), [rates, wage, ageGroup, nationality]);
+  const lookupRows = useMemo(
+    () => LOOKUP_WAGES.map((w) => ({ wage: w, ...calculateEpf(rates.epf, w, "below60", "malaysian") })),
+    [rates]
+  );
 
   return (
     <ToolPageShell title={t("epfPage.title")} intro={t("epfPage.intro")}>
@@ -117,6 +123,31 @@ export default function EpfCalculatorClient() {
           Source: <a href="https://www.kwsp.gov.my/en/epf-act-1991-third-schedule" target="_blank" rel="noopener noreferrer" className="underline">KWSP EPF Act 1991 Third Schedule</a>.{" "}
           {t("epfPage.sourceNote")}
         </p>
+      </Card>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("epfPage.lookupTitle")}</h2>
+        <p className="mt-1 text-xs text-muted">{t("epfPage.lookupHint")}</p>
+        <div className="mt-3 overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border text-left text-muted">
+                <th className="py-2 pr-4 font-medium">{t("epfPage.lookupWageCol")}</th>
+                <th className="py-2 pr-4 font-medium">{t("epfPage.employee")}</th>
+                <th className="py-2 font-medium">{t("epfPage.employer")}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {lookupRows.map((row) => (
+                <tr key={row.wage}>
+                  <td className="py-2 pr-4 tabular-nums">{formatRM(row.wage)}</td>
+                  <td className="py-2 pr-4 tabular-nums font-medium">{formatRM(row.employee)}</td>
+                  <td className="py-2 tabular-nums font-medium">{formatRM(row.employer)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </Card>
 
       <RelatedGuides
