@@ -4,9 +4,10 @@ import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
 import RelatedGuides from "@/components/content/RelatedGuides";
 import PageFaq from "@/components/content/PageFaq";
-import { Card, NumberField, PillGroup } from "@/components/ui/Field";
+import { Card, NumberField, PillGroup, ToggleField } from "@/components/ui/Field";
 import { calculateSocso } from "@/lib/calc/socso";
 import { calculateEis } from "@/lib/calc/eis";
+import { calculateLindung24Jam } from "@/lib/calc/lindung24Jam";
 import type { AgeGroup, Nationality } from "@/lib/calc/types";
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
 import { formatRM } from "@/lib/format";
@@ -17,11 +18,16 @@ export default function SocsoCalculatorClient() {
   const [wage, setWage] = useState(3000);
   const [ageGroup, setAgeGroup] = useState<AgeGroup>("below60");
   const [nationality, setNationality] = useState<Nationality>("malaysian");
+  const [lindungOptIn, setLindungOptIn] = useState(false);
   const { t } = useLanguage();
 
   const rates = getRates(CURRENT_RATE_YEAR);
   const socso = useMemo(() => calculateSocso(rates.socso, wage, ageGroup, nationality), [rates, wage, ageGroup, nationality]);
   const eis = useMemo(() => calculateEis(rates.eis, wage, ageGroup, nationality), [rates, wage, ageGroup, nationality]);
+  const lindung = useMemo(
+    () => calculateLindung24Jam(rates.lindung24Jam, wage, nationality, lindungOptIn),
+    [rates, wage, nationality, lindungOptIn]
+  );
   const insuredWage = Math.min(wage, rates.socso.wageCeiling);
 
   return (
@@ -87,6 +93,28 @@ export default function SocsoCalculatorClient() {
               <p className="mt-3 text-xs text-muted">{t("socsoPage.eisNotApplicable")}</p>
             )}
           </Card>
+
+          <Card>
+            <h2 className="text-lg font-semibold text-foreground">{t("socsoPage.lindungTitle")}</h2>
+            {nationality === "malaysian" ? (
+              <div className="mt-3">
+                <ToggleField label={t("socsoPage.lindungOptInLabel")} checked={lindungOptIn} onChange={setLindungOptIn} />
+                <p className="mt-1 text-xs text-muted">{t("socsoPage.lindungVoluntaryNote")}</p>
+              </div>
+            ) : (
+              <p className="mt-3 text-xs text-muted">{t("socsoPage.lindungMandatoryNote")}</p>
+            )}
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <div className="rounded-xl bg-brand-light px-4 py-3.5">
+                <div className="text-xs font-medium uppercase text-brand-dark/80">{t("epfPage.employee")}</div>
+                <div className="mt-1 text-xl font-bold tabular-nums text-brand-dark">{formatRM(lindung.employee)}</div>
+              </div>
+              <div className="rounded-xl bg-accent-light px-4 py-3.5">
+                <div className="text-xs font-medium uppercase text-foreground/70">{t("epfPage.employer")}</div>
+                <div className="mt-1 text-xl font-bold tabular-nums text-foreground">{formatRM(lindung.employer)}</div>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
 
@@ -96,9 +124,11 @@ export default function SocsoCalculatorClient() {
           <li>{t("socsoPage.category1", { employeePct: rates.socso.category1.employeePct, employerPct: rates.socso.category1.employerPct })}</li>
           <li>{t("socsoPage.category2", { employerPct: rates.socso.category2.employerPct })}</li>
           <li>{t("socsoPage.categoryForeign", { employerPct: rates.socso.foreignWorker.employerPct })}</li>
+          <li>{t("socsoPage.lindungSummary", { employeePct: rates.lindung24Jam.employeePct })}</li>
         </ul>
         <p className="mt-4 text-xs text-muted">
-          Source: <a href="https://www.perkeso.gov.my/en/rate-of-contribution.html" target="_blank" rel="noopener noreferrer" className="underline">PERKESO Rate of Contribution</a>.{" "}
+          Source: <a href="https://www.perkeso.gov.my/en/rate-of-contribution.html" target="_blank" rel="noopener noreferrer" className="underline">PERKESO Rate of Contribution</a>,{" "}
+          <a href="https://www.perkeso.gov.my/skim-kemalangan-bukan-bencana-kerja-lindung-24-jam" target="_blank" rel="noopener noreferrer" className="underline">LINDUNG 24 Jam</a>.{" "}
           {t("socsoPage.footnote")} <Link href="/" className="text-brand underline">{t("socsoPage.footnoteLinkText")}</Link>.
         </p>
       </Card>
@@ -117,7 +147,10 @@ export default function SocsoCalculatorClient() {
       />
 
       <RelatedGuides
-        links={[{ href: "/guides/epf-socso-eis-foreign-workers-2025-changes", label: "EPF, SOCSO & EIS for Foreign Workers" }]}
+        links={[
+          { href: "/guides/lindung-24-jam-socso-new-scheme-2026", label: "LINDUNG 24 Jam Explained" },
+          { href: "/guides/epf-socso-eis-foreign-workers-2025-changes", label: "EPF, SOCSO & EIS for Foreign Workers" },
+        ]}
       />
     </ToolPageShell>
   );

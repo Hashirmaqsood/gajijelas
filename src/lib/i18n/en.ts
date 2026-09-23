@@ -326,6 +326,12 @@ const en = {
     faqQ2: "Is SOCSO the same as EPF?",
     faqA2:
       "No — EPF is a retirement savings scheme where contributions stay in your own account, while SOCSO and EIS are insurance schemes that pool contributions to pay out benefits (medical, disability, unemployment) when something goes wrong. You don't get SOCSO or EIS contributions back as savings.",
+    lindungTitle: "LINDUNG 24 Jam (new, from June 2026)",
+    lindungOptInLabel: "Opt in to LINDUNG 24 Jam",
+    lindungVoluntaryNote: "Voluntary for Malaysian citizens and PRs — fully paid by you, RM0 from your employer.",
+    lindungMandatoryNote: "Mandatory for non-Malaysian employees under current rules — fully paid by the employee, RM0 from the employer.",
+    lindungSummary:
+      "LINDUNG 24 Jam (from 1 June 2026): covers non-work-related accidents 24/7, employee-only contribution starting at {employeePct}% (phased up over the years), voluntary for citizens/PR, mandatory for foreign workers.",
   },
   pcbPage: {
     title: "PCB Calculator (MTD)",

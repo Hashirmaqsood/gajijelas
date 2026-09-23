@@ -246,4 +246,27 @@ export const GUIDES: Guide[] = [
       { href: "/guides/real-cost-of-hiring-in-malaysia", label: "The Real Cost of Hiring in Malaysia" },
     ],
   },
+  {
+    slug: "lindung-24-jam-socso-new-scheme-2026",
+    title: "LINDUNG 24 Jam Explained: PERKESO's New Non-Work Accident Scheme",
+    description: "A new SOCSO scheme launched 1 June 2026 covers accidents outside work too — here's the phased rate, who it's mandatory for, and who can opt in.",
+    publishedDate: "2026-09-23",
+    body: [
+      "Most people know SOCSO as protection for accidents that happen at work. Since 1 June 2026, there's a genuinely new scheme that extends coverage well beyond that — and because it's this new, a lot of employees and even some employers haven't caught up on what it actually means for their payslip.",
+      "## What LINDUNG 24 Jam actually covers",
+      "LINDUNG 24 Jam — officially Skim Kemalangan Bukan Bencana Kerja (SKBBK), the Non-Employment Injury Scheme — covers accidents that happen outside work and aren't related to your job at all: a road accident on your day off, a fall at home, anything that counts as an accident but isn't a workplace injury (which is already covered separately under the existing Employment Injury Scheme) and isn't an illness. Coverage runs 24 hours a day, every day, for as long as you're an enrolled, employed member — including past age 60, which is different from how standard SOCSO categories change at that age.",
+      "## The rate is phased, and it's paid entirely by the employee",
+      "Unlike SOCSO and EIS, which split contributions between employer and employee, LINDUNG 24 Jam is funded entirely by the employee — the employer's share is RM0. The employee rate is phased in over time: 0.75% of wages for the first two years from launch, rising to 1.0% for the next three years, then 1.25% from year six onward. It uses the same RM6,000 monthly wage ceiling as SOCSO and EIS, so the current Phase 1 contribution tops out at RM45 a month (0.75% of RM6,000) even for higher earners.",
+      "## Voluntary for citizens and PRs, mandatory for foreign workers",
+      "This is the detail that trips people up: for Malaysian citizens and permanent residents, LINDUNG 24 Jam is opt-in — you choose whether to participate, and nothing is deducted unless you do. For non-Malaysian employees, it's mandatory under current rules, deducted automatically like SOCSO's Employment Injury coverage already is for that group. If you're a foreign worker, this isn't something you can decline; if you're a citizen or PR, it genuinely is your call.",
+      "## What isn't covered",
+      "PERKESO explicitly excludes a handful of cases: accidents that happen outside Malaysia, actual workplace injuries (those stay under the existing Employment Injury Scheme), domestic disasters under separate legislation, and anything caused by illness — a diabetic episode or a fever isn't an 'accident' under this scheme's definition, even if it leads to a fall or injury. It's specifically for genuine accidents, not health conditions.",
+      "## Should you opt in, if you're eligible to choose?",
+      "That's a personal decision based on your existing coverage — if you already have personal accident insurance or your employer provides group coverage for non-work accidents, LINDUNG 24 Jam may be redundant. If you have no other accident coverage outside work, RM45 a month (or less, depending on your wage) for genuine 24-hour accident protection is a modest cost relative to the protection. Either way, it's worth actually deciding rather than defaulting into whatever your employer's payroll system happens to be set to.",
+    ],
+    relatedLinks: [
+      { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/", label: "Full Salary Calculator" },
+    ],
+  },
 ];

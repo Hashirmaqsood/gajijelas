@@ -7,6 +7,8 @@ import type { StatutoryRates } from "./types";
  * Key differences from the 2025 set:
  *  - EPF is now mandatory for non-Malaysian employees at 2% + 2% (from Oct 2025).
  *  - SOCSO/EIS wage ceiling of RM6,000 (from Oct 2024) is in force for the full year.
+ *  - LINDUNG 24 Jam (Non-Employment Injury Scheme) launched 1 June 2026 — employee-only,
+ *    phased rate starting at 0.75%, voluntary for citizens/PR, mandatory for foreign workers.
  *
  * Income tax (PCB) brackets and relief amounts follow the Year of Assessment
  * 2024/2025 schedule, which LHDN has carried forward with no bracket changes
@@ -39,6 +41,16 @@ const rates2026: StatutoryRates = {
     wageCeiling: 6000,
     standard: { employeePct: 0.2, employerPct: 0.2 },
     notApplicable: { employeePct: 0, employerPct: 0 },
+  },
+  lindung24Jam: {
+    wageCeiling: 6000,
+    employeePct: 0.75,
+    currentPhase: 1,
+    phases: [
+      { phase: 1, employeePct: 0.75, label: "Years 1–2 (from 1 June 2026)" },
+      { phase: 2, employeePct: 1.0, label: "Years 3–5" },
+      { phase: 3, employeePct: 1.25, label: "Year 6 onward" },
+    ],
   },
   pcb: {
     brackets: [
@@ -74,6 +86,7 @@ const rates2026: StatutoryRates = {
     { label: "KWSP – EPF Act 1991 Third Schedule", url: "https://www.kwsp.gov.my/en/epf-act-1991-third-schedule" },
     { label: "KWSP – Mandatory contribution for non-Malaysian employees (Oct 2025)", url: "https://www.kwsp.gov.my/en/w/news/epf-begins-mandatory-contributions-for-non-malaysian-citizen-employees-effective-october-2025" },
     { label: "PERKESO – Rate of Contribution", url: "https://www.perkeso.gov.my/en/rate-of-contribution.html" },
+    { label: "PERKESO – LINDUNG 24 Jam (Non-Employment Injury Scheme)", url: "https://www.perkeso.gov.my/skim-kemalangan-bukan-bencana-kerja-lindung-24-jam" },
     { label: "LHDN – Individual income tax rate", url: "https://www.hasil.gov.my/en/individual/individual-life-cycle/how-to-declare-income/tax-rate/" },
     { label: "LHDN – PCB / MTD computerised calculation specification", url: "https://www.hasil.gov.my" },
   ],

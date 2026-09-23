@@ -2,6 +2,7 @@ export * from "./types";
 export * from "./epf";
 export * from "./socso";
 export * from "./eis";
+export * from "./lindung24Jam";
 export * from "./pcb";
 export * from "./salary";
 export * from "./overtime";

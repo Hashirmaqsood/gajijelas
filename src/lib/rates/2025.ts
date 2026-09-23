@@ -18,6 +18,10 @@ const rates2025: StatutoryRates = {
     ...rates2026.epf,
     nonMalaysian: { employeePct: 0, employerPct: 0 },
   },
+  lindung24Jam: {
+    ...rates2026.lindung24Jam,
+    employeePct: 0,
+  },
   sources: [
     ...rates2026.sources,
     { label: "RinggitPlus – Mandatory EPF contributions for foreign workers begin Oct 2025", url: "https://ringgitplus.com/en/blog/personal-finance-news/mandatory-epf-contributions-for-foreign-workers-begin-oct-2025.html" },

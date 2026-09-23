@@ -85,6 +85,22 @@ export interface MinimumWage {
   hourly: number;
 }
 
+/**
+ * LINDUNG 24 Jam / Skim Kemalangan Bukan Bencana Kerja (SKBBK) — PERKESO's
+ * Non-Employment Injury Scheme, effective 1 June 2026. Employee-only
+ * contribution (0% employer), phased in over time, same RM6,000 wage
+ * ceiling as SOCSO/EIS. Voluntary opt-in for Malaysian/PR employees,
+ * mandatory for foreign workers.
+ */
+export interface Lindung24JamRates {
+  wageCeiling: number;
+  /** Current phase's employee contribution percentage. */
+  employeePct: number;
+  /** Which phase is currently active (1, 2 or 3) and its date range, for display. */
+  currentPhase: 1 | 2 | 3;
+  phases: { phase: 1 | 2 | 3; employeePct: number; label: string }[];
+}
+
 export interface StatutoryRates {
   year: number;
   /** ISO date this rate set was last checked/updated by us. */
@@ -93,6 +109,7 @@ export interface StatutoryRates {
   epf: EpfRates;
   socso: SocsoRates;
   eis: EisRates;
+  lindung24Jam: Lindung24JamRates;
   pcb: PcbRates;
   minimumWage: MinimumWage;
   sources: { label: string; url: string }[];

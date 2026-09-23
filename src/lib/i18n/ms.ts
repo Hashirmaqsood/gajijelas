@@ -327,6 +327,12 @@ const ms: Dictionary = {
     faqQ2: "Adakah SOCSO sama seperti EPF?",
     faqA2:
       "Tidak — EPF adalah skim simpanan persaraan di mana caruman kekal dalam akaun anda sendiri, manakala SOCSO dan EIS adalah skim insurans yang mengumpul caruman untuk membayar faedah (perubatan, hilang upaya, pengangguran) apabila sesuatu berlaku. Anda tidak menerima semula caruman SOCSO atau EIS sebagai simpanan.",
+    lindungTitle: "LINDUNG 24 Jam (baharu, mulai Jun 2026)",
+    lindungOptInLabel: "Sertai LINDUNG 24 Jam",
+    lindungVoluntaryNote: "Secara sukarela untuk warganegara Malaysia dan PR — ditanggung sepenuhnya oleh anda, RM0 daripada majikan.",
+    lindungMandatoryNote: "Mandatori untuk pekerja bukan warganegara Malaysia di bawah peraturan semasa — ditanggung sepenuhnya oleh pekerja, RM0 daripada majikan.",
+    lindungSummary:
+      "LINDUNG 24 Jam (dari 1 Jun 2026): melindungi kemalangan bukan berkaitan kerja 24 jam, caruman pekerja sahaja bermula {employeePct}% (meningkat secara berperingkat mengikut tahun), sukarela untuk warganegara/PR, mandatori untuk pekerja asing.",
   },
   pcbPage: {
     title: "Kalkulator PCB (MTD)",
