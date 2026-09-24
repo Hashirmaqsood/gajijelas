@@ -7,6 +7,11 @@ export interface GlossaryTerm {
 
 const GLOSSARY_EN: GlossaryTerm[] = [
   {
+    term: "Basic salary",
+    definition:
+      "The fixed core component of your pay before any allowances, overtime or bonuses are added — usually the figure written in your employment contract. It's narrower than gross salary, which adds fixed allowances on top of this base.",
+  },
+  {
     term: "Gross salary",
     definition:
       "Everything your employer agrees to pay you before any deduction — your base pay plus fixed allowances, but not one-off reimbursements like travel claims.",
@@ -71,6 +76,11 @@ const GLOSSARY_EN: GlossaryTerm[] = [
 ];
 
 const GLOSSARY_MS: GlossaryTerm[] = [
+  {
+    term: "Gaji asas",
+    definition:
+      "Komponen teras tetap gaji anda sebelum sebarang elaun, lebih masa atau bonus ditambah — biasanya angka yang tertulis dalam kontrak pekerjaan anda. Ia lebih sempit daripada gaji kasar, yang menambah elaun tetap di atas asas ini.",
+  },
   {
     term: "Gaji kasar",
     definition:
