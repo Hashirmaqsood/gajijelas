@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PcbCalculatorClient from "@/app/pcb-calculator/PcbCalculatorClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Kalkulator PCB (MTD) Malaysia";
+const TITLE = "Kalkulator PCB (MTD) Malaysia 2026";
 const DESCRIPTION = "Kalkulator PCB percuma untuk Malaysia — anggarkan potongan cukai bulanan anda mengikut formula LHDN, termasuk pelepasan cukai anda.";
 
 export const metadata: Metadata = {

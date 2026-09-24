@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SocsoCalculatorClient from "@/app/socso-calculator/SocsoCalculatorClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Kalkulator SOCSO (PERKESO & EIS) Malaysia";
+const TITLE = "Kalkulator SOCSO (PERKESO & EIS) Malaysia 2026";
 const DESCRIPTION = "Kalkulator SOCSO percuma untuk Malaysia — anggarkan caruman PERKESO dan EIS anda, dihadkan pada siling gaji RM6,000 yang sama.";
 
 export const metadata: Metadata = {
