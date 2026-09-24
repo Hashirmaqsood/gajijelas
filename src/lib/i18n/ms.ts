@@ -489,6 +489,13 @@ const ms: Dictionary = {
     totalDividends: "Jumlah dividen diperoleh",
     disclaimer:
       "Ini adalah anggaran ringkas: caruman menggunakan peratusan EPF tepat tahun ini dan beralih ke jalur 60+ secara automatik, manakala dividen berkompaun setiap bulan pada 1/12 daripada kadar tahunan yang anda pilih untuk kemudahan. Pada sebenarnya, EPF mengira dividen berdasarkan baki agregat harian anda, dengan caruman baharu memperoleh dividen bermula bulan berikutnya — dan kadar itu sendiri diisytiharkan sekali setahun berdasarkan prestasi pelaburan sebenar EPF, jadi ia berbeza dari tahun ke tahun. Anggap ini sebagai unjuran hala tuju, bukan jaminan.",
+    historyTitle: "Sejarah kadar dividen EPF",
+    historyHint: "Kadar rasmi yang diisytiharkan mengikut tahun — konteks berguna untuk menilai kesesuaian kadar unjuran yang anda pilih, bukan ramalan kadar akan datang.",
+    historyYearCol: "Tahun",
+    historyConventionalCol: "Simpanan Konvensional",
+    historyShariahCol: "Simpanan Shariah",
+    historySourceNote: "Sumber:",
+    historySourceLinkText: "Sejarah kadar dividen rasmi KWSP",
     faqTitle: "Soalan lazim",
     faqQ1: "Bagaimana dividen EPF saya sebenarnya dikira?",
     faqA1:

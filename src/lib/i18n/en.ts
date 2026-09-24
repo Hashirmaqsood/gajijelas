@@ -488,6 +488,13 @@ const en = {
     totalDividends: "Total dividends earned",
     disclaimer:
       "This is a simplified estimate: contributions use this year's exact EPF percentages and switch to the 60+ band automatically, while dividends compound monthly at 1/12th of your chosen annual rate for simplicity. In reality, EPF calculates dividends on your actual daily aggregate balance, with new contributions earning dividends from the following month — and the rate itself is declared once a year based on EPF's actual investment performance, so it varies year to year. Treat this as a directional projection, not a guarantee.",
+    historyTitle: "EPF dividend rate history",
+    historyHint: "Official declared rates by year — useful context for how realistic your chosen projection rate is, not a prediction of future rates.",
+    historyYearCol: "Year",
+    historyConventionalCol: "Simpanan Konvensional",
+    historyShariahCol: "Simpanan Shariah",
+    historySourceNote: "Source:",
+    historySourceLinkText: "KWSP official dividend rate history",
     faqTitle: "Common questions",
     faqQ1: "How is my EPF dividend actually calculated?",
     faqA1:

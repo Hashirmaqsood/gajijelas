@@ -9,7 +9,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "", lastModified: "2026-09-21" },
   { path: "/compare", lastModified: "2026-09-18" },
   { path: "/epf-calculator", lastModified: "2026-09-23" },
-  { path: "/epf-retirement-calculator", lastModified: "2026-09-23" },
+  { path: "/epf-retirement-calculator", lastModified: "2026-09-24" },
   { path: "/epf-account-split-calculator", lastModified: "2026-09-20" },
   { path: "/socso-calculator", lastModified: "2026-09-23" },
   { path: "/pcb-calculator", lastModified: "2026-09-24" },
