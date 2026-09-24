@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 // history), not build time — an always-"now" lastmod is a freshness signal
 // Google explicitly says it learns to distrust and ignore.
 const staticRoutes: { path: string; lastModified: string }[] = [
-  { path: "", lastModified: "2026-09-21" },
+  { path: "", lastModified: "2026-09-24" },
   { path: "/compare", lastModified: "2026-09-18" },
   { path: "/epf-calculator", lastModified: "2026-09-23" },
   { path: "/epf-retirement-calculator", lastModified: "2026-09-24" },

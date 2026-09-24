@@ -4,9 +4,9 @@ import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Malaysia Salary Calculator — Net Pay After EPF, SOCSO, EIS & PCB",
+  title: "Malaysia Salary Calculator — Net Pay, EPF, SOCSO & PCB",
   description:
-    "Free net salary calculator for Malaysia — work out your exact take-home pay after EPF, SOCSO, EIS and PCB/MTD deductions. Private, and updated with official KWSP, PERKESO and LHDN rates.",
+    "Free net salary calculator for Malaysia — see your exact take-home pay after EPF, SOCSO, EIS and PCB deductions, using official KWSP, PERKESO and LHDN rates.",
   alternates: { canonical: "/" },
 };
 
