@@ -12,7 +12,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/epf-retirement-calculator", lastModified: "2026-09-23" },
   { path: "/epf-account-split-calculator", lastModified: "2026-09-20" },
   { path: "/socso-calculator", lastModified: "2026-09-23" },
-  { path: "/pcb-calculator", lastModified: "2026-09-23" },
+  { path: "/pcb-calculator", lastModified: "2026-09-24" },
   { path: "/hourly-rate-calculator", lastModified: "2026-09-20" },
   { path: "/overtime-calculator", lastModified: "2026-09-20" },
   { path: "/annual-leave-calculator", lastModified: "2026-09-20" },

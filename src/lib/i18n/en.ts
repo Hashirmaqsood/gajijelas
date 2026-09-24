@@ -359,6 +359,13 @@ const en = {
     lookupHint: "Monthly PCB for a single Malaysian citizen below 60, no children, no extra reliefs claimed — your own figure above will differ if any of that doesn't match you.",
     lookupSalaryCol: "Gross monthly salary",
     lookupPcbCol: "Monthly PCB",
+    faqTitle: "Common questions",
+    faqQ1: "What is the minimum salary before PCB applies in Malaysia?",
+    faqA1:
+      "For a single Malaysian employee with no children, claiming only the standard individual, EPF and SOCSO/EIS reliefs, PCB stays at RM0 up to around RM3,400 a month — above that it starts kicking in gradually. Below this point, the individual relief, EPF relief and RM400 tax rebate combine to bring your chargeable income under the taxable threshold entirely. This crossover point shifts higher if you're married or have children, and lower if you don't contribute to EPF.",
+    faqQ2: "How much PCB will I pay for my salary?",
+    faqA2:
+      "There's no single fixed PCB amount for a given salary — it depends on your marital status, number of children, EPF contribution and any additional reliefs you claim, since all of these reduce your chargeable income before tax applies. The lookup table above shows typical amounts for a single filer with no extra reliefs; use the calculator above with your own details for your exact figure.",
     bracketsTitle: "Resident tax brackets ({year})",
     chargeableIncomeCol: "Chargeable income (RM)",
     rateCol: "Rate",

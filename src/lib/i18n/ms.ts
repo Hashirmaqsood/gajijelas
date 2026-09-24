@@ -360,6 +360,13 @@ const ms: Dictionary = {
     lookupHint: "PCB bulanan untuk warganegara Malaysia bujang di bawah 60 tahun, tiada anak, tiada pelepasan tambahan dituntut — angka anda di atas akan berbeza jika mana-mana perkara ini tidak sepadan dengan anda.",
     lookupSalaryCol: "Gaji kasar bulanan",
     lookupPcbCol: "PCB bulanan",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Berapakah gaji minimum sebelum PCB dikenakan di Malaysia?",
+    faqA1:
+      "Untuk pekerja warganegara Malaysia bujang tanpa anak, yang hanya menuntut pelepasan individu, EPF dan SOCSO/EIS standard, PCB kekal pada RM0 sehingga lebih kurang RM3,400 sebulan — melebihi itu ia mula dikenakan secara beransur-ansur. Di bawah paras ini, pelepasan individu, pelepasan EPF dan rebat cukai RM400 bergabung untuk membawa pendapatan bercukai anda di bawah paras dikenakan cukai sepenuhnya. Titik peralihan ini menjadi lebih tinggi jika anda berkahwin atau mempunyai anak, dan lebih rendah jika anda tidak menyumbang kepada EPF.",
+    faqQ2: "Berapakah PCB yang perlu saya bayar untuk gaji saya?",
+    faqA2:
+      "Tiada satu jumlah PCB tetap untuk sesuatu gaji — ia bergantung kepada status perkahwinan, bilangan anak, caruman EPF dan sebarang pelepasan tambahan yang anda tuntut, kerana semua ini mengurangkan pendapatan bercukai anda sebelum cukai dikenakan. Jadual rujukan di atas menunjukkan jumlah biasa untuk pemfailan bujang tanpa pelepasan tambahan; gunakan kalkulator di atas dengan butiran anda sendiri untuk angka tepat anda.",
     bracketsTitle: "Jadual PCB & cukai pemastautin ({year})",
     chargeableIncomeCol: "Pendapatan bercukai (RM)",
     rateCol: "Kadar",

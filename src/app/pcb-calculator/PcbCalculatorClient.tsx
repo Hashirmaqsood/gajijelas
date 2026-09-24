@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
 import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card, NumberField, PillGroup, ToggleField } from "@/components/ui/Field";
 import { calculateSalary } from "@/lib/calc/salary";
 import { DEFAULT_SALARY_INPUT, type SalaryInput } from "@/lib/calc/types";
@@ -142,6 +143,14 @@ export default function PcbCalculatorClient() {
           Source: <a href="https://www.hasil.gov.my" target="_blank" rel="noopener noreferrer" className="underline">LHDN</a>. {t("pcbPage.footnote")}
         </p>
       </Card>
+
+      <PageFaq
+        title={t("pcbPage.faqTitle")}
+        items={[
+          { q: t("pcbPage.faqQ1"), a: t("pcbPage.faqA1") },
+          { q: t("pcbPage.faqQ2"), a: t("pcbPage.faqA2") },
+        ]}
+      />
 
       <RelatedGuides
         links={[
