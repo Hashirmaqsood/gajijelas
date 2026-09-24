@@ -186,6 +186,7 @@ export default function SocsoCalculatorClient() {
         links={[
           { href: "/guides/lindung-24-jam-socso-new-scheme-2026", label: "LINDUNG 24 Jam Explained" },
           { href: "/guides/epf-socso-eis-foreign-workers-2025-changes", label: "EPF, SOCSO & EIS for Foreign Workers" },
+          { href: "/guides/budget-2027-malaysia-salary-epf-socso", label: "Budget 2027: What It Could Mean for Your Salary" },
         ]}
       />
     </ToolPageShell>

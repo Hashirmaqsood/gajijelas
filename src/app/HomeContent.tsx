@@ -113,6 +113,7 @@ export default function HomeContent({ rates }: { rates: StatutoryRates }) {
           links={[
             { href: "/guides/first-paycheck-malaysia-what-to-expect", label: "What Your First Paycheck Actually Looks Like" },
             { href: "/guides/minimum-wage-updates-malaysia", label: "Minimum Wage in Malaysia" },
+            { href: "/guides/is-your-salary-good-in-malaysia", label: "Is Your Salary Good in Malaysia?" },
           ]}
         />
       </section>

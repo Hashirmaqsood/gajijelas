@@ -154,6 +154,7 @@ export default function EpfCalculatorClient() {
         links={[
           { href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" },
           { href: "/guides/epf-employer-contribution-guide-malaysia", label: "EPF Employer Contribution Guide" },
+          { href: "/guides/budget-2027-malaysia-salary-epf-socso", label: "Budget 2027: What It Could Mean for Your Salary" },
         ]}
       />
     </ToolPageShell>

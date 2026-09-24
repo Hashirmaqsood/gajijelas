@@ -66,7 +66,10 @@ export default function HourlyRateClient() {
       />
 
       <RelatedGuides
-        links={[{ href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" }]}
+        links={[
+          { href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" },
+          { href: "/guides/salary-calculation-30-or-31-days-malaysia", label: "Is Salary Calculated on 30 or 31 Days?" },
+        ]}
       />
     </ToolPageShell>
   );
