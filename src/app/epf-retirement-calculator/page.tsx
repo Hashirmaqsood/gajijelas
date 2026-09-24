@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import EpfRetirementClient from "./EpfRetirementClient";
 import { calculatorJsonLd, faqPageJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "EPF Retirement Goal Calculator Malaysia 2026 | Dividend Projection";
+const TITLE = "EPF Retirement Calculator Malaysia | Dividend Projection";
 const DESCRIPTION =
   "Free EPF retirement goal calculator — project your KWSP (EPF) savings from today to retirement, including salary growth and compounding annual dividends.";
 

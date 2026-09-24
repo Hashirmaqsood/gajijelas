@@ -3,7 +3,7 @@ import SocsoCalculatorClient from "./SocsoCalculatorClient";
 import { calculatorJsonLd, faqPageJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
 const TITLE = "SOCSO Calculator (PERKESO & EIS) Malaysia";
-const DESCRIPTION = "Free SOCSO calculator for Malaysia — work out your PERKESO employment injury, invalidity, EIS and new LINDUNG 24 Jam contributions, with the RM6,000 wage ceiling applied automatically.";
+const DESCRIPTION = "Free SOCSO calculator for Malaysia — work out your PERKESO, EIS and new LINDUNG 24 Jam contributions, with the RM6,000 wage ceiling applied automatically.";
 
 const FAQ = [
   {

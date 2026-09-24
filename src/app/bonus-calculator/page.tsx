@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BonusClient from "./BonusClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Bonus Tax Calculator Malaysia 2026 | Net Bonus After PCB & EPF";
+const TITLE = "Bonus Tax Calculator Malaysia | Net Bonus After PCB & EPF";
 const DESCRIPTION =
   "Free bonus calculator for Malaysia — see your real net bonus after the extra EPF and PCB tax a one-off bonus triggers.";
 
