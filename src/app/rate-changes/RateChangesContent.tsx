@@ -89,6 +89,11 @@ export default function RateChangesContent() {
         </ul>
         <p className="mt-4 text-xs text-muted">{t("rateChangesPage.sources")}: {y2026.sources.map((s) => s.label).join(" · ")}.</p>
       </Card>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("rateChangesPage.upcomingHeading")}</h2>
+        <p className="mt-2 text-sm text-muted">{t("rateChangesPage.upcomingBudget2027")}</p>
+      </Card>
     </div>
   );
 }

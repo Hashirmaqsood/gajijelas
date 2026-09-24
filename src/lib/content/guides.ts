@@ -269,4 +269,28 @@ export const GUIDES: Guide[] = [
       { href: "/", label: "Full Salary Calculator" },
     ],
   },
+  {
+    slug: "budget-2027-malaysia-salary-epf-socso",
+    title: "Budget 2027 Malaysia: What It Could Mean for Your Salary",
+    description:
+      "Malaysia tables Budget 2027 on 9 October 2026. What the official Pre-Budget Statement says about EPF and SOCSO, and what is still unconfirmed.",
+    publishedDate: "2026-09-24",
+    body: [
+      "The Malaysian government will table Budget 2027 in Parliament on 9 October 2026 — the fifth Budget under the MADANI administration. Budgets regularly touch the numbers this site calculates: PCB tax brackets and reliefs, sometimes EPF or SOCSO rates. Here's what's actually been said officially so far, and what hasn't.",
+      "## What the government has confirmed it's reviewing",
+      "The Ministry of Finance's Pre-Budget Statement, published 18 August 2026, explicitly names social protection as one of Budget 2027's ten focus areas. Its own wording: the government will \"reassess the adequacy and sustainability of Malaysia's social protection system, including coverage under the EPF, Social Security Organisation (SOCSO) and related schemes,\" with stated priority on \"extending protection to informal workers, gig workers and vulnerable groups.\" That's a direct, on-the-record signal that EPF and SOCSO coverage rules are under active review — not a rumour.",
+      "## What that does not tell you",
+      "A pre-budget statement sets discussion priorities; it doesn't fix numbers. Nothing in the official statement commits to a specific contribution rate, wage ceiling, or bracket change for EPF, SOCSO, EIS or PCB. Treat any specific percentage you see quoted online before 9 October as speculation, regardless of how confidently it's written — that includes speculation from us. We won't publish a number here until it's been announced.",
+      "## The pattern from past MADANI budgets",
+      "For context on how directly a budget can move these figures: the first MADANI Budget cut the resident personal income-tax rate by 2 percentage points for every income band from RM35,001 to RM100,000, worth up to RM1,300 a year to about 2.4 million taxpayers. The SOCSO/EIS wage ceiling rose from RM5,000 to RM6,000 in October 2024, and mandatory EPF for non-Malaysian employees began in October 2025. Budgets here have a real track record of changing take-home pay, not just headline policy.",
+      "## What we'll do when it's tabled",
+      "We check LHDN, KWSP and PERKESO directly against the actual Budget 2027 announcement on 9 October, and update every calculator on this site — PCB, EPF, SOCSO, EIS — the same day if anything statutory actually changes, sourced and verifiable, not copied from a headline. If nothing changes for a given rate, we leave it alone rather than manufacturing a reason to post about it.",
+    ],
+    relatedLinks: [
+      { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/rate-changes", label: "Rate Change History" },
+    ],
+  },
 ];

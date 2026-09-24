@@ -281,6 +281,9 @@ const ms: Dictionary = {
       "EPF untuk pekerja bukan warganegara Malaysia menjadi mandatori pada kadar 2% (pekerja) + 2% (majikan) bermula Oktober 2025 — sebelum ini tiada caruman EPF mandatori untuk pekerja asing.",
     changeSocsoCeiling:
       "Siling gaji SOCSO/EIS meningkat daripada RM5,000 kepada RM6,000 berkuat kuasa Oktober 2024, dan kekal pada RM6,000 sepanjang 2025 dan ke 2026.",
+    upcomingHeading: "Apa yang akan datang",
+    upcomingBudget2027:
+      "Belanjawan 2027 akan dibentangkan di Parlimen pada 9 Oktober 2026. Kenyataan Pra-Belanjawan rasmi Kementerian Kewangan (18 Ogos 2026) mengesahkan kerajaan akan \"menilai semula kecukupan dan kemampanan sistem perlindungan sosial Malaysia, termasuk perlindungan di bawah EPF, Pertubuhan Keselamatan Sosial (SOCSO) dan skim berkaitan,\" dengan keutamaan diberikan untuk memperluas perlindungan kepada pekerja gig dan tidak formal. Tiada perubahan kadar khusus disahkan lagi — kami akan mengemas kini setiap kalkulator di laman ini pada hari yang sama sebarang pengumuman rasmi dibuat.",
   },
   epfPage: {
     title: "Kalkulator EPF (KWSP)",

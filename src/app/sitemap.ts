@@ -19,7 +19,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/mortgage-calculator", lastModified: "2026-09-24" },
   { path: "/zakat-calculator", lastModified: "2026-09-23" },
   { path: "/bonus-calculator", lastModified: "2026-09-24" },
-  { path: "/rate-changes", lastModified: "2026-09-18" },
+  { path: "/rate-changes", lastModified: "2026-09-24" },
   { path: "/glossary", lastModified: "2026-09-24" },
   { path: "/faq", lastModified: "2026-09-18" },
   { path: "/guides", lastModified: "2026-09-20" },

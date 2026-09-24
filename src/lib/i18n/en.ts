@@ -280,6 +280,9 @@ const en = {
       "EPF for non-Malaysian employees became mandatory at 2% (employee) + 2% (employer) from October 2025 — previously there was no mandatory EPF contribution for foreign workers.",
     changeSocsoCeiling:
       "The SOCSO/EIS wage ceiling rose from RM5,000 to RM6,000 effective October 2024, and stayed at RM6,000 through 2025 and into 2026.",
+    upcomingHeading: "What's coming next",
+    upcomingBudget2027:
+      "Budget 2027 will be tabled in Parliament on 9 October 2026. The Ministry of Finance's official Pre-Budget Statement (18 August 2026) confirms the government will \"reassess the adequacy and sustainability of Malaysia's social protection system, including coverage under the EPF, Social Security Organisation (SOCSO) and related schemes,\" with priority given to extending protection to gig and informal workers. No specific rate changes have been confirmed yet — we'll update every calculator on this site the same day anything is officially announced.",
   },
   epfPage: {
     title: "EPF Calculator (KWSP)",
