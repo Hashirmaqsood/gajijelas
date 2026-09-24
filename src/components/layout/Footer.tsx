@@ -1,13 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
 import { SITE, TOOL_LINKS } from "@/lib/site";
-import { useLanguage } from "@/lib/i18n/context";
+import { useLanguage, translate, type Lang } from "@/lib/i18n/context";
 
 export default function Footer() {
   const rates = getRates(CURRENT_RATE_YEAR);
-  const { t } = useLanguage();
+  const pathname = usePathname();
+  const { lang: contextLang } = useLanguage();
+  const onMsPage = pathname === "/ms" || pathname.startsWith("/ms/");
+  const lang: Lang = onMsPage ? "ms" : contextLang;
+  const t = (path: string, vars?: Record<string, string | number>) => translate(lang, path, vars);
 
   const toolLabels: Record<string, string> = {
     "/": t("tools.fullCalcTitle"),
@@ -39,13 +44,16 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-foreground">{t("footer.toolsHeading")}</h3>
             <ul className="mt-3 space-y-2">
-              {TOOL_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-muted hover:text-brand">
-                    {toolLabels[link.href] ?? link.label}
-                  </Link>
-                </li>
-              ))}
+              {TOOL_LINKS.map((link) => {
+                const href = lang === "ms" ? (link.href === "/" ? "/ms" : `/ms${link.href}`) : link.href;
+                return (
+                  <li key={link.href}>
+                    <Link href={href} className="text-sm text-muted hover:text-brand">
+                      {toolLabels[link.href] ?? link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

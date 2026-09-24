@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import HtmlLangSync from "@/components/layout/HtmlLangSync";
 import { GoogleTagManagerScript, GoogleTagManagerNoscript } from "@/components/layout/Analytics";
 import { SITE } from "@/lib/site";
 import { LanguageProvider } from "@/lib/i18n/context";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <GoogleTagManagerScript />
       </head>
       <body className="min-h-full flex flex-col">
+        <HtmlLangSync />
         <GoogleTagManagerNoscript />
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-2 focus:rounded focus:bg-brand focus:px-3 focus:py-2 focus:text-white">
           Skip to content
@@ -52,7 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             never leaves your device. Please enable JavaScript to continue.
           </div>
         </noscript>
-        <LanguageProvider>
+        <LanguageProvider initialLang="en">
           <Header />
           <main id="main-content" className="flex-1">
             {children}

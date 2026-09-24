@@ -1,12 +1,42 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SITE } from "@/lib/site";
-import { useLanguage } from "@/lib/i18n/context";
+import { useLanguage, translate, type Lang } from "@/lib/i18n/context";
+import { getAlternatePath } from "@/lib/i18n/routes";
 
 function LangSwitch() {
-  const { lang, setLang } = useLanguage();
+  const pathname = usePathname();
+  const { lang: contextLang, setLang } = useLanguage();
+  const alternate = getAlternatePath(pathname);
+  const onMsPage = pathname === "/ms" || pathname.startsWith("/ms/");
+  const lang: Lang = onMsPage ? "ms" : contextLang;
+
+  if (alternate) {
+    const enHref = onMsPage ? alternate : pathname;
+    const msHref = onMsPage ? pathname : alternate;
+    return (
+      <div className="flex items-center rounded-full border border-border bg-background p-0.5 text-xs font-semibold">
+        <Link
+          href={enHref}
+          aria-pressed={lang === "en"}
+          className={`rounded-full px-2.5 py-1 transition ${lang === "en" ? "bg-brand text-white shadow-sm" : "text-muted hover:text-foreground"}`}
+        >
+          EN
+        </Link>
+        <Link
+          href={msHref}
+          aria-pressed={lang === "ms"}
+          className={`rounded-full px-2.5 py-1 transition ${lang === "ms" ? "bg-brand text-white shadow-sm" : "text-muted hover:text-foreground"}`}
+        >
+          BM
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center rounded-full border border-border bg-background p-0.5 text-xs font-semibold">
       <button
@@ -31,10 +61,14 @@ function LangSwitch() {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const { t } = useLanguage();
+  const pathname = usePathname();
+  const { lang: contextLang } = useLanguage();
+  const onMsPage = pathname === "/ms" || pathname.startsWith("/ms/");
+  const lang: Lang = onMsPage ? "ms" : contextLang;
+  const t = (path: string, vars?: Record<string, string | number>) => translate(lang, path, vars);
 
   const links = [
-    { href: "/", label: t("nav.salaryCalculator") },
+    { href: lang === "ms" ? "/ms" : "/", label: t("nav.salaryCalculator") },
     { href: "/compare", label: t("nav.compareOffers") },
     { href: "/guides", label: t("nav.guides") },
     { href: "/faq", label: t("nav.faq") },

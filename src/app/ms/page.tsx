@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import HomeContent from "./HomeContent";
+import HomeContent from "@/app/HomeContent";
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Malaysia Salary Calculator — Net Pay, EPF, SOCSO & PCB",
+  title: "Kalkulator Gaji Malaysia — Gaji Bawa Balik Sebenar",
   description:
-    "Free net salary calculator for Malaysia — see your exact take-home pay after EPF, SOCSO, EIS and PCB deductions, using official KWSP, PERKESO and LHDN rates.",
+    "Masukkan gaji kasar anda sekali dan lihat gaji bersih sebenar selepas EPF, SOCSO, EIS dan PCB — dikira terus dalam pelayar anda, setiap Ringgit dijelaskan.",
   alternates: {
-    canonical: "/",
+    canonical: "/ms",
     languages: {
       "en-MY": "https://gajijelas.com/",
       "ms-MY": "https://gajijelas.com/ms",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+export default function MsHomePage() {
   const rates = getRates(CURRENT_RATE_YEAR);
 
   const jsonLd = {
@@ -26,8 +26,8 @@ export default function HomePage() {
     name: SITE.name,
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
-    url: SITE.url,
-    description: SITE.description,
+    url: `${SITE.url}/ms`,
+    description: metadata.description,
     offers: { "@type": "Offer", price: "0", priceCurrency: "MYR" },
   };
 

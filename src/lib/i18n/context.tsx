@@ -26,6 +26,13 @@ function interpolate(template: string, vars?: Vars): string {
   return template.replace(/\{(\w+)\}/g, (match, key) => (key in vars ? String(vars[key]) : match));
 }
 
+// Standalone translator usable outside the React context (e.g. by Header/Footer,
+// which render above any per-route locale override and must derive their own
+// language from the URL rather than from ambient context).
+export function translate(lang: Lang, path: string, vars?: Vars): string {
+  return interpolate(getByPath(DICTIONARIES[lang], path), vars);
+}
+
 interface LanguageContextValue {
   lang: Lang;
   setLang: (lang: Lang) => void;
@@ -34,20 +41,37 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+export function LanguageProvider({
+  children,
+  initialLang = "en",
+  respectStoredPreference = true,
+}: {
+  children: ReactNode;
+  /** Server-known starting language — e.g. "ms" for pages under /ms. */
+  initialLang?: Lang;
+  /**
+   * Whether a previously-stored preference (from the instant EN/BM toggle on
+   * non-localized pages) is allowed to override initialLang on mount. Pages
+   * with a real per-language URL (under /ms) must stay authoritative to that
+   * URL, so they pass false here — otherwise a stale "en" preference could
+   * flip a /ms page's content back to English after hydration.
+   */
+  respectStoredPreference?: boolean;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   useEffect(() => {
+    if (!respectStoredPreference) return;
     // One-time sync from localStorage on mount (server has no localStorage,
-    // so the initial render must default to "en" and reconcile client-side).
+    // so the initial render must default to initialLang and reconcile client-side).
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       // eslint-disable-next-line react-hooks/set-state-in-effect
       if (stored === "en" || stored === "ms") setLangState(stored);
     } catch {
-      // localStorage unavailable (private mode, etc.) — default to English.
+      // localStorage unavailable (private mode, etc.) — default to initialLang.
     }
-  }, []);
+  }, [respectStoredPreference]);
 
   const setLang = (next: Lang) => {
     setLangState(next);

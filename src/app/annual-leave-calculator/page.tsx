@@ -19,7 +19,14 @@ const FAQ = [
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/annual-leave-calculator" },
+  alternates: {
+    canonical: "/annual-leave-calculator",
+    languages: {
+      "en-MY": "https://gajijelas.com/annual-leave-calculator",
+      "ms-MY": "https://gajijelas.com/ms/annual-leave-calculator",
+      "x-default": "https://gajijelas.com/annual-leave-calculator",
+    },
+  },
 };
 
 export default function Page() {

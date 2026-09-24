@@ -19,7 +19,14 @@ const FAQ = [
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/overtime-calculator" },
+  alternates: {
+    canonical: "/overtime-calculator",
+    languages: {
+      "en-MY": "https://gajijelas.com/overtime-calculator",
+      "ms-MY": "https://gajijelas.com/ms/overtime-calculator",
+      "x-default": "https://gajijelas.com/overtime-calculator",
+    },
+  },
 };
 
 export default function Page() {

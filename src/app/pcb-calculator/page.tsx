@@ -19,7 +19,14 @@ const FAQ = [
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/pcb-calculator" },
+  alternates: {
+    canonical: "/pcb-calculator",
+    languages: {
+      "en-MY": "https://gajijelas.com/pcb-calculator",
+      "ms-MY": "https://gajijelas.com/ms/pcb-calculator",
+      "x-default": "https://gajijelas.com/pcb-calculator",
+    },
+  },
 };
 
 export default function Page() {

@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import BonusClient from "./BonusClient";
+import BonusClient from "@/app/bonus-calculator/BonusClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Bonus Tax Calculator Malaysia | Net Bonus After PCB & EPF";
-const DESCRIPTION =
-  "Free bonus calculator for Malaysia — see your real net bonus after the extra EPF and PCB tax a one-off bonus triggers.";
+const TITLE = "Kalkulator Cukai Bonus Malaysia";
+const DESCRIPTION = "Lihat berapa sebenarnya bonus anda selepas EPF dan cukai PCB tambahan yang dicetuskannya — bukan sekadar angka kasar.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: {
-    canonical: "/bonus-calculator",
+    canonical: "/ms/bonus-calculator",
     languages: {
       "en-MY": "https://gajijelas.com/bonus-calculator",
       "ms-MY": "https://gajijelas.com/ms/bonus-calculator",
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <script {...jsonLdScriptProps(calculatorJsonLd(TITLE, DESCRIPTION, "/bonus-calculator"))} />
+      <script {...jsonLdScriptProps(calculatorJsonLd(TITLE, DESCRIPTION, "/ms/bonus-calculator"))} />
       <BonusClient />
     </>
   );

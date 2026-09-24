@@ -19,7 +19,14 @@ const FAQ = [
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/socso-calculator" },
+  alternates: {
+    canonical: "/socso-calculator",
+    languages: {
+      "en-MY": "https://gajijelas.com/socso-calculator",
+      "ms-MY": "https://gajijelas.com/ms/socso-calculator",
+      "x-default": "https://gajijelas.com/socso-calculator",
+    },
+  },
 };
 
 export default function Page() {

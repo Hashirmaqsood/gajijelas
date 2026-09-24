@@ -25,6 +25,20 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/guides", lastModified: "2026-09-20" },
   { path: "/about", lastModified: "2026-09-18" },
   { path: "/privacy-policy", lastModified: "2026-09-18" },
+  // Malay versions (Phase 1: homepage + calculators only — guides aren't
+  // translated yet).
+  { path: "/ms", lastModified: "2026-09-24" },
+  { path: "/ms/epf-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/epf-retirement-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/epf-account-split-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/socso-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/pcb-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/hourly-rate-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/overtime-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/annual-leave-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/mortgage-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/zakat-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/bonus-calculator", lastModified: "2026-09-24" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

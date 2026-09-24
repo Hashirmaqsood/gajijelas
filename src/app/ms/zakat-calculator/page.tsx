@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import ZakatClient from "./ZakatClient";
+import ZakatClient from "@/app/zakat-calculator/ZakatClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Zakat Pendapatan Calculator Malaysia 2026 | Income Zakat";
-const DESCRIPTION =
-  "Free zakat pendapatan (income zakat) calculator for Malaysia — 2.5% of annual income once it meets your state's nisab threshold, which you can adjust.";
+const TITLE = "Kalkulator Zakat Pendapatan Malaysia";
+const DESCRIPTION = "Anggarkan zakat pendapatan anda — 2.5% daripada pendapatan tahunan sebaik mencapai paras nisab, menggunakan kaedah rasmi seperti PPZ-MAIWP.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: {
-    canonical: "/zakat-calculator",
+    canonical: "/ms/zakat-calculator",
     languages: {
       "en-MY": "https://gajijelas.com/zakat-calculator",
       "ms-MY": "https://gajijelas.com/ms/zakat-calculator",
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <script {...jsonLdScriptProps(calculatorJsonLd(TITLE, DESCRIPTION, "/zakat-calculator"))} />
+      <script {...jsonLdScriptProps(calculatorJsonLd(TITLE, DESCRIPTION, "/ms/zakat-calculator"))} />
       <ZakatClient />
     </>
   );

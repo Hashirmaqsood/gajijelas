@@ -19,7 +19,14 @@ const FAQ = [
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/hourly-rate-calculator" },
+  alternates: {
+    canonical: "/hourly-rate-calculator",
+    languages: {
+      "en-MY": "https://gajijelas.com/hourly-rate-calculator",
+      "ms-MY": "https://gajijelas.com/ms/hourly-rate-calculator",
+      "x-default": "https://gajijelas.com/hourly-rate-calculator",
+    },
+  },
 };
 
 export default function Page() {

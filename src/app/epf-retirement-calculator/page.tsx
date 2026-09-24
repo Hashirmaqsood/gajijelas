@@ -20,7 +20,14 @@ const FAQ = [
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/epf-retirement-calculator" },
+  alternates: {
+    canonical: "/epf-retirement-calculator",
+    languages: {
+      "en-MY": "https://gajijelas.com/epf-retirement-calculator",
+      "ms-MY": "https://gajijelas.com/ms/epf-retirement-calculator",
+      "x-default": "https://gajijelas.com/epf-retirement-calculator",
+    },
+  },
 };
 
 export default function Page() {
