@@ -99,7 +99,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "epf-withdrawal-rules-malaysia",
-    title: "EPF Withdrawal Rules: What You Can (and Can't) Take Out Early",
+    title: "EPF Withdrawal Rules: What You Can Take Out Early",
     description: "Your EPF savings aren't fully locked until 55 — here's exactly which accounts you can tap into earlier, and under what conditions.",
     publishedDate: "2026-09-20",
     body: [
@@ -149,7 +149,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "real-cost-of-hiring-in-malaysia",
-    title: "The Real Cost of Hiring: What Employers Pay Beyond Salary in Malaysia",
+    title: "The Real Cost of Hiring: What Employers Pay Beyond Salary",
     description: "The salary you offer isn't what the hire actually costs you. A breakdown of the statutory contributions every Malaysian employer pays on top of gross pay.",
     publishedDate: "2026-06-25",
     body: [
@@ -173,7 +173,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "epf-socso-eis-foreign-workers-2025-changes",
-    title: "EPF, SOCSO and EIS for Foreign Workers: The 2025 Rule Changes Explained",
+    title: "EPF, SOCSO and EIS for Foreign Workers: 2025 Rule Changes",
     description: "Mandatory EPF for foreign employees is new as of October 2025. Here's what actually changed, what didn't, and what employers need to update in payroll.",
     publishedDate: "2026-07-18",
     body: [
@@ -197,7 +197,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "malaysia-income-tax-rate-brackets-explained",
-    title: "Malaysia Income Tax Rate 2026: Brackets, Rebates and Filing Deadline",
+    title: "Malaysia Income Tax Rate 2026: Brackets, Rebates & Deadline",
     description: "Malaysia's tax rate is progressive, not flat — here's exactly how the brackets work, what the RM400 rebate actually requires, and when your return is due.",
     publishedDate: "2026-08-05",
     body: [
@@ -222,7 +222,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "epf-employer-contribution-guide-malaysia",
-    title: "EPF Employer Contribution: Rates, Deadlines and Registration Every Malaysian Employer Must Know",
+    title: "EPF Employer Contribution: Rates, Deadlines and Registration",
     description: "Registering, calculating and paying EPF as an employer — the rates, the 15th-of-the-month deadline, and what happens if you miss it.",
     publishedDate: "2026-09-21",
     body: [
@@ -248,7 +248,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "lindung-24-jam-socso-new-scheme-2026",
-    title: "LINDUNG 24 Jam Explained: PERKESO's New Non-Work Accident Scheme",
+    title: "LINDUNG 24 Jam Explained: PERKESO's New Accident Scheme",
     description: "A new SOCSO scheme launched 1 June 2026 covers accidents outside work too — here's the phased rate, who it's mandatory for, and who can opt in.",
     publishedDate: "2026-09-23",
     body: [
