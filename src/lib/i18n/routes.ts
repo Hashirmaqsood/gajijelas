@@ -14,6 +14,7 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/mortgage-calculator", "/ms/mortgage-calculator"],
   ["/zakat-calculator", "/ms/zakat-calculator"],
   ["/bonus-calculator", "/ms/bonus-calculator"],
+  ["/payslip-generator", "/ms/payslip-generator"],
 ];
 
 /** Returns the other-language URL for a localized page, or null if this path has no counterpart. */

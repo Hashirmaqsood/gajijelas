@@ -1,8 +1,10 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import en, { type Dictionary } from "./en";
 import ms from "./ms";
+import { getAlternatePath } from "./routes";
 
 export type Lang = "en" | "ms";
 
@@ -59,11 +61,28 @@ export function LanguageProvider({
   respectStoredPreference?: boolean;
 }) {
   const [lang, setLangState] = useState<Lang>(initialLang);
+  const pathname = usePathname();
+  // A page with a real per-language URL (either side of the pair) must stay
+  // authoritative to that URL — otherwise a stale toggle preference from an
+  // earlier visit to a non-localized page could silently show Malay content
+  // under an English URL (or vice versa), which defeats the point of giving
+  // each language its own indexable URL.
+  const onLocalizedPage = getAlternatePath(pathname) !== null;
 
   useEffect(() => {
+    if (onLocalizedPage) {
+      // Force the URL's language even if a client-side navigation carried
+      // over an in-memory "lang" from an instant toggle on a non-localized
+      // page earlier in the session — the URL is authoritative here.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLangState(initialLang);
+      return;
+    }
     if (!respectStoredPreference) return;
-    // One-time sync from localStorage on mount (server has no localStorage,
-    // so the initial render must default to initialLang and reconcile client-side).
+    // Sync from localStorage (server has no localStorage, so the initial
+    // render must default to initialLang and reconcile client-side; this
+    // also re-applies the stored preference when navigating back to a
+    // non-localized page after visiting a localized one).
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -71,7 +90,7 @@ export function LanguageProvider({
     } catch {
       // localStorage unavailable (private mode, etc.) — default to initialLang.
     }
-  }, [respectStoredPreference]);
+  }, [pathname, onLocalizedPage, respectStoredPreference, initialLang]);
 
   const setLang = (next: Lang) => {
     setLangState(next);

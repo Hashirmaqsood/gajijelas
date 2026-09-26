@@ -27,6 +27,7 @@ export default function Footer() {
     "/hourly-rate-calculator": t("tools.hourlyTitle"),
     "/overtime-calculator": t("tools.overtimeTitle"),
     "/annual-leave-calculator": t("tools.leaveTitle"),
+    "/payslip-generator": t("tools.payslipTitle"),
   };
 
   return (

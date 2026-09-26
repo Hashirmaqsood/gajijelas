@@ -27,4 +27,5 @@ export const TOOL_LINKS = [
   { href: "/mortgage-calculator", label: "Mortgage Calculator", description: "Home loan installment and Debt Service Ratio against your take-home pay." },
   { href: "/zakat-calculator", label: "Zakat Pendapatan Calculator", description: "Estimate your income zakat against an adjustable nisab threshold." },
   { href: "/bonus-calculator", label: "Bonus Tax Calculator", description: "See your net bonus after the extra EPF and PCB it triggers." },
+  { href: "/payslip-generator", label: "Payslip Generator", description: "Create an itemised payslip with EPF, SOCSO, EIS and PCB correctly worked out." },
 ] as const;

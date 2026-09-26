@@ -19,6 +19,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/mortgage-calculator", lastModified: "2026-09-24" },
   { path: "/zakat-calculator", lastModified: "2026-09-23" },
   { path: "/bonus-calculator", lastModified: "2026-09-24" },
+  { path: "/payslip-generator", lastModified: "2026-09-24" },
   { path: "/rate-changes", lastModified: "2026-09-24" },
   { path: "/glossary", lastModified: "2026-09-24" },
   { path: "/faq", lastModified: "2026-09-18" },
@@ -39,6 +40,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/ms/mortgage-calculator", lastModified: "2026-09-24" },
   { path: "/ms/zakat-calculator", lastModified: "2026-09-24" },
   { path: "/ms/bonus-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/payslip-generator", lastModified: "2026-09-24" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

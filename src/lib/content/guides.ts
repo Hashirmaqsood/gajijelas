@@ -145,6 +145,7 @@ export const GUIDES: Guide[] = [
       { href: "/", label: "Full Salary Calculator" },
       { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
       { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/payslip-generator", label: "Payslip Generator" },
     ],
   },
   {
@@ -169,6 +170,7 @@ export const GUIDES: Guide[] = [
       { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
       { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
       { href: "/guides/epf-employer-contribution-guide-malaysia", label: "EPF Employer Contribution Guide" },
+      { href: "/payslip-generator", label: "Payslip Generator" },
     ],
   },
   {

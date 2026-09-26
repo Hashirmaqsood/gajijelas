@@ -214,6 +214,8 @@ const ms: Dictionary = {
     overtimeDesc: "Kadar hari biasa, hari rehat dan cuti umum.",
     leaveTitle: "Kalkulator Cuti Tahunan",
     leaveDesc: "Kelayakan dan pro-rata di bawah Akta Kerja.",
+    payslipTitle: "Penjana Slip Gaji",
+    payslipDesc: "Hasilkan slip gaji terperinci dengan EPF, SOCSO, EIS dan PCB dikira dengan betul.",
   },
   compare: {
     title: "Bandingkan Dua Tawaran Gaji",
@@ -586,6 +588,49 @@ const ms: Dictionary = {
     aboutTitle: "Mengapa bonus memotong lebih daripada biasa",
     aboutBody:
       "Tiada 'kadar cukai bonus' khas di Malaysia — bonus dikenakan cukai pada kadar progresif yang sama seperti gaji anda. Ia kelihatan seperti lebih banyak dipotong kerana kaedah formula LHDN menahan keseluruhan cukai tahunan tambahan yang disebabkan oleh bonus itu dalam bulan tersebut sahaja, bukannya diagihkan sepanjang tahun. EPF juga dikenakan ke atas bonus (bahagian anda dan majikan), tidak seperti SOCSO dan EIS yang mengecualikan bonus sepenuhnya.",
+  },
+  payslipPage: {
+    title: "Penjana Slip Gaji",
+    intro:
+      "Hasilkan slip gaji terperinci Malaysia — gaji asas, elaun, EPF, SOCSO, EIS dan PCB dikira dan dijumlahkan dengan betul, sedia untuk pratonton atau dimuat turun sebagai PDF.",
+    employerHeading: "Butiran majikan",
+    employerName: "Nama majikan / syarikat",
+    employerNamePlaceholder: "cth. Contoso Sdn Bhd",
+    employeeHeading: "Butiran pekerja",
+    employeeName: "Nama pekerja",
+    employeeNamePlaceholder: "cth. Ahmad bin Ali",
+    employeeId: "ID Pekerja (pilihan)",
+    employeeIdPlaceholder: "cth. EMP-0042",
+    payPeriod: "Tempoh gaji",
+    payPeriodYear: "Tahun",
+    earningsHeading: "Pendapatan",
+    basicSalary: "Gaji asas",
+    allowances: "Elaun tetap (pilihan)",
+    allowancesHint: "Perumahan, pengangkutan, dll. — ditambah pada gaji asas untuk tujuan EPF/SOCSO/EIS/PCB",
+    previewHeading: "Pratonton slip gaji",
+    payslipTitle: "SLIP GAJI",
+    employerLabel: "Majikan",
+    employeeLabel: "Pekerja",
+    employeeIdLabel: "ID Pekerja",
+    periodLabel: "Tempoh gaji",
+    earningsCol: "Pendapatan",
+    amountCol: "Jumlah",
+    deductionsCol: "Potongan",
+    grossPay: "Gaji kasar",
+    totalDeductions: "Jumlah potongan",
+    netPay: "Gaji bersih",
+    employerContributionsHeading: "Caruman majikan (tidak dipotong daripada pekerja)",
+    totalEmployerContributions: "Jumlah caruman majikan",
+    downloadButton: "Muat Turun Slip Gaji PDF",
+    disclaimer:
+      "Dokumen ini dijana daripada angka yang anda masukkan dan tidak secara automatik menjadikannya slip gaji yang patuh — anda bertanggungjawab menyemaknya berbanding keperluan Akta Kerja 1955 (Seksyen 25A) dan rekod penggajian anda sendiri sebelum mengeluarkannya. Majikan mesti menyimpan rekod slip gaji sekurang-kurangnya 6 tahun di bawah Seksyen 60A.",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Apa yang mesti ada pada slip gaji Malaysia dari segi undang-undang?",
+    faqA1:
+      "Di bawah Seksyen 25A Akta Kerja 1955, slip gaji mesti menunjukkan butiran majikan, nama dan pengenalan pekerja, tempoh gaji, pecahan terperinci pendapatan (gaji asas, elaun, lebih masa, bonus), pecahan terperinci potongan statutori dan lain-lain (EPF, SOCSO, EIS, PCB, dan lain-lain), serta gaji bersih akhir. Slip gaji digital atau PDF boleh diterima selagi ia tepat dan boleh diakses oleh pekerja.",
+    faqQ2: "Adakah ini slip gaji yang sah dari segi undang-undang untuk saya keluarkan kepada pekerja?",
+    faqA2:
+      "Alat ini mengira angka EPF, SOCSO, EIS dan PCB yang betul dan menyusunnya dalam format slip gaji standard, tetapi anda bertanggungjawab mengesahkan butiran itu tepat dan lengkap untuk pekerja khusus anda sebelum mengeluarkannya — termasuk menyemak rekod sistem penggajian anda sepadan. Ia dibina untuk menghapuskan ralat pengiraan, bukan untuk menggantikan keseluruhan proses pematuhan penggajian anda.",
   },
 };
 

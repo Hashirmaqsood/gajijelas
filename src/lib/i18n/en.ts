@@ -213,6 +213,8 @@ const en = {
     overtimeDesc: "Normal day, rest day and public holiday OT rates.",
     leaveTitle: "Annual Leave Calculator",
     leaveDesc: "Entitlement and pro-rating under the Employment Act.",
+    payslipTitle: "Payslip Generator",
+    payslipDesc: "Create an itemised payslip with EPF, SOCSO, EIS and PCB correctly worked out.",
   },
   compare: {
     title: "Compare Two Salary Offers",
@@ -585,6 +587,49 @@ const en = {
     aboutTitle: "Why a bonus deducts more than usual",
     aboutBody:
       "There's no special 'bonus tax rate' in Malaysia — a bonus is taxed at the exact same progressive rates as your salary. It looks like more is deducted because LHDN's formula method withholds the entire extra annual tax the bonus causes in that single month, rather than spreading it across the year. EPF also applies to bonuses (both your and your employer's share), unlike SOCSO and EIS, which exclude bonuses entirely.",
+  },
+  payslipPage: {
+    title: "Payslip Generator",
+    intro:
+      "Create an itemised Malaysian payslip — basic salary, allowances, EPF, SOCSO, EIS and PCB correctly worked out and totalled, ready to preview or download as a PDF.",
+    employerHeading: "Employer details",
+    employerName: "Employer / company name",
+    employerNamePlaceholder: "e.g. Contoso Sdn Bhd",
+    employeeHeading: "Employee details",
+    employeeName: "Employee name",
+    employeeNamePlaceholder: "e.g. Ahmad bin Ali",
+    employeeId: "Employee ID (optional)",
+    employeeIdPlaceholder: "e.g. EMP-0042",
+    payPeriod: "Pay period",
+    payPeriodYear: "Year",
+    earningsHeading: "Earnings",
+    basicSalary: "Basic salary",
+    allowances: "Fixed allowances (optional)",
+    allowancesHint: "Housing, transport, etc. — added to basic salary for EPF/SOCSO/EIS/PCB purposes",
+    previewHeading: "Payslip preview",
+    payslipTitle: "PAYSLIP",
+    employerLabel: "Employer",
+    employeeLabel: "Employee",
+    employeeIdLabel: "Employee ID",
+    periodLabel: "Pay period",
+    earningsCol: "Earnings",
+    amountCol: "Amount",
+    deductionsCol: "Deductions",
+    grossPay: "Gross pay",
+    totalDeductions: "Total deductions",
+    netPay: "Net pay",
+    employerContributionsHeading: "Employer contributions (not deducted from employee)",
+    totalEmployerContributions: "Total employer contributions",
+    downloadButton: "Download Payslip PDF",
+    disclaimer:
+      "This document is generated from the figures you enter and is not automatically a compliant payslip — you're responsible for checking it against the Employment Act 1955 (Section 25A) requirements and your own payroll records before issuing it. Employers must retain payslip records for at least 6 years under Section 60A.",
+    faqTitle: "Frequently asked questions",
+    faqQ1: "What must a Malaysian payslip legally include?",
+    faqA1:
+      "Under Section 25A of the Employment Act 1955, a payslip must show the employer's details, the employee's name and identification, the pay period, an itemised breakdown of earnings (basic salary, allowances, overtime, bonuses), an itemised breakdown of statutory and other deductions (EPF, SOCSO, EIS, PCB, and any others), and the final net pay. A digital or PDF payslip is acceptable as long as it's accurate and accessible to the employee.",
+    faqQ2: "Is this a legally valid payslip I can just issue to employees?",
+    faqA2:
+      "This tool calculates the correct EPF, SOCSO, EIS and PCB figures and lays them out in standard payslip format, but you're responsible for verifying the details are accurate and complete for your specific employee before issuing it — including checking your payroll system's records match. It's built to remove the arithmetic error, not to replace your payroll compliance process entirely.",
   },
 };
 
