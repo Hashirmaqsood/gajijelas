@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import GlossaryList from "./GlossaryList";
+import { glossaryJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
+import { GLOSSARY } from "@/lib/content/glossary";
 
 export const metadata: Metadata = {
-  title: "Glossary — EPF, SOCSO, EIS, PCB Explained",
-  description: "Plain-language definitions of Malaysian payroll and tax terms: EPF, SOCSO, EIS, PCB, gross vs net pay, chargeable income, tax relief and more.",
+  title: "Malaysia Payroll & Tax Glossary — EPF, SOCSO, PCB Terms",
+  description:
+    "Simple definitions for every Malaysian payroll and tax term — basic salary, gross vs net pay, EPF, SOCSO, EIS, PCB, chargeable income, tax relief and more.",
   alternates: { canonical: "/glossary" },
 };
 
 export default function GlossaryPage() {
-  return <GlossaryList />;
+  return (
+    <>
+      <script {...jsonLdScriptProps(glossaryJsonLd(GLOSSARY, "/glossary"))} />
+      <GlossaryList />
+    </>
+  );
 }

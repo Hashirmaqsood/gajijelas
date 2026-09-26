@@ -41,6 +41,20 @@ export function faqPageJsonLd(items: { q: string; a: string }[]) {
   };
 }
 
+export function glossaryJsonLd(terms: { term: string; definition: string }[], path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    name: "Malaysian Payroll & Tax Glossary",
+    url: `${SITE.url}${path}`,
+    hasDefinedTerm: terms.map((t) => ({
+      "@type": "DefinedTerm",
+      name: t.term,
+      description: t.definition,
+    })),
+  };
+}
+
 export function jsonLdScriptProps(data: object) {
   return { type: "application/ld+json" as const, dangerouslySetInnerHTML: { __html: JSON.stringify(data) } };
 }

@@ -21,7 +21,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/bonus-calculator", lastModified: "2026-09-24" },
   { path: "/payslip-generator", lastModified: "2026-09-24" },
   { path: "/rate-changes", lastModified: "2026-09-24" },
-  { path: "/glossary", lastModified: "2026-09-24" },
+  { path: "/glossary", lastModified: "2026-09-26" },
   { path: "/faq", lastModified: "2026-09-18" },
   { path: "/guides", lastModified: "2026-09-20" },
   { path: "/about", lastModified: "2026-09-18" },
