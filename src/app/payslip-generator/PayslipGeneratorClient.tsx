@@ -11,14 +11,7 @@ import { DEFAULT_SALARY_INPUT, type AgeGroup, type MaritalStatus, type Nationali
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
 import { formatRM } from "@/lib/format";
 import { useLanguage } from "@/lib/i18n/context";
-
-function monthOptions(lang: "en" | "ms") {
-  const formatter = new Intl.DateTimeFormat(lang === "ms" ? "ms-MY" : "en-MY", { month: "long" });
-  return Array.from({ length: 12 }, (_, i) => {
-    const value = String(i + 1).padStart(2, "0");
-    return { value, label: formatter.format(new Date(2026, i, 1)) };
-  });
-}
+import { monthOptions } from "@/lib/i18n/months";
 
 export default function PayslipGeneratorClient() {
   const { t, lang } = useLanguage();

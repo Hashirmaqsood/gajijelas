@@ -216,6 +216,10 @@ const ms: Dictionary = {
     leaveDesc: "Kelayakan dan pro-rata di bawah Akta Kerja.",
     payslipTitle: "Penjana Slip Gaji",
     payslipDesc: "Hasilkan slip gaji terperinci dengan EPF, SOCSO, EIS dan PCB dikira dengan betul.",
+    proratedTitle: "Kalkulator Gaji Pro-rata",
+    proratedDesc: "Kira gaji bulan tidak lengkap untuk mula kerja pertengahan bulan, peletakan jawatan atau cuti tanpa gaji.",
+    incrementTitle: "Kalkulator Kenaikan Gaji",
+    incrementDesc: "Lihat gaji baharu anda selepas kenaikan, mengikut peratusan atau jumlah tetap, berserta unjuran berbilang tahun.",
   },
   compare: {
     title: "Bandingkan Dua Tawaran Gaji",
@@ -631,6 +635,57 @@ const ms: Dictionary = {
     faqQ2: "Adakah ini slip gaji yang sah dari segi undang-undang untuk saya keluarkan kepada pekerja?",
     faqA2:
       "Alat ini mengira angka EPF, SOCSO, EIS dan PCB yang betul dan menyusunnya dalam format slip gaji standard, tetapi anda bertanggungjawab mengesahkan butiran itu tepat dan lengkap untuk pekerja khusus anda sebelum mengeluarkannya — termasuk menyemak rekod sistem penggajian anda sepadan. Ia dibina untuk menghapuskan ralat pengiraan, bukan untuk menggantikan keseluruhan proses pematuhan penggajian anda.",
+  },
+  proratedPage: {
+    title: "Kalkulator Gaji Pro-rata",
+    intro:
+      "Kira dengan tepat berapa yang anda berhak terima untuk bulan tidak lengkap — mula bekerja pertengahan bulan, meletak jawatan awal, atau cuti tanpa gaji — menggunakan formula sebenar Akta Kerja, bukan anggaran kasar.",
+    monthLabel: "Bulan",
+    yearLabel: "Tahun",
+    daysWorked: "Bilangan hari bekerja dalam tempoh ini",
+    daysWorkedHint: "cth. jika anda mula bekerja pada 16hb dalam bulan 30 hari, anda bekerja 15 hari",
+    daysInMonth: "Bilangan hari dalam {month} {year}",
+    resultsTitle: "Apa yang anda berhak terima",
+    statutoryLabel: "Jumlah statutori (formula Akta Kerja)",
+    statutoryHint: "Gaji bulanan ÷ bilangan hari sebenar dalam bulan × hari bekerja",
+    comparisonTitle: "Bagaimana ini dibandingkan dengan kaedah pintasan biasa",
+    flat26Label: "Jika pembahagi tetap 26 hari digunakan",
+    flat30Label: "Jika pembahagi tetap 30 hari digunakan",
+    comparisonNote:
+      "Majikan boleh menggunakan pembahagi tetap seperti 26 atau 30 sebagai gantinya, tetapi hanya jika ia membayar anda jumlah yang sama atau lebih daripada formula hari kalendar statutori — tidak pernah kurang.",
+    aboutTitle: "Formula di sebalik ini",
+    aboutBody:
+      "Di bawah Seksyen 18A Akta Kerja 1955 (dibaca bersama Seksyen 60I(2)), gaji bulan tidak lengkap dikira sebagai: gaji bulanan ÷ bilangan hari sebenar dalam bulan kalendar itu × bilangan hari bekerja. Pembahagi bukan nombor tetap — ia berubah antara 28, 29, 30 dan 31 bergantung pada bulan sebenar.",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Adakah majikan saya dibenarkan menggunakan pembahagi tetap 30 hari sebagai gantinya?",
+    faqA1:
+      "Ya, tetapi hanya jika hasilnya sama atau lebih baik daripada formula hari kalendar statutori. Pembahagi tetap yang membayar anda kurang daripada jumlah statutori untuk bulan tertentu itu tidak patuh, walaupun ia tertulis dalam kontrak anda.",
+    faqQ2: "Adakah ini terpakai untuk bulan penuh yang saya bekerja sepenuhnya?",
+    faqA2:
+      "Tidak — bulan kalendar penuh yang dikerjakan sepenuhnya dibayar pada gaji bulanan penuh anda tanpa mengira sama ada bulan itu ada 28, 30 atau 31 hari. Pro-rata hanya terpakai apabila anda dibayar untuk kurang daripada keseluruhan tempoh.",
+  },
+  incrementPage: {
+    title: "Kalkulator Kenaikan Gaji",
+    intro:
+      "Lihat dengan tepat berapa lebih yang akan anda bawa pulang selepas kenaikan gaji — mengikut peratusan atau jumlah tetap — berserta unjuran berbilang tahun jika kenaikan yang sama berulang.",
+    currentSalary: "Gaji bulanan semasa",
+    incrementMode: "Jenis kenaikan",
+    modePercent: "Peratusan",
+    modeAmount: "Jumlah tetap",
+    incrementPercent: "Peratusan kenaikan",
+    incrementAmount: "Jumlah kenaikan",
+    projectionYears: "Unjurkan ke hadapan (tahun)",
+    resultsTitle: "Gaji baharu anda",
+    newSalary: "Gaji bulanan baharu",
+    increaseAmount: "Kenaikan bulanan",
+    increasePercent: "Itu adalah kenaikan sebanyak",
+    annualIncreaseAmount: "Pendapatan tambahan setahun",
+    projectionTitle: "Jika kenaikan ini berulang setiap tahun",
+    projectionYearCol: "Tahun",
+    projectionSalaryCol: "Gaji bulanan",
+    aboutTitle: "Peratusan berbanding jumlah tetap",
+    aboutBody:
+      "Kenaikan berperatusan berkompaun — kenaikan 5% pada gaji lebih tinggi bernilai lebih banyak Ringgit berbanding 5% yang sama pada gaji lebih rendah, itulah sebabnya peratusan kenaikan yang sama menghasilkan lonjakan Ringgit lebih besar setiap tahun dalam unjuran di bawah. Kenaikan jumlah tetap kekal sama dari segi Ringgit setiap kali, jadi ia mengecil sebagai peratusan gaji yang sudah lebih tinggi.",
   },
 };
 

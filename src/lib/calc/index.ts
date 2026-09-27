@@ -13,3 +13,5 @@ export * from "./epfAccountSplit";
 export * from "./mortgage";
 export * from "./zakat";
 export * from "./bonusImpact";
+export * from "./prorated";
+export * from "./salaryIncrement";

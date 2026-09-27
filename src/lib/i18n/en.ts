@@ -215,6 +215,10 @@ const en = {
     leaveDesc: "Entitlement and pro-rating under the Employment Act.",
     payslipTitle: "Payslip Generator",
     payslipDesc: "Create an itemised payslip with EPF, SOCSO, EIS and PCB correctly worked out.",
+    proratedTitle: "Prorated Salary Calculator",
+    proratedDesc: "Work out partial-month pay for a mid-month start, resignation or unpaid leave.",
+    incrementTitle: "Salary Increment Calculator",
+    incrementDesc: "See your new salary after a raise, by percentage or fixed amount, with a multi-year projection.",
   },
   compare: {
     title: "Compare Two Salary Offers",
@@ -630,6 +634,57 @@ const en = {
     faqQ2: "Is this a legally valid payslip I can just issue to employees?",
     faqA2:
       "This tool calculates the correct EPF, SOCSO, EIS and PCB figures and lays them out in standard payslip format, but you're responsible for verifying the details are accurate and complete for your specific employee before issuing it — including checking your payroll system's records match. It's built to remove the arithmetic error, not to replace your payroll compliance process entirely.",
+  },
+  proratedPage: {
+    title: "Prorated Salary Calculator",
+    intro:
+      "Work out exactly how much you're owed for a partial month — starting mid-month, resigning early, or unpaid leave — using the actual Employment Act formula, not a rough guess.",
+    monthLabel: "Month",
+    yearLabel: "Year",
+    daysWorked: "Days worked in this period",
+    daysWorkedHint: "e.g. if you started on the 16th of a 30-day month, you worked 15 days",
+    daysInMonth: "Days in {month} {year}",
+    resultsTitle: "What you're owed",
+    statutoryLabel: "Statutory amount (Employment Act formula)",
+    statutoryHint: "Monthly salary ÷ actual days in the month × days worked",
+    comparisonTitle: "How this compares to common shortcuts",
+    flat26Label: "If a fixed 26-day divisor were used",
+    flat30Label: "If a fixed 30-day divisor were used",
+    comparisonNote:
+      "Employers may use a fixed divisor like 26 or 30 instead, but only if it pays you the same or more than the statutory calendar-day formula — never less.",
+    aboutTitle: "The formula behind this",
+    aboutBody:
+      "Under Section 18A of the Employment Act 1955 (read together with Section 60I(2)), incomplete-month pay is calculated as: monthly salary ÷ the actual number of days in that calendar month × the number of days worked. The divisor is never a fixed number — it changes between 28, 29, 30 and 31 depending on the actual month.",
+    faqTitle: "Frequently asked questions",
+    faqQ1: "Is my employer allowed to use a fixed 30-day divisor instead?",
+    faqA1:
+      "Yes, but only if the result is equal to or better than the statutory calendar-day formula. A fixed divisor that pays you less than the statutory amount for that specific month isn't compliant, even if it's written into your contract.",
+    faqQ2: "Does this apply to a full month I worked completely?",
+    faqA2:
+      "No — a full calendar month worked in full is paid at your full monthly salary regardless of whether that month has 28, 30 or 31 days. Proration only applies when you're being paid for less than the whole period.",
+  },
+  incrementPage: {
+    title: "Salary Increment Calculator",
+    intro:
+      "See exactly how much more you'll take home after a raise — by percentage or a fixed amount — plus a multi-year projection if the same increment repeats.",
+    currentSalary: "Current monthly salary",
+    incrementMode: "Increment type",
+    modePercent: "Percentage",
+    modeAmount: "Fixed amount",
+    incrementPercent: "Increment percentage",
+    incrementAmount: "Increment amount",
+    projectionYears: "Project forward (years)",
+    resultsTitle: "Your new salary",
+    newSalary: "New monthly salary",
+    increaseAmount: "Monthly increase",
+    increasePercent: "That's an increase of",
+    annualIncreaseAmount: "Extra income per year",
+    projectionTitle: "If this increment repeats every year",
+    projectionYearCol: "Year",
+    projectionSalaryCol: "Monthly salary",
+    aboutTitle: "Percentage vs fixed amount",
+    aboutBody:
+      "A percentage increment compounds — a 5% raise on a higher salary is worth more in Ringgit than the same 5% on a lower one, which is why the same percentage increment produces a bigger Ringgit jump each year in the projection below. A fixed-amount increment stays the same in Ringgit terms every time, so it shrinks as a percentage of an already-higher salary.",
   },
 };
 

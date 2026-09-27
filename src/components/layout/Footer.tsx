@@ -28,6 +28,8 @@ export default function Footer() {
     "/overtime-calculator": t("tools.overtimeTitle"),
     "/annual-leave-calculator": t("tools.leaveTitle"),
     "/payslip-generator": t("tools.payslipTitle"),
+    "/prorated-salary-calculator": t("tools.proratedTitle"),
+    "/salary-increment-calculator": t("tools.incrementTitle"),
   };
 
   return (

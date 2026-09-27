@@ -186,7 +186,10 @@ export default function EpfRetirementClient() {
       />
 
       <RelatedGuides
-        links={[{ href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" }]}
+        links={[
+          { href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" },
+          { href: "/guides/epf-dividend-2026-what-we-know", label: "EPF Dividend 2026: What We Know So Far" },
+        ]}
       />
     </ToolPageShell>
   );

@@ -345,4 +345,29 @@ export const GUIDES: Guide[] = [
       { href: "/", label: "Full Salary Calculator" },
     ],
   },
+  {
+    slug: "epf-dividend-2026-what-we-know",
+    title: "EPF Dividend 2026: What We Know So Far",
+    description:
+      "Searching for the EPF 2026 dividend rate? Here is exactly what KWSP has confirmed, the real announcement date pattern, and what is still unknown.",
+    publishedDate: "2026-09-27",
+    body: [
+      "If you've searched for \"EPF dividend 2026,\" here's the direct answer: it hasn't been announced yet, and won't be for several more months. That's not a non-answer — knowing exactly when it's coming, and what's already confirmed in the meantime, is genuinely useful.",
+      "## The pattern: dividends are announced the following February",
+      "EPF declares each calendar year's dividend the following year, typically in the last week of February, with the amount credited to members' accounts on or around 1 March. The 2025 dividend — 6.15% for both Simpanan Konvensional and Simpanan Shariah — was announced on 28 February 2026 and credited 1 March 2026, with a total payout of RM79.6 billion. Following that same pattern, the 2026 dividend won't be announced until roughly late February 2027.",
+      "## What's actually confirmed right now",
+      "The most recent declared rate is the 2025 dividend: 6.15% for Simpanan Konvensional, 6.15% for Simpanan Shariah. That's the rate currently being credited and the most relevant figure for any planning you're doing today — it is not the 2026 rate, which doesn't exist yet.",
+      "## Why the confusion happens",
+      "Two things get mixed up every year: people search \"EPF dividend [current year]\" expecting a rate that's actually announced the following year, and some sites publish \"forecast\" or \"expected\" figures for the still-unannounced year that read like confirmed numbers. Treat any specific 2026 percentage you see quoted before late February 2027 as speculation, not fact — including anything published here before that date.",
+      "## What determines the rate, and why it's never guaranteed",
+      "EPF's dividend is not a fixed interest rate — it's declared annually based on the fund's actual investment performance that year, split (since 2017) into a conventional and a Shariah-compliant rate. By law, the minimum guaranteed rate is 2.50% a year for Simpanan Konvensional; every year's actual declared rate has been at or above that floor, but nothing above the legal minimum is promised in advance.",
+      "## The historical range, for context",
+      "Over the last decade, the conventional rate has moved between 5.20% (2020, the pandemic year) and 6.90% (2017), averaging in the mid-to-high 5% to low 6% range most years. That's a reasonable planning band — not a prediction — until the actual 2026 rate is declared.",
+    ],
+    relatedLinks: [
+      { href: "/epf-retirement-calculator", label: "EPF Retirement & Dividend Calculator" },
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/rate-changes", label: "Rate Change History" },
+    ],
+  },
 ];

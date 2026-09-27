@@ -28,4 +28,6 @@ export const TOOL_LINKS = [
   { href: "/zakat-calculator", label: "Zakat Pendapatan Calculator", description: "Estimate your income zakat against an adjustable nisab threshold." },
   { href: "/bonus-calculator", label: "Bonus Tax Calculator", description: "See your net bonus after the extra EPF and PCB it triggers." },
   { href: "/payslip-generator", label: "Payslip Generator", description: "Create an itemised payslip with EPF, SOCSO, EIS and PCB correctly worked out." },
+  { href: "/prorated-salary-calculator", label: "Prorated Salary Calculator", description: "Partial-month pay for a mid-month start, resignation or unpaid leave." },
+  { href: "/salary-increment-calculator", label: "Salary Increment Calculator", description: "See your new salary after a raise, with a multi-year projection." },
 ] as const;
