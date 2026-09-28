@@ -3,7 +3,7 @@ import EpfCalculatorClient from "./EpfCalculatorClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
 const TITLE = "EPF Calculator (KWSP) Malaysia 2026";
-const DESCRIPTION = "Free EPF calculator for Malaysia — work out monthly KWSP employee and employer contributions by age, wage and nationality, using official Third Schedule rates.";
+const DESCRIPTION = "Free EPF calculator for Malaysia — work out KWSP employee and employer contributions by age, wage and nationality, using official Third Schedule rates.";
 
 export const metadata: Metadata = {
   title: TITLE,
