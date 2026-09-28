@@ -559,6 +559,16 @@ const ms: Dictionary = {
     dsrHigh: "Tinggi — pinjaman ini sahaja mengambil bahagian besar gaji bawa balik anda",
     dsrNote: "Ini hanya mengira pinjaman ini berbanding gaji bawa balik anda. Bank mengira DSR menggunakan pendapatan kasar dan semua hutang sedia ada (pinjaman kereta, kad kredit, gadai janji lain) secara gabungan, jadi DSR sebenar yang dinilai bank akan berbeza daripada anggaran ini.",
     disclaimer: "Ini adalah anggaran perancangan menggunakan formula pinjaman berkurtasi standard. Kelulusan bank sebenar, kadar faedah dan pengiraan DSR bergantung kepada bank tertentu, profil kredit anda, dan semua komitmen kewangan sedia ada anda — sentiasa sahkan dengan bank atau penasihat kewangan berlesen sebelum membuat keputusan pembelian.",
+    aboutTitle: "Mengapa DSR lebih penting daripada harga label",
+    aboutBody:
+      "Dua orang yang memperoleh gaji kasar yang sama boleh mempunyai kuasa pinjaman sebenar yang sangat berbeza setelah gaji bawa balik dan komitmen sedia ada diambil kira — itulah sebabnya pemberi pinjaman melihat Nisbah Khidmat Hutang, bukan sekadar pendapatan. Menyemak DSR anda sebelum mencari rumah memberi anda bajet yang realistik dan bukannya mengetahuinya selepas permohonan anda ditolak bank.",
+    faqTitle: "Soalan lazim",
+    faqQ1: "Berapakah DSR yang biasanya diterima oleh bank Malaysia untuk pinjaman rumah?",
+    faqA1:
+      "Tiada had undang-undang tunggal — setiap bank menetapkan ambang mereka sendiri. Secara umum, DSR di bawah 30-40% biasanya dianggap selesa, julat 40-60% mendapat penelitian lebih dekat, dan melebihi 60-70% kelulusan biasanya memerlukan profil pendapatan yang kukuh atau cagaran. Bank mengira ini menggunakan pendapatan kasar anda dan semua hutang sedia ada secara gabungan, bukan hanya pinjaman ini sahaja.",
+    faqQ2: "Adakah kalkulator ini termasuk yuran guaman dan duti setem?",
+    faqA2:
+      "Tidak — alat ini hanya mengira ansuran pinjaman, jumlah faedah dan DSR untuk pinjaman itu sendiri. Yuran guaman, duti setem, yuran penilaian dan kos pembelian sekali sahaja yang lain adalah berasingan dan tidak termasuk di sini; peruntukkan bajet untuknya di atas angka di atas.",
   },
   zakatPage: {
     title: "Kalkulator Zakat Pendapatan",

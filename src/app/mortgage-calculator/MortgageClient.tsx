@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import ToolPageShell from "@/components/calculator/ToolPageShell";
+import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card, NumberField } from "@/components/ui/Field";
 import { calculateMortgage } from "@/lib/calc/mortgage";
 import { formatRM } from "@/lib/format";
@@ -82,6 +84,26 @@ export default function MortgageClient() {
       <Card className="mt-6">
         <p className="text-xs text-muted">{t("mortgagePage.disclaimer")}</p>
       </Card>
+
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("mortgagePage.aboutTitle")}</h2>
+        <p className="mt-2 text-sm text-foreground/90">{t("mortgagePage.aboutBody")}</p>
+      </Card>
+
+      <PageFaq
+        title={t("mortgagePage.faqTitle")}
+        items={[
+          { q: t("mortgagePage.faqQ1"), a: t("mortgagePage.faqA1") },
+          { q: t("mortgagePage.faqQ2"), a: t("mortgagePage.faqA2") },
+        ]}
+      />
+
+      <RelatedGuides
+        links={[
+          { href: "/", label: "Full Salary Calculator" },
+          { href: "/guides/is-your-salary-good-in-malaysia", label: "Is Your Salary Good in Malaysia?" },
+        ]}
+      />
     </ToolPageShell>
   );
 }

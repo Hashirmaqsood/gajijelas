@@ -558,6 +558,16 @@ const en = {
     dsrHigh: "High — this loan alone takes up a large share of your take-home pay",
     dsrNote: "This only counts this loan against your take-home pay. Banks calculate DSR using gross income and all your existing debts (car loans, credit cards, other mortgages) combined, so your actual bank-assessed DSR will differ from this estimate.",
     disclaimer: "This is a planning estimate using the standard amortising loan formula. Actual bank approval, interest rates and DSR calculations depend on the specific bank, your credit profile, and all your existing financial commitments — always confirm with a bank or licensed financial advisor before making a purchase decision.",
+    aboutTitle: "Why DSR matters more than the sticker price",
+    aboutBody:
+      "Two people earning the same gross salary can have very different real borrowing power once take-home pay and existing commitments are factored in — which is why lenders look at Debt Service Ratio, not just income. Checking your DSR before house-hunting gives you a realistic budget instead of finding out after a bank has already rejected an application.",
+    faqTitle: "Frequently asked questions",
+    faqQ1: "What DSR do Malaysian banks typically accept for a home loan?",
+    faqA1:
+      "There's no single legal cap — each bank sets its own threshold. As a general pattern, a DSR under 30-40% is usually seen as comfortable, the 40-60% range gets closer scrutiny, and above 60-70% approval typically needs a strong income profile or collateral. Banks calculate this using your gross income and all existing debts combined, not just this one loan.",
+    faqQ2: "Does this calculator include legal fees and stamp duty?",
+    faqA2:
+      "No — this tool calculates only the loan installment, total interest and DSR for the loan itself. Legal fees, stamp duty, valuation fees and other one-off purchase costs are separate and aren't included here; budget for them on top of the figures above.",
   },
   zakatPage: {
     title: "Zakat Pendapatan Calculator",
