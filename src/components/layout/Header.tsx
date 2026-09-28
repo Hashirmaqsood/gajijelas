@@ -21,14 +21,14 @@ function LangSwitch() {
       <div className="flex items-center rounded-full border border-border bg-background p-0.5 text-xs font-semibold">
         <Link
           href={enHref}
-          aria-pressed={lang === "en"}
+          aria-current={lang === "en" ? "page" : undefined}
           className={`rounded-full px-2.5 py-1 transition ${lang === "en" ? "bg-brand text-white shadow-sm" : "text-muted hover:text-foreground"}`}
         >
           EN
         </Link>
         <Link
           href={msHref}
-          aria-pressed={lang === "ms"}
+          aria-current={lang === "ms" ? "page" : undefined}
           className={`rounded-full px-2.5 py-1 transition ${lang === "ms" ? "bg-brand text-white shadow-sm" : "text-muted hover:text-foreground"}`}
         >
           BM
