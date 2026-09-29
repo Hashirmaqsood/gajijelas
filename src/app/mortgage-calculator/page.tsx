@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import MortgageClient from "./MortgageClient";
-import { calculatorJsonLd, faqPageJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
+import { calculatorJsonLd, faqPageJsonLd, breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
 const TITLE = "Mortgage Calculator Malaysia | Home Loan Installment & DSR";
 const DESCRIPTION =
@@ -35,6 +35,7 @@ export default function Page() {
     <>
       <script {...jsonLdScriptProps(calculatorJsonLd(TITLE, DESCRIPTION, "/mortgage-calculator"))} />
       <script {...jsonLdScriptProps(faqPageJsonLd(FAQ))} />
+      <script {...jsonLdScriptProps(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Mortgage Calculator", path: "/mortgage-calculator" }]))} />
       <MortgageClient />
     </>
   );

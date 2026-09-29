@@ -55,6 +55,19 @@ export function glossaryJsonLd(terms: { term: string; definition: string }[], pa
   };
 }
 
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE.url}${item.path}`,
+    })),
+  };
+}
+
 export function jsonLdScriptProps(data: object) {
   return { type: "application/ld+json" as const, dangerouslySetInnerHTML: { __html: JSON.stringify(data) } };
 }

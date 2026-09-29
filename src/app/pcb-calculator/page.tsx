@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PcbCalculatorClient from "./PcbCalculatorClient";
-import { calculatorJsonLd, faqPageJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
+import { calculatorJsonLd, faqPageJsonLd, breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
 const TITLE = "PCB Calculator (MTD) Malaysia 2026";
 const DESCRIPTION = "Free PCB calculator for Malaysia — estimate your monthly tax deduction (MTD) with individual, spouse, child, EPF and other LHDN tax reliefs applied.";
@@ -34,6 +34,7 @@ export default function Page() {
     <>
       <script {...jsonLdScriptProps(calculatorJsonLd(TITLE, DESCRIPTION, "/pcb-calculator"))} />
       <script {...jsonLdScriptProps(faqPageJsonLd(FAQ))} />
+      <script {...jsonLdScriptProps(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "PCB Calculator", path: "/pcb-calculator" }]))} />
       <PcbCalculatorClient />
     </>
   );

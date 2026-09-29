@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import EpfCalculatorClient from "./EpfCalculatorClient";
-import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
+import { calculatorJsonLd, breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
 const TITLE = "EPF Calculator (KWSP) Malaysia 2026";
 const DESCRIPTION = "Free EPF calculator for Malaysia — work out KWSP employee and employer contributions by age, wage and nationality, using official Third Schedule rates.";
@@ -22,6 +22,7 @@ export default function Page() {
   return (
     <>
       <script {...jsonLdScriptProps(calculatorJsonLd(TITLE, DESCRIPTION, "/epf-calculator"))} />
+      <script {...jsonLdScriptProps(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "EPF Calculator", path: "/epf-calculator" }]))} />
       <EpfCalculatorClient />
     </>
   );
