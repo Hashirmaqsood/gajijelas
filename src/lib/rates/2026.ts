@@ -18,7 +18,7 @@ import type { StatutoryRates } from "./types";
  */
 const rates2026: StatutoryRates = {
   year: 2026,
-  lastUpdated: "2026-09-20",
+  lastUpdated: "2026-10-06",
   effectiveFrom: "2025-10-01",
   epf: {
     malaysianBelow60: {
@@ -74,14 +74,14 @@ const rates2026: StatutoryRates = {
       medicalCap: 10000,
       parentMedicalCap: 8000,
       sspnCap: 8000,
-      disabledIndividual: 6000,
+      disabledIndividual: 7000, // raised from RM6,000 by Budget 2025, effective YA 2025
       disabledSpouse: 6000,
       rebateThreshold: 35000,
       rebateAmount: 400,
     },
     nonResidentFlatPct: 30,
   },
-  minimumWage: { monthly: 1700, hourly: 8.19 },
+  minimumWage: { monthly: 1700, hourly: 8.72 }, // Minimum Wages Order 2024: RM1,700 / 195 hours (45-hour week)
   sources: [
     { label: "KWSP – EPF Act 1991 Third Schedule", url: "https://www.kwsp.gov.my/en/epf-act-1991-third-schedule" },
     { label: "KWSP – Mandatory contribution for non-Malaysian employees (Oct 2025)", url: "https://www.kwsp.gov.my/en/w/news/epf-begins-mandatory-contributions-for-non-malaysian-citizen-employees-effective-october-2025" },

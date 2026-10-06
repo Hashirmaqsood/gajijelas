@@ -277,7 +277,7 @@ const en = {
     amountCol: "Income in band",
     rateCol: "Rate",
     taxCol: "Tax",
-    ratesTitle: "Malaysia resident income tax rates (YA 2025)",
+    ratesTitle: "Malaysia income tax rates 2026 for residents (YA 2025)",
     ratesBandCol: "Chargeable income",
     ratesRateCol: "Rate",
     ratesCumulativeCol: "Total tax at top of band",

@@ -88,6 +88,7 @@ export default function ProratedSalaryClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/notis-berhenti-kerja" : "/guides/resignation-notice-period-malaysia", label: lang === "ms" ? "Notis Berhenti Kerja & Gaji Akhir" : "Resignation Notice Period & Final Pay" },
           { href: "/guides/salary-calculation-30-or-31-days-malaysia", label: "Is Salary Calculated on 30 or 31 Days?" },
           { href: "/guides/first-paycheck-malaysia-what-to-expect", label: "What Your First Paycheck Actually Looks Like" },
         ]}

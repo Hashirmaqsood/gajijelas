@@ -20,7 +20,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/zakat-calculator", lastModified: "2026-09-23" },
   { path: "/bonus-calculator", lastModified: "2026-09-24" },
   { path: "/payslip-generator", lastModified: "2026-09-24" },
-  { path: "/prorated-salary-calculator", lastModified: "2026-09-27" },
+  { path: "/prorated-salary-calculator", lastModified: "2026-10-06" },
   { path: "/salary-increment-calculator", lastModified: "2026-09-27" },
   { path: "/income-tax-calculator", lastModified: "2026-10-06" },
   { path: "/rate-changes", lastModified: "2026-09-24" },
@@ -44,10 +44,12 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/ms/zakat-calculator", lastModified: "2026-09-24" },
   { path: "/ms/bonus-calculator", lastModified: "2026-09-24" },
   { path: "/ms/payslip-generator", lastModified: "2026-10-06" },
-  { path: "/ms/prorated-salary-calculator", lastModified: "2026-09-27" },
+  { path: "/ms/prorated-salary-calculator", lastModified: "2026-10-06" },
   { path: "/ms/salary-increment-calculator", lastModified: "2026-09-27" },
   { path: "/ms/income-tax-calculator", lastModified: "2026-10-06" },
   { path: "/ms/dividen-kwsp-2025", lastModified: "2026-10-06" },
+  { path: "/ms/pelepasan-cukai-2026", lastModified: "2026-10-06" },
+  { path: "/ms/notis-berhenti-kerja", lastModified: "2026-10-06" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

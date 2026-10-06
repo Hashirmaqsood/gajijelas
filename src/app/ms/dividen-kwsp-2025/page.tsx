@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import ArticleBody from "@/components/content/ArticleBody";
-import PageFaq from "@/components/content/PageFaq";
+import MsArticlePage from "@/components/content/MsArticlePage";
 import type { GuideTable } from "@/lib/content/guides";
-import { articleJsonLd, faqPageJsonLd, breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
 const PATH = "/ms/dividen-kwsp-2025";
 const TITLE = "Dividen KWSP 2025: Kadar 6.15%, Sejarah & Cara Semak";
@@ -69,42 +66,21 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <article className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
-      <script {...jsonLdScriptProps(articleJsonLd({ title: TITLE, description: DESCRIPTION, path: PATH, publishedDate: "2026-10-06" }))} />
-      <script {...jsonLdScriptProps(faqPageJsonLd(FAQ))} />
-      <script {...jsonLdScriptProps(breadcrumbJsonLd([{ name: "Utama", path: "/ms" }, { name: "Dividen KWSP 2025", path: PATH }]))} />
-      <Link href="/guides" className="text-sm text-brand hover:underline">← Kembali ke panduan</Link>
-      <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted">6 Oktober 2026</p>
-      <h1 className="mt-1 text-3xl font-bold tracking-tight text-foreground">{TITLE}</h1>
-      <p className="mt-3 text-base text-muted">{DESCRIPTION}</p>
-      <p className="mt-3 text-sm text-muted">
-        Alat percuma:{" "}
-        <Link href="/ms/epf-retirement-calculator" className="font-medium text-brand underline">Kalkulator Persaraan &amp; Dividen EPF →</Link>
-      </p>
-
-      <ArticleBody body={BODY} table={TABLE} />
-
-      <PageFaq title="Soalan lazim" items={FAQ} />
-
-      <div className="mt-10 border-t border-border pt-6">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">Kalkulator berkaitan</h2>
-        <ul className="mt-3 flex flex-wrap gap-2">
-          {[
-            { href: "/ms/epf-retirement-calculator", label: "Kalkulator Persaraan & Dividen EPF" },
-            { href: "/ms/epf-calculator", label: "Kalkulator EPF (KWSP)" },
-            { href: "/ms/epf-account-split-calculator", label: "Pecahan Akaun EPF" },
-          ].map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="inline-block rounded-full border border-border bg-surface px-3 py-1.5 text-sm text-brand-dark hover:border-brand hover:bg-brand-light"
-              >
-                {link.label} →
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </article>
+    <MsArticlePage
+      path={PATH}
+      title={TITLE}
+      description={DESCRIPTION}
+      publishedDate="2026-10-06"
+      dateLabel="6 Oktober 2026"
+      breadcrumbName="Dividen KWSP 2025"
+      body={BODY}
+      table={TABLE}
+      faq={FAQ}
+      related={[
+        { href: "/ms/epf-retirement-calculator", label: "Kalkulator Persaraan & Dividen EPF" },
+        { href: "/ms/epf-calculator", label: "Kalkulator EPF (KWSP)" },
+        { href: "/ms/epf-account-split-calculator", label: "Pecahan Akaun EPF" },
+      ]}
+    />
   );
 }

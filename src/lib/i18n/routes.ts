@@ -19,6 +19,8 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/salary-increment-calculator", "/ms/salary-increment-calculator"],
   ["/income-tax-calculator", "/ms/income-tax-calculator"],
   ["/guides/epf-dividend-2025-rate-history", "/ms/dividen-kwsp-2025"],
+  ["/guides/tax-relief-2026-malaysia-ya-2025", "/ms/pelepasan-cukai-2026"],
+  ["/guides/resignation-notice-period-malaysia", "/ms/notis-berhenti-kerja"],
 ];
 
 /** Returns the other-language URL for a localized page, or null if this path has no counterpart. */

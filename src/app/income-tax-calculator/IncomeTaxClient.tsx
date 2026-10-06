@@ -229,6 +229,7 @@ export default function IncomeTaxClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/pelepasan-cukai-2026" : "/guides/tax-relief-2026-malaysia-ya-2025", label: lang === "ms" ? "Pelepasan Cukai 2026: Senarai Penuh" : "Tax Relief 2026 (YA 2025): Full List" },
           { href: lang === "ms" ? "/ms/pcb-calculator" : "/pcb-calculator", label: "PCB Calculator (MTD)" },
           { href: "/guides/malaysia-income-tax-rate-brackets-explained", label: "Malaysia Income Tax Rate Brackets Explained" },
           { href: "/guides/annual-tax-relief-checklist", label: "Annual Tax Relief Checklist" },
