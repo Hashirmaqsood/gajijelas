@@ -43,6 +43,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       </p>
       <h1 className="mt-1 text-3xl font-bold tracking-tight text-foreground">{guide.title}</h1>
       <p className="mt-3 text-base text-muted">{guide.description}</p>
+      {guide.relatedLinks && guide.relatedLinks.length > 0 && (
+        <p className="mt-3 text-sm text-muted">
+          Free tool:{" "}
+          <Link href={guide.relatedLinks[0].href} className="font-medium text-brand underline">
+            {guide.relatedLinks[0].label} →
+          </Link>
+        </p>
+      )}
 
       <div className="prose-content mt-8 space-y-4">
         {guide.body.map((paragraph, i) =>

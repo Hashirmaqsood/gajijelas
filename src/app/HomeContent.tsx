@@ -52,6 +52,7 @@ export default function HomeContent({ rates, examples }: { rates: StatutoryRates
     "/bonus-calculator": { title: t("tools.bonusTitle"), desc: t("tools.bonusDesc") },
     "/socso-calculator": { title: t("tools.socsoTitle"), desc: t("tools.socsoDesc") },
     "/pcb-calculator": { title: t("tools.pcbTitle"), desc: t("tools.pcbDesc") },
+    "/income-tax-calculator": { title: t("tools.incomeTaxTitle"), desc: t("tools.incomeTaxDesc") },
     "/hourly-rate-calculator": { title: t("tools.hourlyTitle"), desc: t("tools.hourlyDesc") },
     "/overtime-calculator": { title: t("tools.overtimeTitle"), desc: t("tools.overtimeDesc") },
     "/annual-leave-calculator": { title: t("tools.leaveTitle"), desc: t("tools.leaveDesc") },

@@ -218,6 +218,7 @@ export const GUIDES: Guide[] = [
       "The PCB deducted from your monthly paycheck is meant to be a running estimate of this exact bracket calculation, spread across the year so you're not hit with the full annual bill at filing time. When PCB is calculated correctly against your actual reliefs, your annual filing should show only a small top-up or refund — a large one in either direction usually means your declared reliefs changed mid-year, or your employer's payroll system is using outdated figures.",
     ],
     relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
       { href: "/", label: "Full Salary Calculator" },
     ],

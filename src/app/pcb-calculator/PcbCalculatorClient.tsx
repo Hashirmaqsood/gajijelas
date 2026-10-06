@@ -154,6 +154,7 @@ export default function PcbCalculatorClient() {
 
       <RelatedGuides
         links={[
+          { href: "/income-tax-calculator", label: "Income Tax Calculator (annual tax payable)" },
           { href: "/guides/malaysia-income-tax-rate-brackets-explained", label: "Malaysia Income Tax Rate Brackets Explained" },
           { href: "/guides/annual-tax-relief-checklist", label: "Annual Tax Relief Checklist" },
           { href: "/guides/budget-2027-malaysia-salary-epf-socso", label: "Budget 2027: What It Could Mean for Your Salary" },

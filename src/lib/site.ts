@@ -21,6 +21,7 @@ export const TOOL_LINKS = [
   { href: "/epf-account-split-calculator", label: "EPF Account Split Calculator", description: "See your EPF contribution split across Akaun Persaraan, Sejahtera and Fleksibel." },
   { href: "/socso-calculator", label: "SOCSO / PERKESO Calculator", description: "Employment injury & invalidity contributions." },
   { href: "/pcb-calculator", label: "PCB / MTD Calculator", description: "Monthly tax deduction with reliefs applied." },
+  { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Annual income tax payable with your reliefs, worked out band by band." },
   { href: "/hourly-rate-calculator", label: "Hourly & Daily Rate Calculator", description: "Convert monthly salary to daily and hourly rates." },
   { href: "/overtime-calculator", label: "Overtime Pay Calculator", description: "Normal day, rest day and public holiday OT rates." },
   { href: "/annual-leave-calculator", label: "Annual Leave Calculator", description: "Entitlement and pro-rating under the Employment Act." },

@@ -12,7 +12,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/epf-retirement-calculator", lastModified: "2026-09-24" },
   { path: "/epf-account-split-calculator", lastModified: "2026-09-24" },
   { path: "/socso-calculator", lastModified: "2026-09-27" },
-  { path: "/pcb-calculator", lastModified: "2026-09-27" },
+  { path: "/pcb-calculator", lastModified: "2026-10-06" },
   { path: "/hourly-rate-calculator", lastModified: "2026-09-20" },
   { path: "/overtime-calculator", lastModified: "2026-10-06" },
   { path: "/annual-leave-calculator", lastModified: "2026-09-20" },
@@ -22,6 +22,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/payslip-generator", lastModified: "2026-09-24" },
   { path: "/prorated-salary-calculator", lastModified: "2026-09-27" },
   { path: "/salary-increment-calculator", lastModified: "2026-09-27" },
+  { path: "/income-tax-calculator", lastModified: "2026-10-06" },
   { path: "/rate-changes", lastModified: "2026-09-24" },
   { path: "/glossary", lastModified: "2026-09-26" },
   { path: "/faq", lastModified: "2026-09-18" },
@@ -45,6 +46,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/ms/payslip-generator", lastModified: "2026-09-24" },
   { path: "/ms/prorated-salary-calculator", lastModified: "2026-09-27" },
   { path: "/ms/salary-increment-calculator", lastModified: "2026-09-27" },
+  { path: "/ms/income-tax-calculator", lastModified: "2026-10-06" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -4,6 +4,7 @@ export * from "./socso";
 export * from "./eis";
 export * from "./lindung24Jam";
 export * from "./pcb";
+export * from "./incomeTax";
 export * from "./salary";
 export * from "./overtime";
 export * from "./leave";

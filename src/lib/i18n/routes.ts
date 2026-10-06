@@ -17,6 +17,7 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/payslip-generator", "/ms/payslip-generator"],
   ["/prorated-salary-calculator", "/ms/prorated-salary-calculator"],
   ["/salary-increment-calculator", "/ms/salary-increment-calculator"],
+  ["/income-tax-calculator", "/ms/income-tax-calculator"],
 ];
 
 /** Returns the other-language URL for a localized page, or null if this path has no counterpart. */
