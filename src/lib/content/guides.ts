@@ -1,3 +1,5 @@
+import { taxBySalaryRows } from "./taxBySalary";
+
 export interface GuideTable {
   /** Render the table right after body[afterIndex]. */
   afterIndex: number;
@@ -392,7 +394,7 @@ export const GUIDES: Guide[] = [
       "KWSP declared a dividend of 6.15% for both Simpanan Konvensional and Simpanan Shariah for 2025. It was announced on 28 February 2026 and credited to members' accounts on 1 March 2026, with a total payout of RM79.6 billion. That is the confirmed figure — earlier forecasts of 6.3% to 6.5% were expectations, not the declared rate.",
       "## EPF dividend rate history",
       "The table below shows the declared rate for the last five years. Each year's dividend is announced the following February.",
-      "## How much dividend will I get?",
+      "## How to calculate your EPF dividend",
       "A simple estimate is your balance multiplied by the declared rate. For example, RM50,000 held for the whole year at 6.15% would earn about RM3,075. Your actual dividend can differ, because it depends on when contributions went in and on any withdrawals during the year, so treat this as a guide rather than an exact figure. To see how dividends compound over many years, use the EPF retirement calculator.",
       "## When was the 2025 dividend credited, and how do I check it?",
       "The 2025 dividend was credited on 1 March 2026. You can check your dividend statement through i-Akaun (website or app), which showed statements from 28 February 2026, or at a KWSP self-service terminal. The dividend is credited to each of your accounts based on that account's balance.",
@@ -549,6 +551,186 @@ export const GUIDES: Guide[] = [
       { href: "/prorated-salary-calculator", label: "Prorated Salary Calculator" },
       { href: "/annual-leave-calculator", label: "Annual Leave Calculator" },
       { href: "/guides/salary-calculation-30-or-31-days-malaysia", label: "Salary Calculation: 30 or 31 Days?" },
+    ],
+  },
+  {
+    slug: "what-is-perkeso-socso-same",
+    title: "What Is PERKESO? Is It the Same as SOCSO?",
+    description:
+      "PERKESO and SOCSO are the same organisation. See what it covers, how EIS fits in, and how much employees and employers contribute.",
+    publishedDate: "2026-10-06",
+    body: [
+      "Yes, PERKESO and SOCSO are the same organisation. PERKESO stands for Pertubuhan Keselamatan Sosial, the Malay name, and SOCSO stands for Social Security Organisation, the English name. Payslips, employers and government forms use the two names interchangeably.",
+      "## What PERKESO administers",
+      "PERKESO runs Malaysia's social security protection for employees under three laws, summarised in the table below.",
+      "## What is EIS?",
+      "EIS, or Sistem Insurans Pekerjaan (SIP), is the Employment Insurance System. It is the part of PERKESO that supports employees who lose their jobs, and it is paid for by separate contributions from both employee and employer. It is not the same as the SOCSO contribution, but both appear on your payslip.",
+      "## How much do you and your employer contribute?",
+      "SOCSO and EIS contributions are calculated on monthly wages up to a RM6,000 ceiling. For an employee under 60 earning RM5,000 a month, the employee pays RM25.00 SOCSO and RM10.00 EIS, and the employer pays RM87.50 SOCSO and RM10.00 EIS. Wages above RM6,000 do not raise the contribution.",
+      "## Calculate your own contribution",
+      "Use the SOCSO calculator to see the exact PERKESO and EIS amounts for your wage, including the contribution table by salary.",
+    ],
+    table: {
+      afterIndex: 2,
+      caption: "What PERKESO (SOCSO) administers",
+      headers: ["Scheme", "Law", "What it covers"],
+      rows: [
+        ["Employment Injury Scheme", "Employees' Social Security Act 1969 (Act 4)", "Accidents at work"],
+        ["Invalidity Scheme", "Employees' Social Security Act 1969 (Act 4)", "Invalidity or death not related to work"],
+        ["Self-Employment scheme", "Self-Employment Social Security Act 2017 (Act 789)", "Self-employed workers"],
+        ["Employment Insurance System (EIS)", "Employment Insurance System Act 2017 (Act 800)", "Support after losing a job"],
+      ],
+    },
+    faq: [
+      {
+        q: "Are PERKESO and SOCSO the same?",
+        a: "Yes. PERKESO is the Malay name (Pertubuhan Keselamatan Sosial) and SOCSO is the English name (Social Security Organisation) of the same organisation.",
+      },
+      {
+        q: "What does PERKESO mean?",
+        a: "PERKESO stands for Pertubuhan Keselamatan Sosial, which is Malay for Social Security Organisation.",
+      },
+      {
+        q: "Is EIS part of PERKESO?",
+        a: "Yes. The Employment Insurance System (EIS, or SIP in Malay) is run by PERKESO under the Employment Insurance System Act 2017 and covers employees who lose their jobs.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/guides/lindung-24-jam-socso-new-scheme-2026", label: "LINDUNG 24 Jam Explained" },
+      { href: "/", label: "Full Salary Calculator" },
+    ],
+  },
+  {
+    slug: "income-tax-malaysia-what-salary-is-taxable",
+    title: "Income Tax in Malaysia: What Salary Is Taxable? (YA 2025)",
+    description:
+      "At what salary do you start paying income tax in Malaysia? See the annual tax at each monthly salary for a single employee, worked out from LHDN rates.",
+    publishedDate: "2026-10-06",
+    body: [
+      "Income tax in Malaysia is not charged on your gross salary. It is charged on your chargeable income, which is your yearly income minus tax reliefs, and the rate rises in bands from 0% to 30%. A lower salary can therefore mean no tax at all.",
+      "## Tax by monthly salary (single employee, YA 2025)",
+      "The table shows the annual income tax for a single Malaysian employee with no children, using only the individual relief and the EPF and SOCSO/EIS reliefs, after the RM400 rebate. Married employees and those with children pay less because they have more reliefs.",
+      "## Why a higher salary does not tax all your income at the top rate",
+      "Each rate applies only to the slice of chargeable income inside its band. For example, the first RM5,000 is taxed at 0% and the next RM15,000 at 1%, so earning more only raises the tax on the extra slice, not on everything.",
+      "## PCB is not the same as your final tax",
+      "The PCB (monthly tax deduction) taken from your pay is an instalment. Your final income tax is worked out when you file your return, and any PCB paid above that amount is refunded.",
+      "## Check your own figure",
+      "Enter your annual income and reliefs in the income tax calculator for your exact tax, or use the PCB calculator for the monthly deduction.",
+    ],
+    table: {
+      afterIndex: 2,
+      caption: "Annual income tax by monthly salary",
+      headers: ["Monthly salary", "Chargeable income", "Annual tax", "Average per month"],
+      rows: taxBySalaryRows(),
+    },
+    faq: [
+      {
+        q: "At what salary do you start paying income tax in Malaysia?",
+        a: "It depends on your reliefs. In the table above, a single employee with no children and only the standard reliefs pays RM0 tax at RM3,000 a month and starts paying a small amount at about RM3,500. Married employees and those with children start paying at a higher salary.",
+      },
+      {
+        q: "Is income tax charged on gross salary?",
+        a: "No. It is charged on chargeable income, which is your income minus tax reliefs such as the RM9,000 individual relief and your EPF contributions.",
+      },
+      {
+        q: "Does a higher salary mean all my income is taxed at a higher rate?",
+        a: "No. Malaysia uses progressive bands, so each rate applies only to the part of your chargeable income that falls inside that band.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
+      { href: "/guides/tax-relief-2026-malaysia-ya-2025", label: "Tax Relief 2026: Full List" },
+    ],
+  },
+  {
+    slug: "how-to-check-epf-balance-statement",
+    title: "How to Check Your EPF (KWSP) Balance & Statement",
+    description:
+      "The official ways to check your EPF balance and download your KWSP statement: the i-Akaun app, the i-Akaun website, a KWSP kiosk and the counter.",
+    publishedDate: "2026-10-06",
+    body: [
+      "You can check your EPF (KWSP) balance and statement through i-Akaun, KWSP's online account, or in person at KWSP. You will see the balance for each of your three accounts: Akaun Persaraan, Akaun Sejahtera and Akaun Fleksibel.",
+      "## Ways to check your EPF balance",
+      "The table below lists the official options and what you need for each.",
+      "## Can I check my EPF with just my IC number?",
+      "Not on an ordinary website. Your balance is personal information, so the official online route needs an i-Akaun login, and the in-person route uses your MyKad. Be careful with third-party websites that ask for your IC number or personal details to \"check KWSP\".",
+      "## Registering for i-Akaun for the first time",
+      "Malaysian citizens and permanent residents can register through the KWSP i-Akaun app. You scan your MyKad, take a selfie to verify your identity (e-KYC), then create a user ID and password.",
+      "## Downloading a statement",
+      "On the i-Akaun website, open your account summary, choose the year you want and download the statement. Keep your statements: they are useful when you apply for a loan or plan your retirement.",
+      "## Plan ahead with your balance",
+      "Once you know your balance, use the EPF retirement calculator to project how it could grow with dividends until retirement.",
+    ],
+    table: {
+      afterIndex: 2,
+      caption: "Official ways to check your EPF balance",
+      headers: ["Method", "What you need", "Note"],
+      rows: [
+        ["i-Akaun mobile app", "Smartphone and your MyKad (first-time registration)", "Balance of all three accounts"],
+        ["i-Akaun website", "i-Akaun user ID and password", "Download statements by year"],
+        ["KWSP self-service kiosk", "Your MyKad", "At KWSP branches"],
+        ["KWSP counter", "Your identification", "Ask the staff for a statement"],
+      ],
+    },
+    faq: [
+      {
+        q: "How do I check my KWSP balance?",
+        a: "Log in to i-Akaun on the KWSP app or website, or use a KWSP self-service kiosk with your MyKad. You will see the balance of your Akaun Persaraan, Akaun Sejahtera and Akaun Fleksibel.",
+      },
+      {
+        q: "Can I check my KWSP balance with only my IC number?",
+        a: "Not through an official online channel. You need an i-Akaun login, or you can use a KWSP kiosk with your MyKad. Avoid third-party sites that ask for your IC number.",
+      },
+      {
+        q: "How do I get my KWSP statement?",
+        a: "Log in to the i-Akaun website, choose the year and download the statement, or ask for one at a KWSP kiosk or counter.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/epf-retirement-calculator", label: "EPF Retirement & Dividend Calculator" },
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/epf-account-split-calculator", label: "EPF Account Split Calculator" },
+    ],
+  },
+  {
+    slug: "income-tax-number-tin-malaysia",
+    title: "Income Tax Number (TIN) Malaysia: How to Find Yours",
+    description:
+      "What is your income tax number (TIN) in Malaysia? The IG format, how to check it on MyTax, and how to apply through e-Daftar if you do not have one.",
+    publishedDate: "2026-10-06",
+    body: [
+      "Your income tax number is called the Tax Identification Number, or TIN (Nombor Pengenalan Cukai). LHDN uses it to identify you as a taxpayer, and you need it to file your income tax return.",
+      "## What a TIN looks like",
+      "For individuals, the TIN starts with the prefix IG, followed by numbers, up to 14 characters in total. The prefix IG replaces the older OG and SG prefixes, and the numbers stay the same.",
+      "## Do I automatically have a TIN?",
+      "LHDN registers TINs automatically for Malaysian citizens and permanent residents aged 18 and above, using data from the National Registration Department. Other people, such as those with no MyKad record, may need to apply.",
+      "## How to find your TIN",
+      "Log in to MyTax at mytax.hasil.gov.my and use the TIN search. You can also find it on the front page of your income tax return, or call the HASiL Contact Centre at 03-8911 1000 or visit an LHDN office.",
+      "## How to apply for a TIN",
+      "Since 1 January 2024, individuals who need a TIN apply online through e-Daftar on the MyTax portal.",
+      "## Why it matters for your salary",
+      "Employers use your TIN when they report your PCB (monthly tax deduction) to LHDN. To see how much tax your salary produces, use the income tax calculator.",
+    ],
+    faq: [
+      {
+        q: "What is the income tax number in Malaysia?",
+        a: "It is the Tax Identification Number (TIN). For individuals it starts with IG followed by numbers, up to 14 characters in total.",
+      },
+      {
+        q: "How do I check my TIN?",
+        a: "Log in to MyTax at mytax.hasil.gov.my and use the TIN search. You can also find it on the front page of your income tax return or call the HASiL Contact Centre at 03-8911 1000.",
+      },
+      {
+        q: "How do I apply for a TIN?",
+        a: "Since 1 January 2024, individuals who need a TIN apply online through e-Daftar on the MyTax portal.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
+      { href: "/guides/tax-relief-2026-malaysia-ya-2025", label: "Tax Relief 2026: Full List" },
     ],
   },
 ];

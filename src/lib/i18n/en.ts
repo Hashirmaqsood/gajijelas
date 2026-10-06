@@ -272,6 +272,9 @@ const en = {
     reliefsTitle: "Tax reliefs applied",
     reliefsNotePre: "EPF and SOCSO/EIS reliefs are estimated from your income using the same rules as our",
     reliefsNoteLink: "salary calculator",
+    howTitle: "How to calculate income tax in Malaysia",
+    howBody:
+      "Income tax = tax on your chargeable income − any rebate. Chargeable income is your annual income minus your tax reliefs. In four steps: (1) add up your income for the year, (2) subtract your reliefs, (3) apply each band's rate to the part of the chargeable income inside that band and add the results, then (4) subtract the RM400 rebate if your chargeable income is RM35,000 or less. For example, RM60,000 a year less RM13,350 in reliefs leaves RM46,650 chargeable income, which gives RM1,299 tax.",
     bandsTitle: "How your tax is calculated, band by band",
     bandCol: "Chargeable income band",
     amountCol: "Income in band",

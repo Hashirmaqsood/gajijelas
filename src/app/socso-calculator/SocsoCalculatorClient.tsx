@@ -21,7 +21,7 @@ export default function SocsoCalculatorClient() {
   const [ageGroup, setAgeGroup] = useState<AgeGroup>("below60");
   const [nationality, setNationality] = useState<Nationality>("malaysian");
   const [lindungOptIn, setLindungOptIn] = useState(false);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const rates = getRates(CURRENT_RATE_YEAR);
   const socso = useMemo(() => calculateSocso(rates.socso, wage, ageGroup, nationality), [rates, wage, ageGroup, nationality]);
@@ -184,6 +184,7 @@ export default function SocsoCalculatorClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/apa-itu-perkeso" : "/guides/what-is-perkeso-socso-same", label: lang === "ms" ? "Apa Itu PERKESO? Beza dengan SOCSO" : "What Is PERKESO? Same as SOCSO?" },
           { href: "/guides/lindung-24-jam-socso-new-scheme-2026", label: "LINDUNG 24 Jam Explained" },
           { href: "/guides/epf-socso-eis-foreign-workers-2025-changes", label: "EPF, SOCSO & EIS for Foreign Workers" },
           { href: "/guides/budget-2027-malaysia-salary-epf-socso", label: "Budget 2027: What It Could Mean for Your Salary" },

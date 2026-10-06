@@ -15,7 +15,7 @@ const BODY = [
   "Dividen KWSP 2025 dikreditkan pada 1 Mac 2026. Penyata dividen boleh disemak melalui i-Akaun (laman web atau aplikasi) mulai 28 Februari 2026.",
   "## Cara semak dividen KWSP 2025",
   "Log masuk ke i-Akaun dan buka penyata anda, atau dapatkan penyata di Terminal Layan Diri (SST) KWSP. Dividen dikreditkan ke setiap akaun anda berdasarkan baki akaun tersebut.",
-  "## Berapa anggaran dividen saya?",
+  "## Cara kira dividen KWSP (anggaran mudah)",
   "Anggaran mudah ialah baki simpanan anda didarab kadar yang diumumkan. Contohnya, simpanan RM50,000 sepanjang tahun pada 6.15% memberi kira-kira RM3,075. Dividen sebenar boleh berbeza kerana bergantung pada bila caruman masuk dan sebarang pengeluaran sepanjang tahun, jadi anggarkan ini sebagai panduan sahaja. Untuk melihat kesan dividen terkumpul selama bertahun-tahun, gunakan kalkulator persaraan EPF.",
   "## Konvensional atau Shariah: adakah beza?",
   "Bagi 2025 dan 2024, kedua-dua jenis simpanan menerima kadar yang sama. Pada tahun-tahun sebelumnya kadarnya berbeza — contohnya pada 2022, kadar konvensional ialah 5.35% berbanding 4.75% bagi Shariah — jadi elok anda tahu jenis simpanan anda. Anda boleh menyemaknya dalam i-Akaun.",

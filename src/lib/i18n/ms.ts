@@ -273,6 +273,9 @@ const ms: Dictionary = {
     reliefsTitle: "Pelepasan cukai yang digunakan",
     reliefsNotePre: "Pelepasan EPF dan SOCSO/EIS dianggar daripada pendapatan anda menggunakan peraturan yang sama seperti",
     reliefsNoteLink: "kalkulator gaji",
+    howTitle: "Cara kira cukai pendapatan di Malaysia",
+    howBody:
+      "Cukai pendapatan = cukai ke atas pendapatan bercukai anda − sebarang rebat. Pendapatan bercukai ialah pendapatan tahunan anda ditolak pelepasan cukai. Dalam empat langkah: (1) jumlahkan pendapatan anda setahun, (2) tolak pelepasan anda, (3) kenakan kadar setiap jalur ke atas bahagian pendapatan bercukai dalam jalur itu dan jumlahkan hasilnya, kemudian (4) tolak rebat RM400 jika pendapatan bercukai anda RM35,000 atau kurang. Contohnya, RM60,000 setahun ditolak pelepasan RM13,350 meninggalkan pendapatan bercukai RM46,650, yang menghasilkan cukai RM1,299.",
     bandsTitle: "Cara kira cukai pendapatan anda, mengikut jalur",
     bandCol: "Jalur pendapatan bercukai",
     amountCol: "Pendapatan dalam jalur",

@@ -18,7 +18,7 @@ export default function EpfCalculatorClient() {
   const [ageGroup, setAgeGroup] = useState<AgeGroup>("below60");
   const [nationality, setNationality] = useState<Nationality>("malaysian");
   const [rateYear, setRateYear] = useState<RateYear>(CURRENT_RATE_YEAR);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const rates = useMemo(() => getRates(rateYear), [rateYear]);
   const result = useMemo(() => calculateEpf(rates.epf, wage, ageGroup, nationality), [rates, wage, ageGroup, nationality]);
@@ -152,6 +152,8 @@ export default function EpfCalculatorClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/semak-penyata-kwsp" : "/guides/how-to-check-epf-balance-statement", label: lang === "ms" ? "Cara Semak Penyata & Baki KWSP" : "How to Check Your EPF Balance" },
+          { href: lang === "ms" ? "/ms/dividen-kwsp-2026" : "/guides/epf-dividend-2026-what-we-know", label: lang === "ms" ? "Dividen KWSP 2026: Bila Diumumkan?" : "EPF Dividend 2026: What We Know" },
           { href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" },
           { href: "/guides/epf-employer-contribution-guide-malaysia", label: "EPF Employer Contribution Guide" },
           { href: "/guides/budget-2027-malaysia-salary-epf-socso", label: "Budget 2027: What It Could Mean for Your Salary" },

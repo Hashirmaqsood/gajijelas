@@ -21,6 +21,11 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/guides/epf-dividend-2025-rate-history", "/ms/dividen-kwsp-2025"],
   ["/guides/tax-relief-2026-malaysia-ya-2025", "/ms/pelepasan-cukai-2026"],
   ["/guides/resignation-notice-period-malaysia", "/ms/notis-berhenti-kerja"],
+  ["/guides/epf-dividend-2026-what-we-know", "/ms/dividen-kwsp-2026"],
+  ["/guides/what-is-perkeso-socso-same", "/ms/apa-itu-perkeso"],
+  ["/guides/income-tax-malaysia-what-salary-is-taxable", "/ms/gaji-berapa-kena-cukai-pendapatan"],
+  ["/guides/how-to-check-epf-balance-statement", "/ms/semak-penyata-kwsp"],
+  ["/guides/income-tax-number-tin-malaysia", "/ms/no-cukai-pendapatan-tin"],
 ];
 
 /** Returns the other-language URL for a localized page, or null if this path has no counterpart. */

@@ -218,6 +218,11 @@ export default function IncomeTaxClient() {
         <p className="mt-3 text-xs text-muted">{t("incomeTaxPage.ratesFootnote")}</p>
       </Card>
 
+      <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("incomeTaxPage.howTitle")}</h2>
+        <p className="mt-2 text-sm leading-relaxed text-muted">{t("incomeTaxPage.howBody")}</p>
+      </Card>
+
       <PageFaq
         title={t("incomeTaxPage.faqTitle")}
         items={[
