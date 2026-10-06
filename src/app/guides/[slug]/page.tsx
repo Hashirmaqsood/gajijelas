@@ -3,7 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GUIDES } from "@/lib/content/guides";
 import GuideMeta from "./GuideMeta";
-import { articleJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
+import ArticleBody from "@/components/content/ArticleBody";
+import PageFaq from "@/components/content/PageFaq";
+import { articleJsonLd, faqPageJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
+import { getAlternatePath } from "@/lib/i18n/routes";
+import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
   return GUIDES.map((g) => ({ slug: g.slug }));
@@ -13,10 +17,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const guide = GUIDES.find((g) => g.slug === slug);
   if (!guide) return {};
+  const alternate = getAlternatePath(`/guides/${guide.slug}`);
   return {
     title: guide.title,
     description: guide.description,
-    alternates: { canonical: `/guides/${guide.slug}` },
+    alternates: {
+      canonical: `/guides/${guide.slug}`,
+      ...(alternate
+        ? {
+            languages: {
+              "en-MY": `${SITE.url}/guides/${guide.slug}`,
+              "ms-MY": `${SITE.url}${alternate}`,
+              "x-default": `${SITE.url}/guides/${guide.slug}`,
+            },
+          }
+        : {}),
+    },
   };
 }
 
@@ -37,6 +53,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           })
         )}
       />
+      {guide.faq && <script {...jsonLdScriptProps(faqPageJsonLd(guide.faq))} />}
       <GuideMeta />
       <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted">
         {new Date(guide.publishedDate).toLocaleDateString("en-MY", { year: "numeric", month: "long", day: "numeric" })}
@@ -52,19 +69,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </p>
       )}
 
-      <div className="prose-content mt-8 space-y-4">
-        {guide.body.map((paragraph, i) =>
-          paragraph.startsWith("## ") ? (
-            <h2 key={i} className="pt-2 text-xl font-semibold text-foreground">
-              {paragraph.replace("## ", "")}
-            </h2>
-          ) : (
-            <p key={i} className="text-[15px] leading-relaxed text-foreground/90">
-              {paragraph}
-            </p>
-          )
-        )}
-      </div>
+      <ArticleBody body={guide.body} table={guide.table} />
+
+      {guide.faq && <PageFaq title="Frequently asked questions" items={guide.faq} />}
 
       {guide.relatedLinks && guide.relatedLinks.length > 0 && (
         <div className="mt-10 border-t border-border pt-6">

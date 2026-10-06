@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PayslipGeneratorClient from "@/app/payslip-generator/PayslipGeneratorClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Templat & Penjana Slip Gaji Malaysia";
+const TITLE = "Template & Penjana Slip Gaji Malaysia";
 const DESCRIPTION =
   "Templat slip gaji Malaysia percuma — hasilkan slip gaji terperinci dengan EPF, SOCSO, EIS dan PCB dikira dengan betul, sedia dimuat turun sebagai PDF.";
 

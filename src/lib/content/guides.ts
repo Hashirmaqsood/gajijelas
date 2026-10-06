@@ -1,9 +1,19 @@
+export interface GuideTable {
+  /** Render the table right after body[afterIndex]. */
+  afterIndex: number;
+  caption: string;
+  headers: string[];
+  rows: string[][];
+}
+
 export interface Guide {
   slug: string;
   title: string;
   description: string;
   publishedDate: string;
   body: string[];
+  table?: GuideTable;
+  faq?: { q: string; a: string }[];
   relatedLinks?: { href: string; label: string }[];
 }
 
@@ -368,7 +378,59 @@ export const GUIDES: Guide[] = [
     relatedLinks: [
       { href: "/epf-retirement-calculator", label: "EPF Retirement & Dividend Calculator" },
       { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/guides/epf-dividend-2025-rate-history", label: "EPF Dividend 2025: Rate & History" },
       { href: "/rate-changes", label: "Rate Change History" },
+    ],
+  },
+  {
+    slug: "epf-dividend-2025-rate-history",
+    title: "EPF Dividend 2025: 6.15% Rate, History & How It's Paid",
+    description:
+      "KWSP declared a 6.15% dividend for 2025 (Konvensional and Shariah), credited 1 March 2026. See past years' rates and how to check your dividend.",
+    publishedDate: "2026-10-06",
+    body: [
+      "KWSP declared a dividend of 6.15% for both Simpanan Konvensional and Simpanan Shariah for 2025. It was announced on 28 February 2026 and credited to members' accounts on 1 March 2026, with a total payout of RM79.6 billion. That is the confirmed figure — earlier forecasts of 6.3% to 6.5% were expectations, not the declared rate.",
+      "## EPF dividend rate history",
+      "The table below shows the declared rate for the last five years. Each year's dividend is announced the following February.",
+      "## How much dividend will I get?",
+      "A simple estimate is your balance multiplied by the declared rate. For example, RM50,000 held for the whole year at 6.15% would earn about RM3,075. Your actual dividend can differ, because it depends on when contributions went in and on any withdrawals during the year, so treat this as a guide rather than an exact figure. To see how dividends compound over many years, use the EPF retirement calculator.",
+      "## When was the 2025 dividend credited, and how do I check it?",
+      "The 2025 dividend was credited on 1 March 2026. You can check your dividend statement through i-Akaun (website or app), which showed statements from 28 February 2026, or at a KWSP self-service terminal. The dividend is credited to each of your accounts based on that account's balance.",
+      "## Konvensional or Shariah: does it matter?",
+      "For 2025 and 2024 both savings types received the same rate. In earlier years they differed — in 2022, for example, the conventional rate was 5.35% against 4.75% for Shariah — so it is worth knowing which type your savings are in. You can see this in i-Akaun.",
+      "## What about the 2026 dividend?",
+      "The 2026 dividend has not been declared. Following the usual pattern, expect the announcement in the last week of February 2027. Any specific 2026 percentage quoted before then is speculation.",
+    ],
+    table: {
+      afterIndex: 2,
+      caption: "EPF dividend rates by year",
+      headers: ["Year", "Simpanan Konvensional", "Simpanan Shariah"],
+      rows: [
+        ["2025", "6.15%", "6.15%"],
+        ["2024", "6.30%", "6.30%"],
+        ["2023", "5.50%", "5.40%"],
+        ["2022", "5.35%", "4.75%"],
+        ["2021", "6.10%", "5.65%"],
+      ],
+    },
+    faq: [
+      {
+        q: "What is the EPF dividend for 2025?",
+        a: "6.15% for both Simpanan Konvensional and Simpanan Shariah. KWSP announced it on 28 February 2026 and credited it to members' accounts on 1 March 2026, with a total payout of RM79.6 billion.",
+      },
+      {
+        q: "When will the EPF 2026 dividend be announced?",
+        a: "It has not been declared yet. KWSP usually announces the previous year's dividend in the last week of February, so the 2026 dividend is expected around late February 2027.",
+      },
+      {
+        q: "How do I check my EPF dividend?",
+        a: "Log in to i-Akaun (website or app) and open your statement, or use a KWSP self-service terminal. The dividend is credited to each of your accounts based on that account's balance.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/epf-retirement-calculator", label: "EPF Retirement & Dividend Calculator" },
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+      { href: "/guides/epf-dividend-2026-what-we-know", label: "EPF Dividend 2026: What We Know" },
     ],
   },
 ];

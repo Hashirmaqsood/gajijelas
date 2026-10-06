@@ -18,6 +18,7 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/prorated-salary-calculator", "/ms/prorated-salary-calculator"],
   ["/salary-increment-calculator", "/ms/salary-increment-calculator"],
   ["/income-tax-calculator", "/ms/income-tax-calculator"],
+  ["/guides/epf-dividend-2025-rate-history", "/ms/dividen-kwsp-2025"],
 ];
 
 /** Returns the other-language URL for a localized page, or null if this path has no counterpart. */
