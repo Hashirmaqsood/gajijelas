@@ -21,7 +21,7 @@ export default function MortgageClient() {
   const [annualInterestRatePct, setAnnualInterestRatePct] = useState(4);
   const [tenureYears, setTenureYears] = useState(30);
   const [monthlyTakeHomePay, setMonthlyTakeHomePay] = useState(5000);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const result = useMemo(
     () => calculateMortgage({ propertyPrice, downPaymentPct, annualInterestRatePct, tenureYears, monthlyTakeHomePay }),
@@ -100,6 +100,7 @@ export default function MortgageClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/berapa-gaji-untuk-beli-rumah" : "/guides/how-much-salary-to-buy-a-house-malaysia", label: lang === "ms" ? "Berapa Gaji untuk Beli Rumah?" : "How Much Salary to Buy a House?" },
           { href: "/", label: "Full Salary Calculator" },
           { href: "/guides/is-your-salary-good-in-malaysia", label: "Is Your Salary Good in Malaysia?" },
         ]}

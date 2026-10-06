@@ -15,7 +15,7 @@ export default function OvertimeClient() {
   const [normalHoursPerDay, setNormalHoursPerDay] = useState(8);
   const [dayType, setDayType] = useState<OvertimeDayType>("normal");
   const [hoursWorked, setHoursWorked] = useState(2);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const { hourlyRate } = useMemo(
     () => calculateHourlyRate({ monthlySalary, workingDaysPerMonth: 26, hoursPerDay: normalHoursPerDay }),
@@ -84,7 +84,10 @@ export default function OvertimeClient() {
       />
 
       <RelatedGuides
-        links={[{ href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" }]}
+        links={[
+          { href: lang === "ms" ? "/ms/kerja-lebih-masa-kadar-cara-kira" : "/guides/understanding-employment-act-overtime-rules", label: lang === "ms" ? "Kerja Lebih Masa: Kadar & Cara Kira" : "Understanding Overtime Rules" },
+          { href: lang === "ms" ? "/ms/akta-kerja-1955-hak-pekerja" : "/guides/employment-act-1955-employee-rights-summary", label: lang === "ms" ? "Akta Kerja 1955: Hak Pekerja" : "Employment Act 1955: Key Rights" },
+        ]}
       />
     </ToolPageShell>
   );

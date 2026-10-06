@@ -26,6 +26,12 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/guides/income-tax-malaysia-what-salary-is-taxable", "/ms/gaji-berapa-kena-cukai-pendapatan"],
   ["/guides/how-to-check-epf-balance-statement", "/ms/semak-penyata-kwsp"],
   ["/guides/income-tax-number-tin-malaysia", "/ms/no-cukai-pendapatan-tin"],
+  ["/guides/gross-net-basic-salary-meaning-malaysia", "/ms/maksud-gaji-kasar-gaji-bersih"],
+  ["/guides/daily-hourly-rate-calculation-malaysia", "/ms/cara-kira-gaji-sehari-sejam"],
+  ["/guides/understanding-employment-act-overtime-rules", "/ms/kerja-lebih-masa-kadar-cara-kira"],
+  ["/guides/employment-act-1955-employee-rights-summary", "/ms/akta-kerja-1955-hak-pekerja"],
+  ["/guides/what-is-pcb-mtd-malaysia", "/ms/apa-itu-pcb"],
+  ["/guides/how-much-salary-to-buy-a-house-malaysia", "/ms/berapa-gaji-untuk-beli-rumah"],
 ];
 
 /** Returns the other-language URL for a localized page, or null if this path has no counterpart. */

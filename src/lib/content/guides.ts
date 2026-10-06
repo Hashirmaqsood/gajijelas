@@ -1,4 +1,5 @@
 import { taxBySalaryRows } from "./taxBySalary";
+import { dailyHourlyRows, houseSalaryRows, pcbBySalaryRows } from "./rateTables";
 
 export interface GuideTable {
   /** Render the table right after body[afterIndex]. */
@@ -731,6 +732,238 @@ export const GUIDES: Guide[] = [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
       { href: "/guides/tax-relief-2026-malaysia-ya-2025", label: "Tax Relief 2026: Full List" },
+    ],
+  },
+  {
+    slug: "gross-net-basic-salary-meaning-malaysia",
+    title: "Gross vs Net vs Basic Salary in Malaysia: What They Mean",
+    description:
+      "What is the difference between basic, gross and net salary in Malaysia? Clear definitions plus a worked example of how RM5,000 gross becomes take-home pay.",
+    publishedDate: "2026-10-06",
+    body: [
+      "Three salary terms appear on Malaysian contracts and payslips: basic salary, gross salary and net salary. They are not the same, and mixing them up leads to wrong expectations about take-home pay.",
+      "## Basic, gross and net salary compared",
+      "The table summarises each term. Your payslip may also show items such as allowances, overtime and bonuses.",
+      "## A worked example",
+      "Take a gross salary of RM5,000 a month for a single Malaysian employee under 60. EPF takes RM550, SOCSO RM25, EIS RM10 and PCB RM108.25, so the net salary, or take-home pay, is RM4,306.75. The employer pays EPF, SOCSO and EIS on top of the gross salary, which is why the cost to the employer is higher than the gross pay.",
+      "## Why the difference matters",
+      "Offers and contracts usually quote gross salary, but you spend your net salary. Some benefits may be calculated on basic pay, so check your contract. EPF contributions are calculated on your wages as defined by the EPF Act, which can include allowances and commissions, not only basic salary.",
+      "## Work out your own net salary",
+      "Enter your gross salary in the salary calculator to see your net salary, each deduction and the total cost to your employer.",
+    ],
+    table: {
+      afterIndex: 2,
+      caption: "Basic, gross and net salary",
+      headers: ["Term", "Meaning", "What it includes"],
+      rows: [
+        ["Basic salary (gaji pokok)", "The fixed base pay in your contract", "Excludes allowances, overtime and bonuses"],
+        ["Gross salary (gaji kasar)", "Total pay before any deduction", "Basic pay plus allowances and other regular pay"],
+        ["Net salary (gaji bersih)", "What reaches your bank account", "Gross pay minus EPF, SOCSO, EIS, PCB and other deductions"],
+      ],
+    },
+    faq: [
+      {
+        q: "What is the difference between gross and net salary?",
+        a: "Gross salary is your pay before any deduction. Net salary, also called take-home pay, is what you receive after EPF, SOCSO, EIS, PCB and other deductions are taken out.",
+      },
+      {
+        q: "What is basic salary?",
+        a: "Basic salary, or gaji pokok, is the fixed base pay stated in your contract, before allowances, overtime and bonuses.",
+      },
+      {
+        q: "Is the salary in my offer letter gross or net?",
+        a: "Offer letters normally state gross salary, so your take-home pay will be lower. Check the wording, and use a salary calculator to see your net figure.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/", label: "Malaysia Salary Calculator" },
+      { href: "/payslip-generator", label: "Payslip Generator" },
+      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
+    ],
+  },
+  {
+    slug: "daily-hourly-rate-calculation-malaysia",
+    title: "Daily & Hourly Rate Calculation Malaysia: Formula & Examples",
+    description:
+      "How to calculate your daily and hourly rate from monthly salary in Malaysia: the Employment Act 26-day formula, with examples and a table.",
+    publishedDate: "2026-10-06",
+    body: [
+      "To work out a daily or hourly rate in Malaysia, the Employment Act convention divides the monthly salary by 26 working days to get the daily rate, then divides the daily rate by the normal working hours per day to get the hourly rate. This is called the ordinary rate of pay.",
+      "## The formula",
+      "Daily rate = monthly salary ÷ 26. Hourly rate = daily rate ÷ hours per day, usually 8. For example, a monthly salary of RM2,600 gives a daily rate of RM100 and an hourly rate of RM12.50.",
+      "## Daily and hourly rates by monthly salary",
+      "The table uses 26 working days and an 8-hour day.",
+      "## Why 26 days and not 30?",
+      "The Employment Act uses 26 working days as the standard divisor for the ordinary rate of pay, which is the base for overtime and similar pay. That is different from pro-rating a salary for an incomplete month, where the actual number of days in that calendar month is used.",
+      "## Where you use the hourly rate",
+      "The hourly rate is the starting point for overtime pay: 1.5 times on a normal working day, with higher rates on rest days and public holidays.",
+    ],
+    table: {
+      afterIndex: 4,
+      caption: "Daily and hourly rate by monthly salary",
+      headers: ["Monthly salary", "Daily rate (÷ 26)", "Hourly rate (÷ 8)"],
+      rows: dailyHourlyRows(),
+    },
+    faq: [
+      {
+        q: "How do I calculate my daily rate from monthly salary in Malaysia?",
+        a: "Divide your monthly salary by 26 working days. For example, RM2,600 ÷ 26 = RM100 a day.",
+      },
+      {
+        q: "How do I calculate my hourly rate in Malaysia?",
+        a: "Divide your daily rate by your normal working hours per day, usually 8. A daily rate of RM100 gives RM12.50 an hour.",
+      },
+      {
+        q: "Why does Malaysia divide by 26 days?",
+        a: "The Employment Act uses a 26-day working month as the standard divisor for the ordinary rate of pay, so overtime and similar pay stay consistent regardless of how many days are in the calendar month.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/hourly-rate-calculator", label: "Hourly & Daily Rate Calculator" },
+      { href: "/overtime-calculator", label: "Overtime (OT) Calculator" },
+      { href: "/guides/salary-calculation-30-or-31-days-malaysia", label: "Salary Calculation: 30 or 31 Days?" },
+    ],
+  },
+  {
+    slug: "employment-act-1955-employee-rights-summary",
+    title: "Employment Act 1955: Key Employee Rights Explained",
+    description:
+      "A plain summary of the Employment Act 1955 after the 2022 amendments: working hours, overtime, leave, notice, maternity and paternity leave.",
+    publishedDate: "2026-10-06",
+    body: [
+      "The Employment Act 1955 sets the minimum terms of employment in Malaysia. Since 1 January 2023 it applies to all employees regardless of salary, although some provisions, such as overtime and termination benefits, apply only to employees earning RM4,000 a month or less (and manual workers).",
+      "## Key employee rights at a glance",
+      "The table summarises the main minimums. Your contract can give you more than the Act, but not less.",
+      "## What the 2022 amendment changed",
+      "The Employment (Amendment) Act 2022, in force from 1 January 2023, cut the normal working week to 45 hours, extended maternity leave to 98 days, introduced 7 days of paternity leave and gave employees the right to request flexible working arrangements.",
+      "## Check your own entitlements",
+      "Use the overtime, annual leave and prorated salary calculators to turn these minimums into your own numbers.",
+    ],
+    table: {
+      afterIndex: 2,
+      caption: "Employment Act 1955: main minimums",
+      headers: ["Topic", "What the law says"],
+      rows: [
+        ["Who is covered", "All employees since 1 January 2023; overtime and termination-benefit rules only for those earning RM4,000 a month or less"],
+        ["Working hours", "Up to 8 hours a day and 45 hours a week"],
+        ["Overtime", "1.5 times the hourly rate on a normal day; higher rates on rest days and public holidays"],
+        ["Annual leave", "8 days (under 2 years), 12 days (2 to under 5 years), 16 days (5 years or more)"],
+        ["Sick leave", "14, 18 or 22 days depending on service, and up to 60 days if hospitalised"],
+        ["Paid public holidays", "11 a year, including 5 fixed: National Day, Labour Day, Malaysia Day, the Agong's birthday and the Ruler's or Governor's birthday"],
+        ["Maternity leave", "98 consecutive days"],
+        ["Paternity leave", "7 consecutive days for married male employees with at least 12 months' service"],
+        ["Notice of termination", "4, 6 or 8 weeks if the contract is silent"],
+        ["Flexible working", "Right to apply; the employer must give reasons within 60 days if it refuses"],
+      ],
+    },
+    faq: [
+      {
+        q: "Does the Employment Act 1955 apply to everyone in Malaysia?",
+        a: "Since 1 January 2023 it applies to all employees regardless of salary, but overtime and termination-benefit provisions apply only to employees earning RM4,000 a month or less and to manual workers.",
+      },
+      {
+        q: "How many hours can I be required to work in a week?",
+        a: "The normal working week is a maximum of 45 hours, and no more than 8 hours in a day.",
+      },
+      {
+        q: "How many days of maternity leave do I get in Malaysia?",
+        a: "98 consecutive days under the Employment Act, after the 2022 amendment that took effect on 1 January 2023.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/overtime-calculator", label: "Overtime (OT) Calculator" },
+      { href: "/annual-leave-calculator", label: "Annual Leave Calculator" },
+      { href: "/guides/resignation-notice-period-malaysia", label: "Resignation Notice Period" },
+    ],
+  },
+  {
+    slug: "what-is-pcb-mtd-malaysia",
+    title: "What Is PCB (MTD) in Malaysia? Meaning & How It Works",
+    description:
+      "PCB (Potongan Cukai Bulanan) is the monthly income tax your employer deducts from your salary. See what it means, how it works and what you pay at each salary.",
+    publishedDate: "2026-10-06",
+    body: [
+      "PCB stands for Potongan Cukai Bulanan, known in English as MTD, the Monthly Tax Deduction. It is the income tax your employer deducts from your salary each month and pays to LHDN on your behalf.",
+      "## How PCB works",
+      "PCB is not an extra tax. It is an instalment of your yearly income tax, spread over the year. When you file your return, your final tax is compared with the PCB already paid: if you overpaid you get a refund, and if you underpaid you pay the balance.",
+      "## What affects your PCB",
+      "Your PCB depends on your income, marital status, number of children, EPF contributions and the reliefs you claim. A bonus month usually has a larger PCB because the extra income is taxed in that month.",
+      "## PCB at different salaries",
+      "The table shows the monthly PCB for a single Malaysian employee with no children and only the standard reliefs.",
+      "## Why PCB can be RM0",
+      "At lower incomes, your reliefs and the RM400 tax rebate bring your tax down to zero, so no PCB is deducted. Married employees and those with children start paying PCB at a higher salary.",
+      "## Calculate your own PCB",
+      "Use the PCB calculator for your exact monthly deduction, or the income tax calculator for your yearly tax.",
+    ],
+    table: {
+      afterIndex: 5,
+      caption: "Monthly PCB by salary (single, no children)",
+      headers: ["Monthly salary", "PCB per month"],
+      rows: pcbBySalaryRows(),
+    },
+    faq: [
+      {
+        q: "What is PCB in Malaysia?",
+        a: "PCB (Potongan Cukai Bulanan), also called MTD (Monthly Tax Deduction), is the income tax your employer deducts from your monthly salary and pays to LHDN for you.",
+      },
+      {
+        q: "Is PCB the same as income tax?",
+        a: "PCB is an instalment of your yearly income tax. Your final tax is worked out when you file your return, and any PCB paid above that amount is refunded.",
+      },
+      {
+        q: "Can I get my PCB back?",
+        a: "If the PCB deducted during the year is more than your final tax, the difference is refunded after you file your income tax return.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/guides/how-bonuses-are-taxed-in-malaysia", label: "How Bonuses Are Taxed" },
+    ],
+  },
+  {
+    slug: "how-much-salary-to-buy-a-house-malaysia",
+    title: "How Much Salary Do You Need to Buy a House in Malaysia?",
+    description:
+      "Salary needed to buy a house in Malaysia by price, from RM300,000 to RM1 million: monthly instalment and the take-home pay that keeps your DSR comfortable.",
+    publishedDate: "2026-10-06",
+    body: [
+      "How much salary you need depends on the price of the house, the size of the loan and your other debts. A practical way to plan is to check that the monthly instalment stays within about 30% to 40% of your take-home pay.",
+      "## Salary needed by property price",
+      "The table assumes a 10% down payment and a 30-year loan at 4% a year. It shows the monthly instalment and the take-home pay needed to keep that instalment within 40% and within 30% of your pay.",
+      "## Why 30% to 40%?",
+      "Lenders look at your Debt Service Ratio (DSR), which compares all your monthly debt payments with your income. There is no single legal limit and each bank decides, but a DSR under 30% to 40% is generally seen as comfortable, while above 60% to 70% usually needs a strong income profile or collateral.",
+      "## Banks use gross income and all your debts",
+      "Banks assess your gross income and count other commitments such as car loans and credit cards. The table uses take-home pay as a simple planning guide, so your actual approval can differ.",
+      "## Other costs to budget for",
+      "Legal fees, stamp duty and valuation fees are separate from the instalment and are not included in these figures.",
+      "## Try your own numbers",
+      "Enter the price, down payment, interest rate and your take-home pay in the mortgage calculator to see your instalment and DSR.",
+    ],
+    table: {
+      afterIndex: 2,
+      caption: "Salary needed by property price (10% down, 30 years, 4%)",
+      headers: ["Property price", "Loan", "Monthly instalment", "Take-home pay for 40%", "Take-home pay for 30%"],
+      rows: houseSalaryRows(),
+    },
+    faq: [
+      {
+        q: "How much salary do I need to buy a RM300,000 house?",
+        a: "With a 10% down payment and a 30-year loan at 4%, the instalment is about RM1,289 a month. To keep it within 40% of your take-home pay you need about RM3,250 a month, and within 30% about RM4,300. Your bank's decision can differ.",
+      },
+      {
+        q: "Do Malaysian banks use gross or net salary for a home loan?",
+        a: "Banks calculate your DSR using your gross income and all your existing debts combined, not your take-home pay.",
+      },
+      {
+        q: "What DSR is considered comfortable for a home loan?",
+        a: "There is no single legal cap. As a general pattern, a DSR under 30% to 40% is seen as comfortable, and above 60% to 70% usually needs a strong income profile or collateral.",
+      },
+    ],
+    relatedLinks: [
+      { href: "/mortgage-calculator", label: "Mortgage Calculator & DSR" },
+      { href: "/", label: "Malaysia Salary Calculator" },
+      { href: "/guides/is-your-salary-good-in-malaysia", label: "Is Your Salary Good in Malaysia?" },
     ],
   },
 ];

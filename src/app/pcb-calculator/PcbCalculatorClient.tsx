@@ -19,7 +19,7 @@ export default function PcbCalculatorClient() {
   const rates = getRates(CURRENT_RATE_YEAR);
   const result = useMemo(() => calculateSalary(input, rates), [input, rates]);
   const set = <K extends keyof SalaryInput>(key: K, v: SalaryInput[K]) => setInput({ ...input, [key]: v });
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const lookupRows = useMemo(
     () =>
@@ -154,6 +154,7 @@ export default function PcbCalculatorClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/apa-itu-pcb" : "/guides/what-is-pcb-mtd-malaysia", label: lang === "ms" ? "Apa Itu PCB? Maksud & Cara Kira" : "What Is PCB (MTD)?" },
           { href: "/income-tax-calculator", label: "Income Tax Calculator (annual tax payable)" },
           { href: "/guides/malaysia-income-tax-rate-brackets-explained", label: "Malaysia Income Tax Rate Brackets Explained" },
           { href: "/guides/annual-tax-relief-checklist", label: "Annual Tax Relief Checklist" },
