@@ -36,9 +36,9 @@ const ms: Dictionary = {
   },
   home: {
     ratesBadge: "Kadar statutori {year}",
-    heroTitle: "Ketahui gaji bawa balik sebenar anda di Malaysia",
+    heroTitle: "Kalkulator Gaji Malaysia: Gaji Bersih Sebenar Anda",
     heroSubtitle:
-      "Masukkan gaji kasar anda sekali dan lihat gaji bersih (gaji bawa balik) sebenar anda selepas EPF, SOCSO, EIS dan PCB — dengan setiap Ringgit dijelaskan, dikira secara langsung dalam pelayar anda.",
+      "Masukkan gaji kasar anda sekali dan lihat gaji bersih (gaji bawa balik) sebenar anda selepas EPF, SOCSO, EIS dan PCB — serta caruman yang dibayar majikan. Gaji bersih dan kos gaji (payroll) dikira terus dalam pelayar anda, dengan setiap Ringgit dijelaskan.",
     trustNoSignup: "Tanpa pendaftaran diperlukan",
     trustNoServer: "Tidak ada data dihantar ke pelayan",
     trustRatesChecked: "Kadar terakhir disemak {date}",
@@ -49,6 +49,36 @@ const ms: Dictionary = {
     sourcedDisclaimer:
       "Semua keputusan adalah anggaran untuk tujuan perancangan dan bukan pengganti nasihat daripada pasukan gaji majikan anda atau ejen cukai berlesen.",
     rateChangesLink: "halaman perubahan kadar",
+    examplesTitle: "Gaji selepas EPF, SOCSO dan cukai: contoh pengiraan (kadar {year})",
+    examplesIntro:
+      "Angka-angka ini datang terus daripada kalkulator di atas, untuk pekerja Malaysia bujang bawah 60 tahun tanpa bonus, anak atau pelepasan tambahan. Sudah berkahwin, ada anak, atau menuntut pelepasan? Masukkan butiran anda di atas — PCB paling banyak berubah.",
+    colGross: "Gaji kasar",
+    colEpf: "EPF (anda)",
+    colSocso: "SOCSO",
+    colEis: "EIS",
+    colPcb: "PCB (cukai)",
+    colNet: "Gaji bersih",
+    colEmployer: "Jumlah kos majikan",
+    payrollTitle: "Kalkulator payroll untuk majikan di Malaysia",
+    payrollBody:
+      "Menguruskan gaji pekerja? Selain gaji bersih, kalkulator ini menunjukkan caruman yang dibayar majikan di atas gaji kasar — EPF (13% bagi gaji sehingga RM5,000, 12% jika lebih), SOCSO dan EIS — serta jumlah kos bulanan setiap pekerja. Gunakannya untuk membuat bajet pengambilan pekerja, kemudian jana slip gaji terperinci dengan",
+    payrollLinkText: "penjana slip gaji",
+    faqTitle: "Pengiraan gaji di Malaysia: soalan lazim",
+    faqQ1: "Bagaimana gaji bersih dikira di Malaysia?",
+    faqA1:
+      "Gaji bersih (gaji bawa balik) ialah gaji kasar anda ditolak empat potongan berkanun: bahagian EPF anda sebanyak 11%, caruman SOCSO dan EIS (kedua-duanya dikira atas gaji maksimum RM6,000), dan potongan cukai bulanan (PCB/MTD) jika pendapatan anda cukup tinggi untuk dikenakan cukai. Kalkulator ini menggunakan kadar semasa KWSP, PERKESO dan LHDN secara automatik.",
+    faqQ2: "Apakah beza antara gaji kasar dan gaji bersih?",
+    faqA2:
+      "Gaji kasar ialah jumlah dalam kontrak pekerjaan anda sebelum sebarang potongan. Gaji bersih ialah jumlah yang sebenarnya masuk ke akaun bank anda selepas EPF, SOCSO, EIS dan PCB ditolak. Majikan anda juga membayar EPF, SOCSO dan EIS di atas gaji kasar anda, sebab itulah jumlah kos majikan lebih tinggi daripada gaji kasar anda.",
+    faqQ3: "Berapakah caruman EPF majikan dan pekerja?",
+    faqA3:
+      "Bagi pekerja Malaysia bawah 60 tahun, pekerja menyumbang 11% daripada gaji bulanan. Majikan menyumbang 13% jika gaji RM5,000 atau kurang, dan 12% jika gaji melebihi RM5,000.",
+    faqQ4: "Adakah ini juga kalkulator payroll untuk majikan?",
+    faqA4:
+      "Ya. Bersama gaji bersih pekerja, keputusan menunjukkan caruman EPF, SOCSO dan EIS majikan serta jumlah kos bulanan majikan, supaya pasukan HR dan pemilik perniagaan kecil dapat merancang bajet gaji. Untuk rekod bercetak, gunakan penjana slip gaji.",
+    faqQ5: "Adakah PCB (potongan cukai bulanan) dikenakan pada setiap gaji?",
+    faqA5:
+      "Tidak. Di bawah tahap pendapatan tertentu, pelepasan cukai dan rebat cukai anda menjadikan cukai sifar, jadi tiada PCB dipotong. Jadual contoh di atas menunjukkan di mana PCB bermula bagi pekerja bujang; berkahwin, mempunyai anak atau menuntut pelepasan tambahan akan menolak titik itu lebih tinggi.",
   },
   form: {
     title: "Butiran anda",
@@ -408,7 +438,7 @@ const ms: Dictionary = {
       "Tidak — ini hanya menukar gaji bulanan asas anda. Bonus, elaun dan gaji lebih masa dikira secara berasingan dan tidak sepatutnya dimasukkan dalam angka gaji yang anda masukkan di sini.",
   },
   overtimePage: {
-    title: "Kalkulator Gaji Lebih Masa",
+    title: "Kalkulator OT (Gaji Lebih Masa)",
     intro: "Kira gaji lebih masa di bawah Jadual Kedua Akta Kerja 1955, meliputi hari bekerja biasa, hari rehat dan cuti umum.",
     monthlySalary: "Gaji bulanan",
     monthlySalaryHint: "Digunakan untuk mendapatkan kadar sejam anda (÷26 hari ÷ jam biasa)",

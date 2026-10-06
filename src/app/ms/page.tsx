@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import HomeContent from "@/app/HomeContent";
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
 import { SITE } from "@/lib/site";
+import { computeSalaryExamples } from "@/lib/content/salaryExamples";
+import { faqPageJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
+import ms from "@/lib/i18n/ms";
 
 export const metadata: Metadata = {
-  title: "Kalkulator Gaji Malaysia — Gaji Bawa Balik Sebenar",
+  title: "Kalkulator Gaji Malaysia 2026 — Kira Gaji Bersih, EPF & PCB",
   description:
-    "Masukkan gaji kasar anda sekali dan lihat gaji bersih sebenar selepas EPF, SOCSO, EIS dan PCB — dikira terus dalam pelayar anda, setiap Ringgit dijelaskan.",
+    "Kalkulator gaji Malaysia percuma — kira gaji bersih (gaji bawa balik) selepas EPF, SOCSO, EIS dan PCB, serta kos majikan. Kadar rasmi KWSP, PERKESO & LHDN 2026.",
   alternates: {
     canonical: "/ms",
     languages: {
@@ -17,8 +20,17 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQ = [
+  { q: ms.home.faqQ1, a: ms.home.faqA1 },
+  { q: ms.home.faqQ2, a: ms.home.faqA2 },
+  { q: ms.home.faqQ3, a: ms.home.faqA3 },
+  { q: ms.home.faqQ4, a: ms.home.faqA4 },
+  { q: ms.home.faqQ5, a: ms.home.faqA5 },
+];
+
 export default function MsHomePage() {
   const rates = getRates(CURRENT_RATE_YEAR);
+  const examples = computeSalaryExamples(rates);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -34,7 +46,8 @@ export default function MsHomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <HomeContent rates={rates} />
+      <script {...jsonLdScriptProps(faqPageJsonLd(FAQ))} />
+      <HomeContent rates={rates} examples={examples} />
     </>
   );
 }

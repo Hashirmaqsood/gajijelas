@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 // history), not build time — an always-"now" lastmod is a freshness signal
 // Google explicitly says it learns to distrust and ignore.
 const staticRoutes: { path: string; lastModified: string }[] = [
-  { path: "", lastModified: "2026-09-24" },
+  { path: "", lastModified: "2026-10-06" },
   { path: "/compare", lastModified: "2026-09-18" },
   { path: "/epf-calculator", lastModified: "2026-09-27" },
   { path: "/epf-retirement-calculator", lastModified: "2026-09-24" },
@@ -14,7 +14,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/socso-calculator", lastModified: "2026-09-27" },
   { path: "/pcb-calculator", lastModified: "2026-09-27" },
   { path: "/hourly-rate-calculator", lastModified: "2026-09-20" },
-  { path: "/overtime-calculator", lastModified: "2026-09-20" },
+  { path: "/overtime-calculator", lastModified: "2026-10-06" },
   { path: "/annual-leave-calculator", lastModified: "2026-09-20" },
   { path: "/mortgage-calculator", lastModified: "2026-09-28" },
   { path: "/zakat-calculator", lastModified: "2026-09-23" },
@@ -30,14 +30,14 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/privacy-policy", lastModified: "2026-09-18" },
   // Malay versions (Phase 1: homepage + calculators only — guides aren't
   // translated yet).
-  { path: "/ms", lastModified: "2026-09-24" },
+  { path: "/ms", lastModified: "2026-10-06" },
   { path: "/ms/epf-calculator", lastModified: "2026-09-27" },
   { path: "/ms/epf-retirement-calculator", lastModified: "2026-09-24" },
   { path: "/ms/epf-account-split-calculator", lastModified: "2026-09-24" },
   { path: "/ms/socso-calculator", lastModified: "2026-09-27" },
   { path: "/ms/pcb-calculator", lastModified: "2026-09-27" },
   { path: "/ms/hourly-rate-calculator", lastModified: "2026-09-24" },
-  { path: "/ms/overtime-calculator", lastModified: "2026-09-24" },
+  { path: "/ms/overtime-calculator", lastModified: "2026-10-06" },
   { path: "/ms/annual-leave-calculator", lastModified: "2026-09-24" },
   { path: "/ms/mortgage-calculator", lastModified: "2026-09-28" },
   { path: "/ms/zakat-calculator", lastModified: "2026-09-24" },

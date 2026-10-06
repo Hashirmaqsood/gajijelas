@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import OvertimeClient from "@/app/overtime-calculator/OvertimeClient";
 import { calculatorJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Kalkulator Gaji Lebih Masa Malaysia";
+const TITLE = "Kalkulator OT & Gaji Lebih Masa Malaysia";
 const DESCRIPTION = "Kira gaji lebih masa di bawah Jadual Kedua Akta Kerja 1955, meliputi hari bekerja biasa, hari rehat dan cuti umum.";
 
 export const metadata: Metadata = {

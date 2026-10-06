@@ -3,9 +3,12 @@
 import Link from "next/link";
 import SalaryCalculatorApp from "@/components/calculator/SalaryCalculatorApp";
 import RelatedGuides from "@/components/content/RelatedGuides";
+import PageFaq from "@/components/content/PageFaq";
 import { Card } from "@/components/ui/Field";
 import { TOOL_LINKS } from "@/lib/site";
 import type { StatutoryRates } from "@/lib/rates/types";
+import type { SalaryExampleRow } from "@/lib/content/salaryExamples";
+import { formatRM } from "@/lib/format";
 import { useLanguage } from "@/lib/i18n/context";
 
 function ShieldIcon() {
@@ -35,8 +38,9 @@ function ClockIcon() {
   );
 }
 
-export default function HomeContent({ rates }: { rates: StatutoryRates }) {
-  const { t } = useLanguage();
+export default function HomeContent({ rates, examples }: { rates: StatutoryRates; examples: SalaryExampleRow[] }) {
+  const { t, lang } = useLanguage();
+  const payslipHref = lang === "ms" ? "/ms/payslip-generator" : "/payslip-generator";
 
   const toolMeta: Record<string, { title: string; desc: string }> = {
     "/": { title: t("tools.fullCalcTitle"), desc: t("tools.fullCalcDesc") },
@@ -92,6 +96,64 @@ export default function HomeContent({ rates }: { rates: StatutoryRates }) {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+        <Card>
+          <h2 className="text-xl font-semibold text-foreground">{t("home.examplesTitle", { year: rates.year })}</h2>
+          <p className="mt-2 max-w-3xl text-sm text-muted">{t("home.examplesIntro")}</p>
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[680px] whitespace-nowrap text-sm tabular-nums">
+              <thead>
+                <tr className="border-b border-border text-left text-xs uppercase text-muted">
+                  <th scope="col" className="py-2 pr-4 font-medium">{t("home.colGross")}</th>
+                  <th scope="col" className="py-2 pr-4 font-medium">{t("home.colEpf")}</th>
+                  <th scope="col" className="py-2 pr-4 font-medium">{t("home.colSocso")}</th>
+                  <th scope="col" className="py-2 pr-4 font-medium">{t("home.colEis")}</th>
+                  <th scope="col" className="py-2 pr-4 font-medium">{t("home.colPcb")}</th>
+                  <th scope="col" className="py-2 pr-4 font-medium text-brand-dark">{t("home.colNet")}</th>
+                  <th scope="col" className="py-2 font-medium">{t("home.colEmployer")}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {examples.map((row) => (
+                  <tr key={row.gross} className="border-b border-border/60 last:border-b-0">
+                    <th scope="row" className="py-2.5 pr-4 text-left font-semibold text-foreground">{formatRM(row.gross, { decimals: 0 })}</th>
+                    <td className="py-2.5 pr-4">{formatRM(row.epf)}</td>
+                    <td className="py-2.5 pr-4">{formatRM(row.socso)}</td>
+                    <td className="py-2.5 pr-4">{formatRM(row.eis)}</td>
+                    <td className="py-2.5 pr-4">{formatRM(row.pcb)}</td>
+                    <td className="py-2.5 pr-4 font-semibold text-brand-dark">{formatRM(row.net)}</td>
+                    <td className="py-2.5">{formatRM(row.employerCost)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
+        <Card>
+          <h2 className="text-lg font-semibold text-foreground">{t("home.payrollTitle")}</h2>
+          <p className="mt-2 max-w-3xl text-sm text-muted">
+            {t("home.payrollBody")}{" "}
+            <Link href={payslipHref} className="text-brand underline">
+              {t("home.payrollLinkText")}
+            </Link>
+            .
+          </p>
+        </Card>
+        <PageFaq
+          title={t("home.faqTitle")}
+          items={[
+            { q: t("home.faqQ1"), a: t("home.faqA1") },
+            { q: t("home.faqQ2"), a: t("home.faqA2") },
+            { q: t("home.faqQ3"), a: t("home.faqA3") },
+            { q: t("home.faqQ4"), a: t("home.faqA4") },
+            { q: t("home.faqQ5"), a: t("home.faqA5") },
+          ]}
+        />
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">

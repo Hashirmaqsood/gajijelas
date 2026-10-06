@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import OvertimeClient from "./OvertimeClient";
 import { calculatorJsonLd, faqPageJsonLd, jsonLdScriptProps } from "@/lib/seo/jsonLd";
 
-const TITLE = "Overtime Pay Calculator Malaysia";
-const DESCRIPTION = "Calculate overtime pay for normal working days, rest days and public holidays under the Employment Act 1955.";
+const TITLE = "Overtime (OT) Calculator Malaysia | Employment Act Rates";
+const DESCRIPTION = "Free OT calculator for Malaysia — work out overtime pay for normal working days, rest days and public holidays, using Employment Act 1955 rates.";
 
 const FAQ = [
   {

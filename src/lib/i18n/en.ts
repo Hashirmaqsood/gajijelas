@@ -35,9 +35,9 @@ const en = {
   },
   home: {
     ratesBadge: "{year} statutory rates",
-    heroTitle: "Know your real take-home pay in Malaysia",
+    heroTitle: "Malaysia Salary Calculator: Your Real Take-Home Pay",
     heroSubtitle:
-      "Enter your gross salary once and see exactly what EPF, SOCSO, EIS and PCB take out — with every Ringgit explained, calculated live in your browser.",
+      "Enter your gross salary once and see exactly what EPF, SOCSO, EIS and PCB take out — plus what your employer pays on top. Net pay and payroll cost, calculated live in your browser with every Ringgit explained.",
     trustNoSignup: "No sign-up required",
     trustNoServer: "Nothing sent to a server",
     trustRatesChecked: "Rates last checked {date}",
@@ -48,6 +48,36 @@ const en = {
     sourcedDisclaimer:
       "All results are estimates for planning purposes and are not a substitute for advice from your employer's payroll team or a licensed tax agent.",
     rateChangesLink: "rate changes page",
+    examplesTitle: "Salary after EPF, SOCSO and tax: worked examples ({year} rates)",
+    examplesIntro:
+      "These figures come straight from the calculator above, for a single Malaysian employee under 60 with no bonus, children or extra reliefs. Married, with children, or claiming reliefs? Enter your own details above — PCB changes the most.",
+    colGross: "Gross salary",
+    colEpf: "EPF (you)",
+    colSocso: "SOCSO",
+    colEis: "EIS",
+    colPcb: "PCB (tax)",
+    colNet: "Take-home pay",
+    colEmployer: "Total employer cost",
+    payrollTitle: "Payroll calculator for Malaysian employers",
+    payrollBody:
+      "Running payroll? Besides your take-home pay, the calculator shows what the employer pays on top of gross salary — EPF (13% on wages up to RM5,000, 12% above), SOCSO and EIS — and the total monthly cost of each employee. Use it to budget hiring costs, then generate an itemised payslip with the",
+    payrollLinkText: "payslip generator",
+    faqTitle: "Malaysia salary calculation: common questions",
+    faqQ1: "How is net salary calculated in Malaysia?",
+    faqA1:
+      "Net salary (take-home pay, or gaji bersih) is your gross salary minus four statutory deductions: your 11% EPF share, your SOCSO and EIS contributions (both calculated on wages capped at RM6,000), and monthly tax deduction (PCB/MTD) if your income is high enough to be taxable. This calculator applies the current KWSP, PERKESO and LHDN rates automatically.",
+    faqQ2: "What is the difference between gross and net salary?",
+    faqA2:
+      "Gross salary is the amount in your employment contract before any deductions. Net salary is what actually reaches your bank account after EPF, SOCSO, EIS and PCB are deducted. Your employer also pays EPF, SOCSO and EIS on top of your gross salary, which is why the total cost to the employer is higher than your gross pay.",
+    faqQ3: "How much EPF do employers and employees pay?",
+    faqA3:
+      "For Malaysian employees under 60, the employee contributes 11% of monthly wages. The employer contributes 13% when wages are RM5,000 or less, and 12% when wages are above RM5,000.",
+    faqQ4: "Is this also a payroll calculator for employers?",
+    faqA4:
+      "Yes. Alongside the employee's take-home pay, the results show the employer's EPF, SOCSO and EIS contributions and the total monthly cost to the employer, so HR teams and small business owners can budget payroll. For a printable record, use the payslip generator.",
+    faqQ5: "Is PCB (monthly tax deduction) charged on every salary?",
+    faqA5:
+      "No. Below a certain income, your tax reliefs and the tax rebate bring your tax to zero, so no PCB is deducted. The examples table above shows where PCB starts for a single employee; being married, having children or claiming extra reliefs pushes that point higher.",
   },
   form: {
     title: "Your details",
@@ -407,7 +437,7 @@ const en = {
       "No — this converts your base monthly salary only. Bonuses, allowances and overtime pay are calculated separately and shouldn't be included in the salary figure you enter here.",
   },
   overtimePage: {
-    title: "Overtime Pay Calculator",
+    title: "Overtime (OT) Pay Calculator",
     intro: "Calculate overtime pay under the Employment Act 1955's Second Schedule, covering normal working days, rest days and public holidays.",
     monthlySalary: "Monthly salary",
     monthlySalaryHint: "Used to derive your hourly rate (÷26 days ÷ normal hours)",
