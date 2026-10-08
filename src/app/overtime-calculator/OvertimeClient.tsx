@@ -86,6 +86,7 @@ export default function OvertimeClient() {
       <RelatedGuides
         links={[
           { href: lang === "ms" ? "/ms/kerja-lebih-masa-kadar-cara-kira" : "/guides/understanding-employment-act-overtime-rules", label: lang === "ms" ? "Kerja Lebih Masa: Kadar & Cara Kira" : "Understanding Overtime Rules" },
+          { href: lang === "ms" ? "/ms/waktu-bekerja-akta-kerja" : "/guides/working-hours-malaysia-employment-act", label: lang === "ms" ? "Waktu Bekerja Mengikut Akta Kerja" : "Working Hours in Malaysia" },
           { href: lang === "ms" ? "/ms/akta-kerja-1955-hak-pekerja" : "/guides/employment-act-1955-employee-rights-summary", label: lang === "ms" ? "Akta Kerja 1955: Hak Pekerja" : "Employment Act 1955: Key Rights" },
         ]}
       />

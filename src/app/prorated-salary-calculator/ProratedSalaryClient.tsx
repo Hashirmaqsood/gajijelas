@@ -89,6 +89,7 @@ export default function ProratedSalaryClient() {
       <RelatedGuides
         links={[
           { href: lang === "ms" ? "/ms/notis-berhenti-kerja" : "/guides/resignation-notice-period-malaysia", label: lang === "ms" ? "Notis Berhenti Kerja & Gaji Akhir" : "Resignation Notice Period & Final Pay" },
+          { href: lang === "ms" ? "/ms/cuti-tanpa-gaji-potongan-gaji" : "/guides/unpaid-leave-malaysia-salary-deduction", label: lang === "ms" ? "Cuti Tanpa Gaji: Potongan Gaji Sehari" : "Unpaid Leave: Salary Deduction Per Day" },
           { href: "/guides/salary-calculation-30-or-31-days-malaysia", label: "Is Salary Calculated on 30 or 31 Days?" },
           { href: "/guides/first-paycheck-malaysia-what-to-expect", label: "What Your First Paycheck Actually Looks Like" },
         ]}

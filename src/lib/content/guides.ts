@@ -1,5 +1,6 @@
 import { taxBySalaryRows } from "./taxBySalary";
 import { dailyHourlyRows, houseSalaryRows, pcbBySalaryRows } from "./rateTables";
+import { WORKPLACE_GUIDES } from "./workplaceGuides";
 
 export interface GuideTable {
   /** Render the table right after body[afterIndex]. */
@@ -20,7 +21,7 @@ export interface Guide {
   relatedLinks?: { href: string; label: string }[];
 }
 
-export const GUIDES: Guide[] = [
+const BASE_GUIDES: Guide[] = [
   {
     slug: "how-bonuses-are-taxed-in-malaysia",
     title: "How Bonuses Are Actually Taxed in Malaysia",
@@ -967,3 +968,5 @@ export const GUIDES: Guide[] = [
     ],
   },
 ];
+
+export const GUIDES: Guide[] = [...BASE_GUIDES, ...WORKPLACE_GUIDES];

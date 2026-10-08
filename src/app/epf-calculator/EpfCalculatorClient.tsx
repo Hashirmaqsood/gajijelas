@@ -152,6 +152,7 @@ export default function EpfCalculatorClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/jadual-caruman-kwsp-2026" : "/guides/epf-contribution-table-2026-employee-employer", label: lang === "ms" ? "Jadual Caruman KWSP 2026" : "EPF Contribution Table 2026" },
           { href: lang === "ms" ? "/ms/semak-penyata-kwsp" : "/guides/how-to-check-epf-balance-statement", label: lang === "ms" ? "Cara Semak Penyata & Baki KWSP" : "How to Check Your EPF Balance" },
           { href: lang === "ms" ? "/ms/dividen-kwsp-2026" : "/guides/epf-dividend-2026-what-we-know", label: lang === "ms" ? "Dividen KWSP 2026: Bila Diumumkan?" : "EPF Dividend 2026: What We Know" },
           { href: "/guides/epf-withdrawal-rules-malaysia", label: "EPF Withdrawal Rules" },

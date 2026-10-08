@@ -12,7 +12,7 @@ export default function AnnualLeaveClient() {
   const [yearsOfService, setYearsOfService] = useState(1);
   const [isPartialYear, setIsPartialYear] = useState(false);
   const [completedMonths, setCompletedMonths] = useState(6);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const fullEntitlement = useMemo(() => annualLeaveDaysByService(yearsOfService), [yearsOfService]);
   const entitlement = useMemo(
@@ -76,7 +76,13 @@ export default function AnnualLeaveClient() {
       />
 
       <RelatedGuides
-        links={[{ href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" }]}
+        links={[
+          { href: lang === "ms" ? "/ms/cuti-tahunan-cuti-sakit-akta-kerja" : "/guides/annual-leave-sick-leave-entitlement-malaysia", label: lang === "ms" ? "Cuti Tahunan & Cuti Sakit Pekerja Swasta" : "Annual Leave & Sick Leave Entitlement" },
+          { href: lang === "ms" ? "/ms/cuti-bersalin-swasta-akta-kerja" : "/guides/maternity-leave-malaysia-employment-act", label: lang === "ms" ? "Cuti Bersalin Swasta: 98 Hari" : "Maternity Leave in Malaysia" },
+          { href: lang === "ms" ? "/ms/cuti-paterniti-cuti-isteri-bersalin" : "/guides/paternity-leave-malaysia-employment-act", label: lang === "ms" ? "Cuti Paterniti: 7 Hari" : "Paternity Leave in Malaysia" },
+          { href: lang === "ms" ? "/ms/cuti-tanpa-gaji-potongan-gaji" : "/guides/unpaid-leave-malaysia-salary-deduction", label: lang === "ms" ? "Cuti Tanpa Gaji: Potongan Gaji" : "Unpaid Leave: Salary Deduction" },
+          { href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" },
+        ]}
       />
     </ToolPageShell>
   );

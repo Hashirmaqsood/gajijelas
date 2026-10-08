@@ -184,6 +184,7 @@ export default function SocsoCalculatorClient() {
 
       <RelatedGuides
         links={[
+          { href: lang === "ms" ? "/ms/eis-perkeso-cara-tuntut" : "/guides/eis-perkeso-how-to-claim-benefits-malaysia", label: lang === "ms" ? "EIS PERKESO: Cara Tuntut Faedah" : "How to Claim EIS (PERKESO) Benefits" },
           { href: lang === "ms" ? "/ms/apa-itu-perkeso" : "/guides/what-is-perkeso-socso-same", label: lang === "ms" ? "Apa Itu PERKESO? Beza dengan SOCSO" : "What Is PERKESO? Same as SOCSO?" },
           { href: "/guides/lindung-24-jam-socso-new-scheme-2026", label: "LINDUNG 24 Jam Explained" },
           { href: "/guides/epf-socso-eis-foreign-workers-2025-changes", label: "EPF, SOCSO & EIS for Foreign Workers" },

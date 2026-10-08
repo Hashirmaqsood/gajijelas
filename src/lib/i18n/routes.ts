@@ -32,6 +32,14 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/guides/employment-act-1955-employee-rights-summary", "/ms/akta-kerja-1955-hak-pekerja"],
   ["/guides/what-is-pcb-mtd-malaysia", "/ms/apa-itu-pcb"],
   ["/guides/how-much-salary-to-buy-a-house-malaysia", "/ms/berapa-gaji-untuk-beli-rumah"],
+  ["/guides/minimum-wage-malaysia-2026-take-home-pay", "/ms/gaji-minimum-2026"],
+  ["/guides/epf-contribution-table-2026-employee-employer", "/ms/jadual-caruman-kwsp-2026"],
+  ["/guides/maternity-leave-malaysia-employment-act", "/ms/cuti-bersalin-swasta-akta-kerja"],
+  ["/guides/paternity-leave-malaysia-employment-act", "/ms/cuti-paterniti-cuti-isteri-bersalin"],
+  ["/guides/annual-leave-sick-leave-entitlement-malaysia", "/ms/cuti-tahunan-cuti-sakit-akta-kerja"],
+  ["/guides/working-hours-malaysia-employment-act", "/ms/waktu-bekerja-akta-kerja"],
+  ["/guides/unpaid-leave-malaysia-salary-deduction", "/ms/cuti-tanpa-gaji-potongan-gaji"],
+  ["/guides/eis-perkeso-how-to-claim-benefits-malaysia", "/ms/eis-perkeso-cara-tuntut"],
 ];
 
 /** Returns the other-language URL for a localized page, or null if this path has no counterpart. */

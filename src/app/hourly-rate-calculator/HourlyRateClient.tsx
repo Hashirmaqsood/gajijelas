@@ -68,6 +68,7 @@ export default function HourlyRateClient() {
       <RelatedGuides
         links={[
           { href: lang === "ms" ? "/ms/cara-kira-gaji-sehari-sejam" : "/guides/daily-hourly-rate-calculation-malaysia", label: lang === "ms" ? "Cara Kira Gaji Sehari & Sejam" : "Daily & Hourly Rate Formula" },
+          { href: lang === "ms" ? "/ms/gaji-minimum-2026" : "/guides/minimum-wage-malaysia-2026-take-home-pay", label: lang === "ms" ? "Gaji Minimum 2026: RM1,700" : "Minimum Wage Malaysia 2026: RM1,700" },
           { href: "/guides/understanding-employment-act-overtime-rules", label: "Understanding Overtime Rules" },
           { href: "/guides/salary-calculation-30-or-31-days-malaysia", label: "Is Salary Calculated on 30 or 31 Days?" },
         ]}

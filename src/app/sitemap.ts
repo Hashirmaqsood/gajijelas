@@ -61,6 +61,14 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/ms/akta-kerja-1955-hak-pekerja", lastModified: "2026-10-06" },
   { path: "/ms/apa-itu-pcb", lastModified: "2026-10-06" },
   { path: "/ms/berapa-gaji-untuk-beli-rumah", lastModified: "2026-10-06" },
+  { path: "/ms/gaji-minimum-2026", lastModified: "2026-10-08" },
+  { path: "/ms/jadual-caruman-kwsp-2026", lastModified: "2026-10-08" },
+  { path: "/ms/cuti-bersalin-swasta-akta-kerja", lastModified: "2026-10-08" },
+  { path: "/ms/cuti-paterniti-cuti-isteri-bersalin", lastModified: "2026-10-08" },
+  { path: "/ms/cuti-tahunan-cuti-sakit-akta-kerja", lastModified: "2026-10-08" },
+  { path: "/ms/waktu-bekerja-akta-kerja", lastModified: "2026-10-08" },
+  { path: "/ms/cuti-tanpa-gaji-potongan-gaji", lastModified: "2026-10-08" },
+  { path: "/ms/eis-perkeso-cara-tuntut", lastModified: "2026-10-08" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
