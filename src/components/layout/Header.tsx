@@ -70,7 +70,7 @@ export default function Header() {
   const links = [
     { href: lang === "ms" ? "/ms" : "/", label: t("nav.salaryCalculator") },
     { href: "/compare", label: t("nav.compareOffers") },
-    { href: "/guides", label: t("nav.guides") },
+    { href: lang === "ms" ? "/ms/panduan" : "/guides", label: t("nav.guides") },
     { href: "/faq", label: t("nav.faq") },
     { href: "/about", label: t("footer.about") },
   ];

@@ -23,7 +23,7 @@ export default function MsArticlePage({ path, title, description, publishedDate,
       <script {...jsonLdScriptProps(articleJsonLd({ title, description, path, publishedDate }))} />
       <script {...jsonLdScriptProps(faqPageJsonLd(faq))} />
       <script {...jsonLdScriptProps(breadcrumbJsonLd([{ name: "Utama", path: "/ms" }, { name: breadcrumbName, path }]))} />
-      <Link href="/guides" className="text-sm text-brand hover:underline">← Kembali ke panduan</Link>
+      <Link href="/ms/panduan" className="text-sm text-brand hover:underline">← Semua panduan</Link>
       <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted">{dateLabel}</p>
       <h1 className="mt-1 text-3xl font-bold tracking-tight text-foreground">{title}</h1>
       <p className="mt-3 text-base text-muted">{description}</p>

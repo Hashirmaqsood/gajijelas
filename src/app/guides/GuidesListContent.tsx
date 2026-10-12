@@ -16,6 +16,9 @@ export default function GuidesListContent() {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
       <h1 className="text-3xl font-bold tracking-tight text-foreground">{t("guidesPage.title")}</h1>
       <p className="mt-2 text-base text-muted">{t("guidesPage.subtitle")}</p>
+      <p className="mt-3 text-sm">
+        <Link href="/ms/panduan" className="font-medium text-brand underline">Panduan dalam Bahasa Melayu →</Link>
+      </p>
 
       <div className="mt-8 space-y-4">
         {SORTED_GUIDES.map((g) => (

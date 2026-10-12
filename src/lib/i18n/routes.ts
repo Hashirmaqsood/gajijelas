@@ -32,6 +32,7 @@ export const LOCALIZED_PATHS: [en: string, ms: string][] = [
   ["/guides/employment-act-1955-employee-rights-summary", "/ms/akta-kerja-1955-hak-pekerja"],
   ["/guides/what-is-pcb-mtd-malaysia", "/ms/apa-itu-pcb"],
   ["/guides/how-much-salary-to-buy-a-house-malaysia", "/ms/berapa-gaji-untuk-beli-rumah"],
+  ["/guides", "/ms/panduan"],
   ["/guides/minimum-wage-malaysia-2026-take-home-pay", "/ms/gaji-minimum-2026"],
   ["/guides/epf-contribution-table-2026-employee-employer", "/ms/jadual-caruman-kwsp-2026"],
   ["/guides/maternity-leave-malaysia-employment-act", "/ms/cuti-bersalin-swasta-akta-kerja"],

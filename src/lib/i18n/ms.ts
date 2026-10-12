@@ -454,6 +454,20 @@ const ms: Dictionary = {
     faqQ2: "Berapakah PCB yang perlu saya bayar untuk gaji saya?",
     faqA2:
       "Tiada satu jumlah PCB tetap untuk sesuatu gaji — ia bergantung kepada status perkahwinan, bilangan anak, caruman EPF dan sebarang pelepasan tambahan yang anda tuntut, kerana semua ini mengurangkan pendapatan bercukai anda sebelum cukai dikenakan. Jadual rujukan di atas menunjukkan jumlah biasa untuk pemfailan bujang tanpa pelepasan tambahan; gunakan kalkulator di atas dengan butiran anda sendiri untuk angka tepat anda.",
+    faqQ3: "Bagaimana PCB dikira?",
+    faqA3:
+      "PCB dikira dengan menjadikan gaji bulanan anda setahun, menolak pelepasan anda untuk mendapat pendapatan bercukai, mengenakan kadar cukai progresif, menolak sebarang rebat, dan membahagikan cukai tahunan yang terhasil sepanjang bulan dalam setahun. Contoh pengiraan di atas menunjukkan setiap langkah dengan angka sebenar.",
+    faqQ4: "Adakah PCB sama dengan cukai pendapatan, dan boleh dapat bayaran balik?",
+    faqA4:
+      "PCB (juga dipanggil MTD) ialah bayaran pendahuluan cukai pendapatan tahunan anda, yang dipotong oleh majikan dan dibayar kepada LHDN. Apabila anda memfailkan borang, cukai sebenar dibandingkan dengan PCB yang telah dibayar: jika terlebih bayar anda mendapat bayaran balik, dan jika terkurang anda membayar bakinya.",
+    faqQ5: "Apa itu Borang TP1 dan bagaimana ia mengurangkan PCB?",
+    faqA5:
+      "Borang TP1 ialah borang yang boleh anda berikan kepada majikan untuk mengisytiharkan pelepasan dan potongan tambahan seperti insurans hayat, perbelanjaan perubatan atau yuran pendidikan. Majikan kemudian boleh mengambilnya kira supaya PCB bulanan anda lebih menghampiri cukai sebenar anda.",
+    exampleTitle: "Contoh pengiraan: PCB bagi gaji {salary}",
+    exampleBody:
+      "Pekerja warganegara Malaysia bujang bawah 60 tahun yang bergaji {salary} sebulan mempunyai pendapatan kasar tahunan {annualGross}. Selepas {reliefs} pelepasan standard, pendapatan bercukai ialah {chargeable}. Cukai ke atasnya ialah {taxBeforeRebate}. Tiada rebat dikenakan pada pendapatan ini, jadi cukai tahunan ialah {annualTax}. Dibahagi sepanjang 12 bulan, PCB bulanan ialah {monthly}.",
+    exampleTail:
+      "Angka anda sendiri boleh lebih rendah jika anda menuntut pelepasan tambahan seperti insurans hayat, perbelanjaan perubatan atau anak, yang boleh dimaklumkan kepada majikan menggunakan Borang TP1.",
     bracketsTitle: "Jadual PCB & cukai pemastautin ({year})",
     chargeableIncomeCol: "Pendapatan bercukai (RM)",
     rateCol: "Kadar",

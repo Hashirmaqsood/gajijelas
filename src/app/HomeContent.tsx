@@ -173,11 +173,22 @@ export default function HomeContent({ rates, examples }: { rates: StatutoryRates
 
       <section className="mx-auto max-w-6xl px-4 pb-10 sm:px-6">
         <RelatedGuides
-          links={[
-            { href: "/guides/first-paycheck-malaysia-what-to-expect", label: "What Your First Paycheck Actually Looks Like" },
-            { href: "/guides/minimum-wage-updates-malaysia", label: "Minimum Wage in Malaysia" },
-            { href: "/guides/is-your-salary-good-in-malaysia", label: "Is Your Salary Good in Malaysia?" },
-          ]}
+          links={
+            lang === "ms"
+              ? [
+                  { href: "/ms/gaji-minimum-2026", label: "Gaji Minimum 2026: RM1,700" },
+                  { href: "/ms/jadual-caruman-kwsp-2026", label: "Jadual Caruman KWSP 2026" },
+                  { href: "/ms/apa-itu-pcb", label: "Apa Itu PCB?" },
+                  { href: "/ms/dividen-kwsp-2026", label: "Dividen KWSP 2026" },
+                  { href: "/ms/panduan", label: "Semua Panduan" },
+                ]
+              : [
+                  { href: "/guides/first-paycheck-malaysia-what-to-expect", label: "What Your First Paycheck Actually Looks Like" },
+                  { href: "/guides/minimum-wage-malaysia-2026-take-home-pay", label: "Minimum Wage Malaysia 2026: RM1,700" },
+                  { href: "/guides/epf-contribution-table-2026-employee-employer", label: "EPF Contribution Table 2026" },
+                  { href: "/guides/is-your-salary-good-in-malaysia", label: "Is Your Salary Good in Malaysia?" },
+                ]
+          }
         />
       </section>
     </>

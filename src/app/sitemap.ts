@@ -61,6 +61,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/ms/akta-kerja-1955-hak-pekerja", lastModified: "2026-10-06" },
   { path: "/ms/apa-itu-pcb", lastModified: "2026-10-06" },
   { path: "/ms/berapa-gaji-untuk-beli-rumah", lastModified: "2026-10-06" },
+  { path: "/ms/panduan", lastModified: "2026-10-12" },
   { path: "/ms/gaji-minimum-2026", lastModified: "2026-10-08" },
   { path: "/ms/jadual-caruman-kwsp-2026", lastModified: "2026-10-08" },
   { path: "/ms/cuti-bersalin-swasta-akta-kerja", lastModified: "2026-10-08" },

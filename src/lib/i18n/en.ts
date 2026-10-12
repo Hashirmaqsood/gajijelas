@@ -453,6 +453,20 @@ const en = {
     faqQ2: "How much PCB will I pay for my salary?",
     faqA2:
       "There's no single fixed PCB amount for a given salary — it depends on your marital status, number of children, EPF contribution and any additional reliefs you claim, since all of these reduce your chargeable income before tax applies. The lookup table above shows typical amounts for a single filer with no extra reliefs; use the calculator above with your own details for your exact figure.",
+    faqQ3: "How is PCB calculated?",
+    faqA3:
+      "PCB is worked out by annualising your monthly pay, subtracting your reliefs to get chargeable income, applying the progressive tax rates, deducting any rebate, and spreading the resulting annual tax across the months of the year. The worked example above shows each step with real numbers.",
+    faqQ4: "Is PCB the same as income tax, and can I get a refund?",
+    faqA4:
+      "PCB (also called MTD) is an advance payment of your annual income tax, deducted by your employer and paid to LHDN. When you file your return, the actual tax is compared with the PCB already paid: if you paid too much you get a refund, and if too little you pay the balance.",
+    faqQ5: "What is Form TP1 and how does it lower my PCB?",
+    faqA5:
+      "Form TP1 is a form you can give your employer to declare extra reliefs and deductions such as life insurance, medical expenses or education fees. Your employer can then take them into account so that your monthly PCB better matches your real tax.",
+    exampleTitle: "Worked example: PCB on a {salary} salary",
+    exampleBody:
+      "A single Malaysian employee under 60 earning {salary} a month has an annual gross income of {annualGross}. After {reliefs} of standard reliefs, the chargeable income is {chargeable}. Tax on that is {taxBeforeRebate}. No rebate applies at this income, so the annual tax is {annualTax}. Spread over 12 months, the monthly PCB is {monthly}.",
+    exampleTail:
+      "Your own figure can be lower if you claim extra reliefs such as life insurance, medical expenses or children, which you can tell your employer about using Form TP1.",
     bracketsTitle: "Resident tax brackets ({year})",
     chargeableIncomeCol: "Chargeable income (RM)",
     rateCol: "Rate",

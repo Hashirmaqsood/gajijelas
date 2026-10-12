@@ -21,6 +21,21 @@ export default function PcbCalculatorClient() {
   const set = <K extends keyof SalaryInput>(key: K, v: SalaryInput[K]) => setInput({ ...input, [key]: v });
   const { t, lang } = useLanguage();
 
+  const example = useMemo(() => {
+    const salary = 5000;
+    const { regularMonth, pcbDetail } = calculateSalary({ ...DEFAULT_SALARY_INPUT, rateYear: CURRENT_RATE_YEAR, grossMonthly: salary }, rates);
+    return {
+      salary: formatRM(salary, { decimals: 0 }),
+      annualGross: formatRM(pcbDetail.annualGrossIncome, { decimals: 0 }),
+      reliefs: formatRM(pcbDetail.totalReliefs, { decimals: 0 }),
+      chargeable: formatRM(pcbDetail.chargeableIncome, { decimals: 0 }),
+      taxBeforeRebate: formatRM(pcbDetail.taxBeforeRebate),
+      rebate: formatRM(pcbDetail.rebate, { decimals: 0 }),
+      annualTax: formatRM(pcbDetail.annualTax),
+      monthly: formatRM(regularMonth.pcb),
+    };
+  }, [rates]);
+
   const lookupRows = useMemo(
     () =>
       LOOKUP_SALARIES.map((salary) => {
@@ -120,6 +135,12 @@ export default function PcbCalculatorClient() {
       </Card>
 
       <Card className="mt-6">
+        <h2 className="text-lg font-semibold text-foreground">{t("pcbPage.exampleTitle", { salary: example.salary })}</h2>
+        <p className="mt-3 text-sm leading-relaxed text-foreground/90">{t("pcbPage.exampleBody", example)}</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">{t("pcbPage.exampleTail")}</p>
+      </Card>
+
+      <Card className="mt-6">
         <h2 className="text-lg font-semibold text-foreground">{t("pcbPage.bracketsTitle", { year: rates.year })}</h2>
         <div className="mt-3 overflow-x-auto">
           <table className="w-full text-sm">
@@ -149,6 +170,9 @@ export default function PcbCalculatorClient() {
         items={[
           { q: t("pcbPage.faqQ1"), a: t("pcbPage.faqA1") },
           { q: t("pcbPage.faqQ2"), a: t("pcbPage.faqA2") },
+          { q: t("pcbPage.faqQ3"), a: t("pcbPage.faqA3") },
+          { q: t("pcbPage.faqQ4"), a: t("pcbPage.faqA4") },
+          { q: t("pcbPage.faqQ5"), a: t("pcbPage.faqA5") },
         ]}
       />
 
