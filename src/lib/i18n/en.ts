@@ -366,7 +366,7 @@ const en = {
       "The SOCSO/EIS wage ceiling rose from RM5,000 to RM6,000 effective October 2024, and stayed at RM6,000 through 2025 and into 2026.",
     upcomingHeading: "What's coming next",
     upcomingBudget2027:
-      "Budget 2027 will be tabled in Parliament on 9 October 2026. The Ministry of Finance's official Pre-Budget Statement (18 August 2026) confirms the government will \"reassess the adequacy and sustainability of Malaysia's social protection system, including coverage under the EPF, Social Security Organisation (SOCSO) and related schemes,\" with priority given to extending protection to gig and informal workers. No specific rate changes have been confirmed yet — we'll update every calculator on this site the same day anything is officially announced.",
+      "Budget 2027 was tabled on 9 October 2026. It announced a rise in the minimum wage from RM1,700 to RM2,000 from June 2027, an increase in the individual tax relief from RM9,000 to RM12,000 and one-point cuts to two resident tax bands, plus EPF and SOCSO support for gig workers. No change to the EPF, SOCSO or EIS contribution rates for employees was reported, and the Year of Assessment for the tax changes was not stated. The figures on this site stay at the rates in force today and we will update them once the changes are confirmed and gazetted. See our Budget 2027 summary for details.",
   },
   epfPage: {
     title: "EPF Calculator (KWSP)",
