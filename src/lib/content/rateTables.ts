@@ -1,5 +1,6 @@
 import { calculateSalary, DEFAULT_SALARY_INPUT } from "@/lib/calc";
 import { calculateEpf } from "@/lib/calc/epf";
+import { taxOnChargeableIncome } from "@/lib/calc/pcb";
 import { calculateHourlyRate } from "@/lib/calc/hourlyRate";
 import { calculateMortgage } from "@/lib/calc/mortgage";
 import { CURRENT_RATE_YEAR, getRates } from "@/lib/rates";
@@ -99,5 +100,37 @@ export function unpaidLeaveRows(): string[][] {
   return [1700, 2000, 3000, 4000, 5000].map((monthly) => {
     const day = monthly / 26;
     return [formatRM(monthly, { decimals: 0 }), formatRM(day), formatRM(day * 3), formatRM(day * 5)];
+  });
+}
+
+/**
+ * Illustration of the Budget 2027 tax announcement (9 Oct 2026): individual relief RM9,000 -> RM12,000 and
+ * a one-point cut in the RM70,001-RM100,000 (19% -> 18%) and RM100,001-RM150,000 (25% -> 24%) bands.
+ * Reported figures only; the Year of Assessment was not stated, so this is not wired into the calculators.
+ */
+export function budget2027TaxSavingRows(): string[][] {
+  const current = getRates(CURRENT_RATE_YEAR).pcb.brackets;
+  const proposed = [
+    { from: 0, to: 5000, ratePct: 0 },
+    { from: 5001, to: 20000, ratePct: 1 },
+    { from: 20001, to: 35000, ratePct: 3 },
+    { from: 35001, to: 50000, ratePct: 6 },
+    { from: 50001, to: 70000, ratePct: 11 },
+    { from: 70001, to: 100000, ratePct: 18 },
+    { from: 100001, to: 150000, ratePct: 24 },
+    { from: 150001, to: 400000, ratePct: 25 },
+    { from: 400001, to: 600000, ratePct: 26 },
+    { from: 600001, to: 2000000, ratePct: 28 },
+    { from: 2000001, to: null, ratePct: 30 },
+  ];
+  return [40000, 60000, 80000, 120000, 200000].map((chargeable) => {
+    const taxNow = taxOnChargeableIncome(current, chargeable);
+    const taxNew = taxOnChargeableIncome(proposed, chargeable - 3000);
+    return [
+      formatRM(chargeable, { decimals: 0 }),
+      formatRM(taxNow, { decimals: 0 }),
+      formatRM(taxNew, { decimals: 0 }),
+      formatRM(taxNow - taxNew, { decimals: 0 }),
+    ];
   });
 }

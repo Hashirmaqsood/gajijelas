@@ -13,6 +13,8 @@ const BODY = [
   "Setiap jumlah ialah had maksimum yang boleh dituntut. Bagi kebanyakan pelepasan, anda memerlukan resit dan hanya boleh menuntut jumlah yang sebenar dibayar, sehingga had tersebut. Sesetengah item mempunyai sub-had yang lebih kecil dalam had keseluruhan.",
   "## Apa yang berubah bagi TA 2025",
   "Berikutan Bajet 2025, pelepasan bagi individu kurang upaya dinaikkan daripada RM6,000 kepada RM7,000 dan pelepasan bagi pasangan kurang upaya dinaikkan daripada RM5,000 kepada RM6,000. Pelepasan bagi anak belum berkahwin yang kurang upaya dinaikkan daripada RM6,000 kepada RM8,000.",
+  "## Bajet 2027: pelepasan individu RM12,000",
+  "Bajet 2027, dibentangkan pada 9 Oktober 2026, mengumumkan bahawa pelepasan individu asas akan naik daripada RM9,000 kepada RM12,000, bersama pelepasan yang lebih luas untuk penjagaan lepas bersalin, penjagaan ibu bapa dan yuran tuisyen anak. Laporan tidak menyatakan Tahun Taksiran yang terpakai, jadi jumlah dalam jadual kekal untuk TA 2025 sehingga disahkan.",
   "## Pelepasan cukai berbanding rebat cukai",
   "Pelepasan menurunkan pendapatan bercukai anda sebelum cukai dikira. Rebat pula menurunkan cukai itu sendiri: jika pendapatan bercukai anda RM35,000 atau kurang, anda mendapat rebat cukai RM400 yang ditolak selepas cukai anda dikira.",
   "## Lihat kesan pelepasan anda pada cukai",

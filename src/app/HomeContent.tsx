@@ -176,6 +176,7 @@ export default function HomeContent({ rates, examples }: { rates: StatutoryRates
           links={
             lang === "ms"
               ? [
+                  { href: "/ms/bajet-2027", label: "Bajet 2027: Gaji Minimum & Cukai" },
                   { href: "/ms/gaji-minimum-2026", label: "Gaji Minimum 2026: RM1,700" },
                   { href: "/ms/jadual-caruman-kwsp-2026", label: "Jadual Caruman KWSP 2026" },
                   { href: "/ms/apa-itu-pcb", label: "Apa Itu PCB?" },
@@ -184,6 +185,7 @@ export default function HomeContent({ rates, examples }: { rates: StatutoryRates
                 ]
               : [
                   { href: "/guides/first-paycheck-malaysia-what-to-expect", label: "What Your First Paycheck Actually Looks Like" },
+                  { href: "/guides/budget-2027-malaysia-salary-epf-socso", label: "Budget 2027: Minimum Wage, Tax & EPF" },
                   { href: "/guides/minimum-wage-malaysia-2026-take-home-pay", label: "Minimum Wage Malaysia 2026: RM1,700" },
                   { href: "/guides/epf-contribution-table-2026-employee-employer", label: "EPF Contribution Table 2026" },
                   { href: "/guides/is-your-salary-good-in-malaysia", label: "Is Your Salary Good in Malaysia?" },

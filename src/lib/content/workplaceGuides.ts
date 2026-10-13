@@ -21,8 +21,8 @@ export const WORKPLACE_GUIDES: Guide[] = [
       `The Order sets the minimum hourly rate at RM8.72, which comes from RM1,700 over the 195 hours in an average month of a 45-hour week. On the common 26-working-day method, RM1,700 a month is about ${formatRM(mw.daily)} a day.`,
       "## Who is covered",
       "The minimum wage applies to employees under a contract of service, whether full-time or part-time, local or foreign. Domestic workers are not covered by the Order.",
-      "## Is the rate changing?",
-      "The government has said it is reviewing the RM1,700 rate. Nothing changes until a new rate is gazetted, so confirm the current figure with the Ministry of Human Resources before using it for payroll.",
+      "## Budget 2027: RM2,000 from June 2027",
+      "Budget 2027, tabled on 9 October 2026, announced a rise in the minimum wage from RM1,700 to RM2,000 a month from June 2027, with micro, small and medium enterprises that have annual sales below RM50 million reported as exempt. A separate RM2,500 baseline for semi-skilled workers and graduates was also announced, with no date. RM1,700 stays the legal minimum until the new rate is gazetted, so confirm the figure with the Ministry of Human Resources before using it for payroll.",
       "## Check your own pay",
       "Enter any salary in the calculator to see your own EPF, SOCSO, EIS, tax and take-home pay.",
     ],
@@ -43,7 +43,11 @@ export const WORKPLACE_GUIDES: Guide[] = [
     faq: [
       {
         q: "What is the minimum wage in Malaysia in 2026?",
-        a: "RM1,700 a month, or RM8.72 an hour, under the Minimum Wages Order 2024. The government has said it is reviewing the rate, but nothing changes until a new rate is gazetted.",
+        a: "RM1,700 a month, or RM8.72 an hour, under the Minimum Wages Order 2024. Budget 2027 announced a rise to RM2,000 from June 2027, but RM1,700 stays the legal minimum until the new rate is gazetted.",
+      },
+      {
+        q: "Will the minimum wage be RM2,000 in 2027?",
+        a: "Budget 2027 announced a rise from RM1,700 to RM2,000 a month from June 2027. Micro, small and medium enterprises with annual sales below RM50 million were reported as exempt, and a separate RM2,500 baseline for semi-skilled workers and graduates was announced without a date.",
       },
       {
         q: "What is the take-home pay on a RM1,700 salary?",
@@ -64,6 +68,7 @@ export const WORKPLACE_GUIDES: Guide[] = [
     ],
     relatedLinks: [
       { href: "/", label: "Malaysia Salary Calculator" },
+      { href: "/guides/budget-2027-malaysia-salary-epf-socso", label: "Budget 2027: Minimum Wage, Tax & EPF" },
       { href: "/guides/minimum-wage-updates-malaysia", label: "Minimum Wage in Malaysia: What's Changed" },
       { href: "/hourly-rate-calculator", label: "Hourly & Daily Rate Calculator" },
       { href: "/guides/gross-net-basic-salary-meaning-malaysia", label: "Gross vs Net vs Basic Salary" },

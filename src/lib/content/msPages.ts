@@ -6,6 +6,7 @@ export interface MsPageLink {
 
 /** Malay-language articles, newest topics first within each theme. Used by the /ms/panduan hub. */
 export const MS_ARTICLES: MsPageLink[] = [
+  { href: "/ms/bajet-2027", title: "Bajet 2027: Gaji Minimum RM2,000 & Pelepasan Cukai", description: "Gaji minimum RM2,000 mulai Jun 2027, pelepasan individu RM12,000 dan apa lagi yang diumumkan untuk gaji, cukai, KWSP dan PERKESO." },
   { href: "/ms/dividen-kwsp-2026", title: "Dividen KWSP 2026: Bila Diumumkan & Masuk Akaun?", description: "Bila dividen KWSP 2026 diumumkan dan dikreditkan, serta kadar yang dijangka." },
   { href: "/ms/dividen-kwsp-2025", title: "Dividen KWSP 2025: Kadar 6.15%, Sejarah & Cara Semak", description: "Kadar dividen KWSP 2025, sejarah kadar beberapa tahun dan cara menyemak dividen anda." },
   { href: "/ms/jadual-caruman-kwsp-2026", title: "Jadual Caruman KWSP 2026: Kadar Pekerja & Majikan", description: "Kadar caruman 11% pekerja dan 13% atau 12% majikan, dengan jadual mengikut gaji." },

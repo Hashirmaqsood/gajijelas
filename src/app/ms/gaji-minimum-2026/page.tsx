@@ -22,8 +22,8 @@ const BODY = [
   `Perintah menetapkan kadar minimum sejam RM8.72, iaitu RM1,700 dibahagi 195 jam dalam purata sebulan bagi minggu bekerja 45 jam. Dengan kaedah biasa 26 hari bekerja, RM1,700 sebulan bersamaan kira-kira ${formatRM(mw.daily)} sehari.`,
   "## Siapa yang dilindungi",
   "Gaji minimum terpakai kepada pekerja di bawah kontrak perkhidmatan, sama ada sepenuh masa atau separuh masa, tempatan atau asing. Pekerja domestik tidak dilindungi oleh Perintah ini.",
-  "## Adakah kadar akan berubah?",
-  "Kerajaan telah menyatakan ia sedang menyemak kadar RM1,700. Tiada apa yang berubah sehingga kadar baharu diwartakan, jadi sahkan angka semasa dengan Kementerian Sumber Manusia sebelum menggunakannya untuk gaji.",
+  "## Bajet 2027: RM2,000 mulai Jun 2027",
+  "Bajet 2027, dibentangkan pada 9 Oktober 2026, mengumumkan kenaikan gaji minimum daripada RM1,700 kepada RM2,000 sebulan mulai Jun 2027, dengan perusahaan mikro, kecil dan sederhana yang mempunyai jualan tahunan di bawah RM50 juta dilaporkan dikecualikan. Asas RM2,500 yang berasingan bagi pekerja separa mahir dan graduan juga diumumkan, tanpa tarikh. RM1,700 kekal sebagai gaji minimum yang sah sehingga kadar baharu diwartakan, jadi sahkan angka dengan Kementerian Sumber Manusia sebelum menggunakannya untuk gaji.",
   "## Semak gaji anda sendiri",
   "Masukkan sebarang gaji dalam kalkulator untuk melihat KWSP, PERKESO, EIS, cukai dan gaji bawa balik anda sendiri.",
 ];
@@ -46,7 +46,11 @@ const TABLE: GuideTable = {
 const FAQ = [
   {
     q: "Berapa gaji minimum di Malaysia pada 2026?",
-    a: "RM1,700 sebulan, atau RM8.72 sejam, di bawah Perintah Gaji Minimum 2024. Kerajaan telah menyatakan ia sedang menyemak kadar ini, tetapi tiada apa yang berubah sehingga kadar baharu diwartakan.",
+    a: "RM1,700 sebulan, atau RM8.72 sejam, di bawah Perintah Gaji Minimum 2024. Bajet 2027 mengumumkan kenaikan kepada RM2,000 mulai Jun 2027, tetapi RM1,700 kekal sebagai gaji minimum yang sah sehingga kadar baharu diwartakan.",
+  },
+  {
+    q: "Adakah gaji minimum akan menjadi RM2,000 pada 2027?",
+    a: "Bajet 2027 mengumumkan kenaikan daripada RM1,700 kepada RM2,000 sebulan mulai Jun 2027. Perusahaan mikro, kecil dan sederhana dengan jualan tahunan di bawah RM50 juta dilaporkan dikecualikan, dan asas RM2,500 yang berasingan bagi pekerja separa mahir dan graduan diumumkan tanpa tarikh.",
   },
   {
     q: "Berapa gaji bawa balik bagi gaji RM1,700?",
@@ -94,6 +98,7 @@ export default function Page() {
       related={[
         { href: "/ms", label: "Kalkulator Gaji Malaysia" },
         { href: "/ms/hourly-rate-calculator", label: "Kalkulator Gaji Sejam & Sehari" },
+        { href: "/ms/bajet-2027", label: "Bajet 2027: Gaji Minimum & Cukai" },
         { href: "/ms/maksud-gaji-kasar-gaji-bersih", label: "Maksud Gaji Kasar & Gaji Bersih" },
         { href: "/ms/jadual-caruman-kwsp-2026", label: "Jadual Caruman KWSP 2026" },
       ]}

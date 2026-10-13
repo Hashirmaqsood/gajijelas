@@ -1,5 +1,5 @@
 import { taxBySalaryRows } from "./taxBySalary";
-import { dailyHourlyRows, houseSalaryRows, pcbBySalaryRows } from "./rateTables";
+import { budget2027TaxSavingRows, dailyHourlyRows, houseSalaryRows, pcbBySalaryRows } from "./rateTables";
 import { WORKPLACE_GUIDES } from "./workplaceGuides";
 
 export interface GuideTable {
@@ -73,8 +73,8 @@ const BASE_GUIDES: Guide[] = [
     publishedDate: "2026-09-20",
     body: [
       "Malaysia's minimum wage is set nationally and applies to almost all employees, with a specific carve-out historically given to smaller employers on a delayed timeline. It's reviewed periodically, and when it changes, the ripple effects go beyond just the headline number.",
-      "## The current RM1,700 rate is under active review",
-      "As of August 2026, the government has publicly confirmed it is reviewing the current RM1,700 monthly minimum wage, with a possible increase under discussion based on factors like cost of living and wage levels. This isn't a confirmed new figure yet — just an active review — and Malaysia's minimum wage is set to be revisited on a roughly two-year cycle, so a review at this point in the cycle isn't unusual. If you're budgeting payroll costs for the coming year, this is worth watching rather than acting on, since nothing changes until an actual gazetted rate is announced.",
+      "## Budget 2027: RM1,700 to RM2,000 from June 2027",
+      "Budget 2027, tabled on 9 October 2026, announced that the minimum wage will rise from RM1,700 to RM2,000 a month from June 2027, with micro, small and medium enterprises that have annual sales below RM50 million reported as exempt. A separate RM2,500 baseline for semi-skilled workers and graduates was also announced, without a date. RM1,700 remains the legal minimum until a new rate is gazetted. If you're budgeting payroll costs for 2027, plan for RM2,000 from June, and see our Budget 2027 summary for the full list of announcements.",
       "## It's not just about the paycheck",
       "Because EPF, SOCSO and EIS contributions are all calculated as a percentage (or banded amount) of wages, any minimum wage increase automatically increases the statutory contributions tied to it too — both what the employee sees deducted and what the employer has to budget for on top. A minimum wage worker's real 'cost to the company' has always been noticeably higher than their gross pay alone once you add the employer's EPF, SOCSO and EIS shares.",
       "## Who's actually covered",
@@ -288,25 +288,54 @@ const BASE_GUIDES: Guide[] = [
   },
   {
     slug: "budget-2027-malaysia-salary-epf-socso",
-    title: "Budget 2027 Malaysia: What It Could Mean for Your Salary",
+    title: "Budget 2027 Malaysia: Minimum Wage RM2,000 & Tax Relief",
     description:
-      "Malaysia tables Budget 2027 on 9 October 2026. What the official Pre-Budget Statement says about EPF and SOCSO, and what is still unconfirmed.",
-    publishedDate: "2026-09-24",
+      "Budget 2027 raises the minimum wage to RM2,000 from June 2027 and the individual tax relief to RM12,000. What was announced for salary, tax, EPF and SOCSO.",
+    publishedDate: "2026-10-13",
     body: [
-      "The Malaysian government will table Budget 2027 in Parliament on 9 October 2026 — the fifth Budget under the MADANI administration. Budgets regularly touch the numbers this site calculates: PCB tax brackets and reliefs, sometimes EPF or SOCSO rates. Here's what's actually been said officially so far, and what hasn't.",
-      "## What the government has confirmed it's reviewing",
-      "The Ministry of Finance's Pre-Budget Statement, published 18 August 2026, explicitly names social protection as one of Budget 2027's ten focus areas. Its own wording: the government will \"reassess the adequacy and sustainability of Malaysia's social protection system, including coverage under the EPF, Social Security Organisation (SOCSO) and related schemes,\" with stated priority on \"extending protection to informal workers, gig workers and vulnerable groups.\" That's a direct, on-the-record signal that EPF and SOCSO coverage rules are under active review — not a rumour.",
-      "## What that does not tell you",
-      "A pre-budget statement sets discussion priorities; it doesn't fix numbers. Nothing in the official statement commits to a specific contribution rate, wage ceiling, or bracket change for EPF, SOCSO, EIS or PCB. Treat any specific percentage you see quoted online before 9 October as speculation, regardless of how confidently it's written — that includes speculation from us. We won't publish a number here until it's been announced.",
-      "## The pattern from past MADANI budgets",
-      "For context on how directly a budget can move these figures: the first MADANI Budget cut the resident personal income-tax rate by 2 percentage points for every income band from RM35,001 to RM100,000, worth up to RM1,300 a year to about 2.4 million taxpayers. The SOCSO/EIS wage ceiling rose from RM5,000 to RM6,000 in October 2024, and mandatory EPF for non-Malaysian employees began in October 2025. Budgets here have a real track record of changing take-home pay, not just headline policy.",
-      "## What we'll do when it's tabled",
-      "We check LHDN, KWSP and PERKESO directly against the actual Budget 2027 announcement on 9 October, and update every calculator on this site — PCB, EPF, SOCSO, EIS — the same day if anything statutory actually changes, sourced and verifiable, not copied from a headline. If nothing changes for a given rate, we leave it alone rather than manufacturing a reason to post about it.",
+      "Budget 2027 was tabled in Parliament on 9 October 2026. This page summarises the announcements that affect salaries, income tax, EPF and SOCSO, based on reports from NST, SAYS and Bernama. These are announcements, not yet law, and some details such as the Year of Assessment for the tax changes were not stated, so check the official Budget documents and LHDN before relying on them.",
+      "## Minimum wage: RM1,700 to RM2,000",
+      "The minimum wage rises from RM1,700 to RM2,000 a month from June 2027, with micro, small and medium enterprises that have annual sales below RM50 million reported as exempt. A separate RM2,500 baseline for semi-skilled workers and graduates was also announced, with no date. Until a new rate is gazetted, RM1,700 remains the legal minimum.",
+      "## Income tax: higher individual relief and lower rates",
+      "The basic individual relief rises from RM9,000 to RM12,000, the first increase since 2010. The rate for the RM70,001 to RM100,000 band falls by one percentage point to 18%, and the rate for the RM100,001 to RM150,000 band falls by one point to 24%. Reliefs were also widened for postnatal care, care of parents and grandparents, children's tuition fees, education in all fields, sports shoes, AI software subscriptions, vaccinations and pet adoption fees from registered shelters, plus extra relief for self-employment social security contributions. The reports did not state the Year of Assessment these apply from.",
+      "## What the tax change could save you",
+      "The table compares tax today with tax under a RM12,000 individual relief and the lower 18% and 24% rates, for the same income. It is an illustration based on the reported figures, not an official LHDN calculation. Someone in the 6% band saves about RM180 a year from the higher relief alone, and higher bands save more.",
+      "## EPF and SOCSO",
+      "Every Malaysian citizen will be registered as an EPF member at age 18, although the reports did not confirm automatic contributions or a date. EPF members aged 55 and 60 can choose the i-Emas monthly withdrawal scheme, and members under 55 can pay MediAsas premiums from their Akaun Sejahtera. For e-hailing and p-hailing gig workers, EPF contributions of up to RM600 a year (RM6,000 over a lifetime) were announced, along with government SOCSO matching of 35%, rising to 50% if the platform also contributes. Self-employed people in 17 sectors where SOCSO is not mandatory get a 70% matching incentive. No change to the EPF, SOCSO or EIS contribution rates for employees was reported.",
+      "## Cash aid and other measures",
+      "The allocation for STR and SARA is RM16 billion, with STR recipients getting up to RM150 a month in SARA (RM1,800 a year). Adults aged 18 and above who do not receive STR get RM100 twice, before Aidilfitri and before Merdeka. First-time homebuyers get a full stamp duty exemption on homes up to RM500,000 and a partial exemption up to RM750,000 for agreements signed between 1 January 2027 and 31 December 2030. The minimum pension rises from RM1,000 to RM1,350 a month.",
+      "## What this means for the calculators on this site",
+      "Our calculators use the rates in force today. We will update the minimum wage, the individual relief and the tax bands once the effective dates are confirmed and the changes are gazetted, so your take-home estimate stays correct for the year you are looking at. Sources: NST, SAYS and Bernama reports on the Budget 2027 speech, 9 October 2026.",
+    ],
+    table: {
+      afterIndex: 6,
+      caption: "Illustrative annual tax saving (RM12,000 individual relief and lower 18% / 24% rates)",
+      headers: ["Chargeable income today", "Tax today", "Tax under Budget 2027 changes", "Annual saving"],
+      rows: budget2027TaxSavingRows(),
+    },
+    faq: [
+      {
+        q: "When does the minimum wage go up to RM2,000?",
+        a: "Budget 2027 announced a rise from RM1,700 to RM2,000 a month from June 2027. Micro, small and medium enterprises with annual sales below RM50 million were reported as exempt. RM1,700 stays the legal minimum until the new rate is gazetted.",
+      },
+      {
+        q: "What is the new individual tax relief in Budget 2027?",
+        a: "The basic individual relief rises from RM9,000 to RM12,000. The reports did not state the Year of Assessment it applies from, so confirm with LHDN before relying on it.",
+      },
+      {
+        q: "Will EPF or SOCSO contribution rates change after Budget 2027?",
+        a: "No change to the EPF, SOCSO or EIS contribution rates for employees was reported. Budget 2027 announced automatic EPF registration at age 18 and new EPF and SOCSO support for gig workers.",
+      },
+      {
+        q: "How much tax could I save from Budget 2027?",
+        a: "It depends on your tax band. A RM3,000 higher relief saves RM180 a year in the 6% band and more in higher bands, and the 18% and 24% rate cuts add to that for higher incomes. Reports cite a government estimate of up to RM1,600 for about five million taxpayers.",
+      },
     ],
     relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/pcb-calculator", label: "PCB Calculator (MTD)" },
-      { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
-      { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/guides/minimum-wage-malaysia-2026-take-home-pay", label: "Minimum Wage Malaysia 2026" },
+      { href: "/guides/tax-relief-2026-malaysia-ya-2025", label: "Tax Relief 2026 (YA 2025)" },
       { href: "/rate-changes", label: "Rate Change History" },
     ],
   },
@@ -449,6 +478,8 @@ const BASE_GUIDES: Guide[] = [
       "Each amount is the most you can claim. For most reliefs you need receipts and can only claim what you actually paid, up to the cap, and some items have smaller sub-limits inside the overall cap.",
       "## What changed for YA 2025",
       "Following Budget 2025, the relief for a disabled individual rose from RM6,000 to RM7,000 and the relief for a disabled spouse rose from RM5,000 to RM6,000. The relief for an unmarried disabled child rose from RM6,000 to RM8,000.",
+      "## Budget 2027: individual relief to RM12,000",
+      "Budget 2027, tabled on 9 October 2026, announced that the basic individual relief will rise from RM9,000 to RM12,000, along with wider reliefs for postnatal care, parents' care and children's tuition. The reports did not state which Year of Assessment this applies from, so the amounts in the table remain the ones for YA 2025 until it is confirmed.",
       "## Tax relief versus tax rebate",
       "A relief lowers your chargeable income before tax is calculated. A rebate lowers the tax itself: if your chargeable income is RM35,000 or less you get a RM400 tax rebate, applied after your tax is worked out.",
       "## See what your reliefs do to your tax",
@@ -487,7 +518,7 @@ const BASE_GUIDES: Guide[] = [
     faq: [
       {
         q: "How much is the individual tax relief in Malaysia?",
-        a: "RM9,000 for YA 2025. It is automatic, so you do not need receipts to claim it.",
+        a: "RM9,000 for YA 2025. It is automatic, so you do not need receipts to claim it. Budget 2027 announced a rise to RM12,000, but the Year of Assessment it applies from was not stated.",
       },
       {
         q: "What is the difference between tax relief and tax rebate?",
