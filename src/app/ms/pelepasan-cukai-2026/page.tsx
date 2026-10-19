@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import MsArticlePage from "@/components/content/MsArticlePage";
 import type { GuideTable } from "@/lib/content/guides";
+import { reliefSavingRows } from "@/lib/content/rateTables";
 
 const PATH = "/ms/pelepasan-cukai-2026";
 const TITLE = "Pelepasan Cukai 2026 (TA 2025): Senarai Penuh & Jumlah";
@@ -21,7 +22,28 @@ const BODY = [
   "Masukkan pendapatan dan pelepasan anda dalam kalkulator cukai pendapatan kami untuk melihat pendapatan bercukai, cukai bagi setiap jalur dan cukai kena dibayar. Ia menggunakan pelepasan individu, KWSP, SOCSO/EIS, pasangan, anak, gaya hidup, perubatan, perubatan ibu bapa dan SSPN secara automatik. Beberapa pelepasan seperti yuran pendidikan, yuran penjagaan anak, PRS, pengecasan EV dan peralatan penyusuan belum ada dalam kalkulator, jadi cukai sebenar anda mungkin lebih rendah daripada anggaran.",
   "## Semak senarai rasmi sebelum memfailkan",
   "Halaman ini ialah ringkasan. Jumlah dan syarat pelepasan boleh berubah setiap kali Bajet, jadi sahkan dengan jadual pelepasan rasmi LHDN di hasil.gov.my sebelum anda memfailkan.",
+  "## Berapa cukai yang sebenarnya dijimatkan oleh pelepasan?",
+  "Pelepasan tidak mengurangkan cukai anda sebanyak jumlahnya. Ia mengurangkan pendapatan bercukai, jadi cukai yang dijimatkan sama dengan pelepasan didarab kadar cukai yang anda bayar pada bahagian teratas pendapatan. Jadual menunjukkan berapa yang dijimatkan oleh tambahan pelepasan RM2,500 (contohnya had gaya hidup) pada paras pendapatan berbeza, menggunakan kadar cukai pemastautin semasa. Pada kadar 6% ia menjimatkan RM150, manakala pada 25% ia menjimatkan RM625.",
+  "## Cara menuntut pelepasan dalam e-Filing (Borang BE)",
+  "Jika satu-satunya pendapatan anda ialah daripada pekerjaan, anda memfailkan Borang BE. Jika anda juga ada pendapatan perniagaan, gunakan Borang B. Bagi TA 2025, iaitu pendapatan yang diperoleh pada 2025, langkahnya ialah:",
+  "1. Log masuk MyTax di mytax.hasil.gov.my menggunakan nombor IC dan kata laluan. Pengguna kali pertama perlu mendaftar dahulu.",
+  "2. Pilih e-Filing, kemudian borang e-BE bagi Tahun Taksiran yang betul.",
+  "3. Semak butiran peribadi dan akaun bank anda. Akaun bank yang salah melambatkan bayaran balik cukai.",
+  "4. Masukkan pendapatan anda daripada Borang EA yang diberikan majikan, termasuk jumlah PCB yang dipotong.",
+  "5. Tuntut pelepasan anda, hanya setakat jumlah yang anda benar-benar bayar dan dengan resit disimpan.",
+  "6. Semak semuanya, hantar, dan simpan slip pengesahan. Jika anda perlu membayar cukai, bayar menggunakan nombor bil melalui ByrHASiL atau bank yang diluluskan.",
+  "## Apa yang perlu disediakan sebelum memfailkan",
+  "Anda memerlukan Borang EA (majikan mesti mengeluarkannya sebelum akhir Februari), jumlah PCB setahun, dan resit bagi setiap pelepasan yang dituntut. Simpan rekod anda kerana LHDN boleh memintanya kemudian, dan jangkaan umum ialah menyimpannya selama tujuh tahun.",
+  "## Tarikh akhir",
+  "Bagi TA 2025, tarikh akhir bagi pekerja yang memfailkan Borang BE ialah 15 Mei 2026, selepas LHDN mengalihkannya daripada 30 April. Tarikh akhir bagi TA 2026, yang difailkan pada 2027, belum diumumkan, jadi semak dengan LHDN sebelum memfailkan. Lewat memfailkan boleh menyebabkan penalti di bawah Akta Cukai Pendapatan 1967.",
 ];
+
+const SAVING: GuideTable = {
+  afterIndex: 14,
+  caption: "Cukai dijimatkan oleh tambahan pelepasan RM2,500 mengikut pendapatan bercukai (kadar pemastautin)",
+  headers: ["Pendapatan bercukai", "Kadar cukai anda", "Cukai dijimatkan oleh pelepasan RM2,500", "Cukai sebelum pelepasan"],
+  rows: reliefSavingRows(),
+};
 
 const TABLE: GuideTable = {
   afterIndex: 2,
@@ -53,6 +75,14 @@ const TABLE: GuideTable = {
 };
 
 const FAQ = [
+  {
+    q: "Bagaimana cara menuntut pelepasan cukai di Malaysia?",
+    a: "Log masuk MyTax, pilih e-Filing dan borang e-BE bagi Tahun Taksiran yang betul, masukkan pendapatan daripada Borang EA, kemudian tuntut setiap pelepasan sehingga had masing-masing dengan resit disimpan. Semak dan hantar, dan simpan slip pengesahan.",
+  },
+  {
+    q: "Berapa cukai yang dijimatkan oleh pelepasan RM2,500?",
+    a: "Bergantung pada kadar cukai anda. Pada kadar 6% ia menjimatkan RM150, pada 11% RM275 dan pada 25% RM625, kerana pelepasan mengurangkan pendapatan bercukai dan bukan cukai secara terus.",
+  },
   {
     q: "Berapakah pelepasan cukai individu di Malaysia?",
     a: "RM9,000 bagi TA 2025. Ia automatik, jadi anda tidak perlu resit untuk menuntutnya.",
@@ -91,6 +121,9 @@ export default function Page() {
       breadcrumbName="Pelepasan Cukai 2026"
       body={BODY}
       table={TABLE}
+      extraTables={[SAVING]}
+      updatedDate="2026-10-19"
+      updatedLabel="19 Oktober 2026"
       faq={FAQ}
       related={[
         { href: "/ms/income-tax-calculator", label: "Kalkulator Cukai Pendapatan" },

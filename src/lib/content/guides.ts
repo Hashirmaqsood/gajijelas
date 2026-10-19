@@ -1,5 +1,5 @@
 import { taxBySalaryRows } from "./taxBySalary";
-import { budget2027TaxSavingRows, dailyHourlyRows, houseSalaryRows, pcbBySalaryRows } from "./rateTables";
+import { budget2027TaxSavingRows, dailyHourlyRows, dividendGrowthRows, dividendWhatIfRows, houseSalaryRows, pcbBySalaryRows, reliefSavingRows } from "./rateTables";
 import { WORKPLACE_GUIDES } from "./workplaceGuides";
 
 export interface GuideTable {
@@ -17,6 +17,10 @@ export interface Guide {
   publishedDate: string;
   body: string[];
   table?: GuideTable;
+  /** Additional tables, each rendered after its own afterIndex paragraph. */
+  extraTables?: GuideTable[];
+  /** ISO date of the last real content update; shown on the page and in the Article schema. */
+  updatedDate?: string;
   faq?: { q: string; a: string }[];
   relatedLinks?: { href: string; label: string }[];
 }
@@ -407,9 +411,47 @@ const BASE_GUIDES: Guide[] = [
       "EPF's dividend is not a fixed interest rate — it's declared annually based on the fund's actual investment performance that year, split (since 2017) into a conventional and a Shariah-compliant rate. By law, the minimum guaranteed rate is 2.50% a year for Simpanan Konvensional; every year's actual declared rate has been at or above that floor, but nothing above the legal minimum is promised in advance.",
       "## The historical range, for context",
       "Over the last decade, the conventional rate has moved between 5.20% (2020, the pandemic year) and 6.90% (2017), averaging in the mid-to-high 5% to low 6% range most years. That's a reasonable planning band — not a prediction — until the actual 2026 rate is declared.",
+      "## What the dividend could mean for your savings",
+      "The table is an illustration, not a forecast. It shows the yearly dividend on a balance that stays in your account for the whole year, at the 2025 rate of 6.15% and at three other rates around it. For example, a RM100,000 balance earns about RM6,150 at 6.15% and about RM5,500 at 5.5%, a difference of RM650 a year.",
+      "## Why your own dividend can differ from balance times rate",
+      "The table assumes the money sat in your account all year. In practice, a contribution that arrives part-way through the year earns dividend only for the time it was in your account, and money you withdraw stops earning from the day it leaves. Someone adding RM500 every month will therefore usually see a lower figure than balance multiplied by the rate. Your i-Akaun statement shows the exact amount credited.",
+      "## How dividends compound over time",
+      "Each year's dividend is added to your savings and earns dividend itself the following year, so small differences in the rate become large differences over decades. The table leaves RM50,000 untouched with no new contributions: after 20 years it reaches about RM145,888 at 5.5% but about RM164,957 at 6.15%, a gap of roughly RM19,000 from less than one percentage point. This is why long-term planning uses a range rather than a single rate.",
+      "## How to see your dividend when it is announced",
+      "Once KWSP announces the 2026 rate, usually in the last week of February 2027, you can check the dividend credited to each of your accounts in i-Akaun (website or app) or at a KWSP self-service terminal. Our guide on checking your EPF balance and statement walks through the steps.",
+    ],
+    table: {
+      afterIndex: 12,
+      caption: "Estimated yearly EPF dividend by balance and rate (balance held all year)",
+      headers: ["EPF balance", "At 5.5%", "At 6.0%", "At 6.15% (2025 rate)", "At 6.5%"],
+      rows: dividendWhatIfRows(),
+    },
+    extraTables: [
+      {
+        afterIndex: 16,
+        caption: "RM50,000 left untouched, dividend re-invested each year, no new contributions",
+        headers: ["After", "At 5.0%", "At 5.5%", "At 6.15%"],
+        rows: dividendGrowthRows(),
+      },
+    ],
+    updatedDate: "2026-10-19",
+    faq: [
+      {
+        q: "When will the EPF dividend for 2026 be announced?",
+        a: "KWSP announces each year's dividend the following February. The 2025 dividend was announced on 28 February 2026 and credited on 1 March 2026, so the 2026 dividend is expected around the last week of February 2027. The date is only confirmed when KWSP announces it.",
+      },
+      {
+        q: "How much EPF dividend will I get on RM100,000?",
+        a: "At the 2025 rate of 6.15%, a RM100,000 balance held all year would earn about RM6,150. The 2026 rate has not been announced, and your actual figure depends on when contributions went in and any withdrawals during the year.",
+      },
+      {
+        q: "Is the EPF dividend rate guaranteed?",
+        a: "No. It is declared each year from the fund's investment performance. The legal minimum is 2.50% a year for Simpanan Konvensional, and anything above that is not promised in advance.",
+      },
     ],
     relatedLinks: [
       { href: "/epf-retirement-calculator", label: "EPF Retirement & Dividend Calculator" },
+      { href: "/guides/how-to-check-epf-balance-statement", label: "How to Check Your EPF Balance" },
       { href: "/epf-calculator", label: "EPF Calculator (KWSP)" },
       { href: "/guides/epf-dividend-2025-rate-history", label: "EPF Dividend 2025: Rate & History" },
       { href: "/rate-changes", label: "Rate Change History" },
@@ -486,7 +528,30 @@ const BASE_GUIDES: Guide[] = [
       "Enter your income and reliefs in our income tax calculator to see your chargeable income, tax by band and tax payable. It applies the individual, EPF, SOCSO/EIS, spouse, child, lifestyle, medical, parent-medical and SSPN reliefs automatically. A few reliefs, such as education fees, childcare fees, PRS, EV charging and breastfeeding equipment, are not in the calculator yet, so your actual tax may be lower than the estimate.",
       "## Check the official list before you file",
       "This page is a summary. Relief amounts and conditions can change with each Budget, so confirm them against LHDN's official relief schedule at hasil.gov.my before you file.",
+      "## How much tax does a relief actually save?",
+      "A relief does not cut your tax by its full amount. It reduces your chargeable income, so the tax saved equals the relief multiplied by the tax rate you pay on your top slice of income. The table shows what an extra RM2,500 of relief (for example the lifestyle cap) saves at different income levels, using the current resident tax rates. At the 6% rate it saves RM150, while at 25% it saves RM625.",
+      "## How to claim your reliefs in e-Filing (Form BE)",
+      "If your only income is from employment, you file Form BE. If you also have business income, use Form B instead. For YA 2025, which covers income earned in 2025, the steps are:",
+      "1. Log in to MyTax at mytax.hasil.gov.my with your IC number and password. First-time users register first.",
+      "2. Choose e-Filing, then the e-BE form for the correct Year of Assessment.",
+      "3. Check your personal details and bank account. A wrong bank account delays any refund.",
+      "4. Enter your income from the EA form your employer gave you, including the total PCB deducted.",
+      "5. Claim your reliefs, only up to what you actually paid and with receipts kept.",
+      "6. Review everything, submit, and keep the acknowledgement. If you owe tax, pay with the bill number through ByrHASiL or an approved bank.",
+      "## What to have ready before you file",
+      "You need your EA form (employers must issue it by the end of February), the total PCB for the year, and receipts for each relief you claim. Keep your records, because LHDN can ask for them later, and the general expectation is to keep them for seven years.",
+      "## Deadlines",
+      "For YA 2025, the deadline for employees filing Form BE was 15 May 2026, after LHDN moved it from 30 April. The deadline for YA 2026, filed in 2027, has not been announced, so check LHDN before you file. Late filing can lead to penalties under the Income Tax Act 1967.",
     ],
+    extraTables: [
+      {
+        afterIndex: 14,
+        caption: "Tax saved by an extra RM2,500 of relief, by chargeable income (resident rates)",
+        headers: ["Chargeable income", "Your tax rate", "Tax saved by RM2,500 relief", "Tax before the relief"],
+        rows: reliefSavingRows(),
+      },
+    ],
+    updatedDate: "2026-10-19",
     table: {
       afterIndex: 2,
       caption: "Personal tax reliefs, YA 2025",
@@ -516,6 +581,14 @@ const BASE_GUIDES: Guide[] = [
       ],
     },
     faq: [
+      {
+        q: "How do I claim tax relief in Malaysia?",
+        a: "Log in to MyTax, choose e-Filing and the e-BE form for the right Year of Assessment, enter your income from the EA form, then claim each relief up to its limit with receipts kept. Review and submit, and keep the acknowledgement.",
+      },
+      {
+        q: "How much tax does a RM2,500 relief save?",
+        a: "It depends on your tax rate. At the 6% rate it saves RM150, at 11% it saves RM275, and at 25% it saves RM625, because a relief reduces your chargeable income rather than your tax directly.",
+      },
       {
         q: "How much is the individual tax relief in Malaysia?",
         a: "RM9,000 for YA 2025. It is automatic, so you do not need receipts to claim it. Budget 2027 announced a rise to RM12,000, but the Year of Assessment it applies from was not stated.",

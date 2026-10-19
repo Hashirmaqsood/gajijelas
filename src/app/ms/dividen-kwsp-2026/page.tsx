@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import MsArticlePage from "@/components/content/MsArticlePage";
 import type { GuideTable } from "@/lib/content/guides";
+import { dividendGrowthRows, dividendWhatIfRows } from "@/lib/content/rateTables";
 
 const PATH = "/ms/dividen-kwsp-2026";
 const TITLE = "Dividen KWSP 2026: Bila Diumumkan & Masuk Akaun?";
@@ -21,7 +22,27 @@ const BODY = [
   "Dividen KWSP diisytiharkan setiap tahun berdasarkan prestasi pelaburan sebenar dana itu. Kadar minimum yang dijamin ialah 2.50% setahun bagi Simpanan Konvensional, manakala kadar yang melebihi itu tidak dijanjikan lebih awal.",
   "## Cara semak dividen apabila diumumkan",
   "Log masuk ke i-Akaun (aplikasi atau laman web) atau gunakan terminal layan diri KWSP untuk melihat penyata anda. Lihat juga panduan cara semak penyata dan baki KWSP.",
+  "## Apa maksud dividen ini kepada simpanan anda",
+  "Jadual ialah ilustrasi, bukan ramalan. Ia menunjukkan dividen setahun bagi baki yang kekal dalam akaun anda sepanjang tahun, pada kadar 2025 iaitu 6.15% dan tiga kadar lain di sekelilingnya. Contohnya, baki RM100,000 memberi kira-kira RM6,150 pada 6.15% dan kira-kira RM5,500 pada 5.5%, iaitu beza RM650 setahun.",
+  "## Kenapa dividen sebenar anda boleh berbeza daripada baki darab kadar",
+  "Jadual mengandaikan wang berada dalam akaun anda sepanjang tahun. Sebenarnya, caruman yang masuk pada pertengahan tahun hanya mendapat dividen bagi tempoh ia berada dalam akaun, dan wang yang dikeluarkan berhenti menjana dividen mulai hari ia keluar. Orang yang menambah RM500 setiap bulan biasanya akan nampak angka lebih rendah daripada baki didarab kadar. Penyata i-Akaun anda menunjukkan jumlah tepat yang dikreditkan.",
+  "## Bagaimana dividen berganda dari masa ke masa",
+  "Dividen setiap tahun ditambah kepada simpanan anda dan menjana dividen pula pada tahun berikutnya, jadi beza kecil pada kadar menjadi beza besar selama beberapa dekad. Jadual meninggalkan RM50,000 tanpa disentuh dan tanpa caruman baharu: selepas 20 tahun ia mencapai kira-kira RM145,888 pada 5.5% tetapi kira-kira RM164,957 pada 6.15%, jurang kira-kira RM19,000 daripada beza kurang satu mata peratusan. Inilah sebabnya perancangan jangka panjang menggunakan julat dan bukan satu kadar.",
 ];
+
+const WHAT_IF: GuideTable = {
+  afterIndex: 14,
+  caption: "Anggaran dividen KWSP setahun mengikut baki dan kadar (baki kekal sepanjang tahun)",
+  headers: ["Baki KWSP", "Pada 5.5%", "Pada 6.0%", "Pada 6.15% (kadar 2025)", "Pada 6.5%"],
+  rows: dividendWhatIfRows(),
+};
+
+const GROWTH: GuideTable = {
+  afterIndex: 18,
+  caption: "RM50,000 tanpa disentuh, dividen dilaburkan semula setiap tahun, tiada caruman baharu",
+  headers: ["Selepas", "Pada 5.0%", "Pada 5.5%", "Pada 6.15%"],
+  rows: dividendGrowthRows().map(([years, ...rest]) => [years.replace("years", "tahun"), ...rest]),
+};
 
 const TABLE: GuideTable = {
   afterIndex: 6,
@@ -49,6 +70,14 @@ const FAQ = [
     q: "Berapa dividen KWSP 2025?",
     a: "6.15% bagi kedua-dua Simpanan Konvensional dan Simpanan Shariah, diumumkan pada 28 Februari 2026 dan dikreditkan pada 1 Mac 2026.",
   },
+  {
+    q: "Berapa dividen KWSP untuk simpanan RM100,000?",
+    a: "Pada kadar 2025 iaitu 6.15%, baki RM100,000 yang kekal sepanjang tahun memberi kira-kira RM6,150. Kadar 2026 belum diumumkan, dan angka sebenar anda bergantung pada bila caruman masuk dan sebarang pengeluaran sepanjang tahun.",
+  },
+  {
+    q: "Adakah kadar dividen KWSP dijamin?",
+    a: "Tidak. Ia diisytiharkan setiap tahun berdasarkan prestasi pelaburan dana. Kadar minimum mengikut undang-undang ialah 2.50% setahun bagi Simpanan Konvensional, dan sebarang kadar lebih tinggi tidak dijanjikan lebih awal.",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -75,6 +104,9 @@ export default function Page() {
       breadcrumbName="Dividen KWSP 2026"
       body={BODY}
       table={TABLE}
+      extraTables={[WHAT_IF, GROWTH]}
+      updatedDate="2026-10-19"
+      updatedLabel="19 Oktober 2026"
       faq={FAQ}
       related={[
         { href: "/ms/epf-retirement-calculator", label: "Kalkulator Persaraan & Dividen EPF" },

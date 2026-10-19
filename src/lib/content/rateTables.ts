@@ -134,3 +134,43 @@ export function budget2027TaxSavingRows(): string[][] {
     ];
   });
 }
+
+/** Illustrative yearly EPF dividend (balance x rate) for a balance held the whole year. Not a forecast. */
+export function dividendWhatIfRows(): string[][] {
+  const rates = [5.5, 6.0, 6.15, 6.5];
+  return [20000, 50000, 100000, 250000, 500000].map((balance) => [
+    formatRM(balance, { decimals: 0 }),
+    ...rates.map((r) => formatRM((balance * r) / 100, { decimals: 0 })),
+  ]);
+}
+
+/** RM50,000 left untouched with the dividend re-invested each year, no new contributions. */
+export function dividendGrowthFigures() {
+  const grow = (rate: number, years: number) => 50000 * Math.pow(1 + rate / 100, years);
+  return { grow };
+}
+
+export function dividendGrowthRows(): string[][] {
+  const { grow } = dividendGrowthFigures();
+  return [10, 20, 30].map((years) => [
+    `${years} years`,
+    formatRM(grow(5.0, years), { decimals: 0 }),
+    formatRM(grow(5.5, years), { decimals: 0 }),
+    formatRM(grow(6.15, years), { decimals: 0 }),
+  ]);
+}
+
+/** Tax saved by claiming an extra RM2,500 of relief, by chargeable income (resident, current brackets, above the RM35,000 rebate zone). */
+export function reliefSavingRows(): string[][] {
+  const brackets = getRates(CURRENT_RATE_YEAR).pcb.brackets;
+  return [40000, 55000, 75000, 120000, 250000].map((chargeable) => {
+    const saved = taxOnChargeableIncome(brackets, chargeable) - taxOnChargeableIncome(brackets, chargeable - 2500);
+    const top = brackets.find((b) => chargeable >= b.from && (b.to === null || chargeable <= b.to));
+    return [
+      formatRM(chargeable, { decimals: 0 }),
+      `${top?.ratePct ?? 0}%`,
+      formatRM(saved, { decimals: 0 }),
+      formatRM(taxOnChargeableIncome(brackets, chargeable), { decimals: 0 }),
+    ];
+  });
+}

@@ -14,7 +14,7 @@ export function calculatorJsonLd(name: string, description: string, path: string
   };
 }
 
-export function articleJsonLd(opts: { title: string; description: string; path: string; publishedDate: string }) {
+export function articleJsonLd(opts: { title: string; description: string; path: string; publishedDate: string; modifiedDate?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -22,7 +22,7 @@ export function articleJsonLd(opts: { title: string; description: string; path: 
     description: opts.description,
     url: `${SITE.url}${opts.path}`,
     datePublished: opts.publishedDate,
-    dateModified: opts.publishedDate,
+    dateModified: opts.modifiedDate ?? opts.publishedDate,
     author: { "@type": "Organization", name: SITE.name, url: SITE.url },
     publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.url}${opts.path}` },

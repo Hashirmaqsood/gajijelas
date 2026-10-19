@@ -13,18 +13,21 @@ interface Props {
   breadcrumbName: string;
   body: string[];
   table?: GuideTable;
+  extraTables?: GuideTable[];
+  updatedDate?: string;
+  updatedLabel?: string;
   faq: { q: string; a: string }[];
   related: { href: string; label: string }[];
 }
 
-export default function MsArticlePage({ path, title, description, publishedDate, dateLabel, breadcrumbName, body, table, faq, related }: Props) {
+export default function MsArticlePage({ path, title, description, publishedDate, dateLabel, breadcrumbName, body, table, extraTables, updatedDate, updatedLabel, faq, related }: Props) {
   return (
     <article className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
-      <script {...jsonLdScriptProps(articleJsonLd({ title, description, path, publishedDate }))} />
+      <script {...jsonLdScriptProps(articleJsonLd({ title, description, path, publishedDate, modifiedDate: updatedDate }))} />
       <script {...jsonLdScriptProps(faqPageJsonLd(faq))} />
       <script {...jsonLdScriptProps(breadcrumbJsonLd([{ name: "Utama", path: "/ms" }, { name: breadcrumbName, path }]))} />
       <Link href="/ms/panduan" className="text-sm text-brand hover:underline">← Semua panduan</Link>
-      <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted">{dateLabel}</p>
+      <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted">{dateLabel}{updatedLabel && <span className="ml-2 normal-case text-muted/80">· Dikemas kini {updatedLabel}</span>}</p>
       <h1 className="mt-1 text-3xl font-bold tracking-tight text-foreground">{title}</h1>
       <p className="mt-3 text-base text-muted">{description}</p>
       <p className="mt-3 text-sm text-muted">
@@ -32,7 +35,7 @@ export default function MsArticlePage({ path, title, description, publishedDate,
         <Link href={related[0].href} className="font-medium text-brand underline">{related[0].label} →</Link>
       </p>
 
-      <ArticleBody body={body} table={table} />
+      <ArticleBody body={body} table={table} extraTables={extraTables} />
 
       <PageFaq title="Soalan lazim" items={faq} />
 

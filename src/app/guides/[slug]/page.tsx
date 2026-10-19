@@ -50,6 +50,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             description: guide.description,
             path: `/guides/${guide.slug}`,
             publishedDate: guide.publishedDate,
+            modifiedDate: guide.updatedDate,
           })
         )}
       />
@@ -57,6 +58,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <GuideMeta />
       <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted">
         {new Date(guide.publishedDate).toLocaleDateString("en-MY", { year: "numeric", month: "long", day: "numeric" })}
+        {guide.updatedDate && (
+          <span className="ml-2 normal-case text-muted/80">
+            · Updated {new Date(guide.updatedDate).toLocaleDateString("en-MY", { year: "numeric", month: "long", day: "numeric" })}
+          </span>
+        )}
       </p>
       <h1 className="mt-1 text-3xl font-bold tracking-tight text-foreground">{guide.title}</h1>
       <p className="mt-3 text-base text-muted">{guide.description}</p>
@@ -69,7 +75,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </p>
       )}
 
-      <ArticleBody body={guide.body} table={guide.table} />
+      <ArticleBody body={guide.body} table={guide.table} extraTables={guide.extraTables} />
 
       {guide.faq && <PageFaq title="Frequently asked questions" items={guide.faq} />}
 

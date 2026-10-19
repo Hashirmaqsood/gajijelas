@@ -48,9 +48,9 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/ms/salary-increment-calculator", lastModified: "2026-09-27" },
   { path: "/ms/income-tax-calculator", lastModified: "2026-10-06" },
   { path: "/ms/dividen-kwsp-2025", lastModified: "2026-10-06" },
-  { path: "/ms/pelepasan-cukai-2026", lastModified: "2026-10-13" },
+  { path: "/ms/pelepasan-cukai-2026", lastModified: "2026-10-19" },
   { path: "/ms/notis-berhenti-kerja", lastModified: "2026-10-06" },
-  { path: "/ms/dividen-kwsp-2026", lastModified: "2026-10-06" },
+  { path: "/ms/dividen-kwsp-2026", lastModified: "2026-10-19" },
   { path: "/ms/apa-itu-perkeso", lastModified: "2026-10-06" },
   { path: "/ms/gaji-berapa-kena-cukai-pendapatan", lastModified: "2026-10-06" },
   { path: "/ms/semak-penyata-kwsp", lastModified: "2026-10-06" },
@@ -83,7 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const guideEntries = GUIDES.map((g) => ({
     url: `${SITE.url}/guides/${g.slug}`,
-    lastModified: new Date(g.publishedDate),
+    lastModified: new Date(g.updatedDate ?? g.publishedDate),
     changeFrequency: "yearly" as const,
     priority: 0.5,
   }));
