@@ -36,7 +36,35 @@ const BODY = [
   "Anda memerlukan Borang EA (majikan mesti mengeluarkannya sebelum akhir Februari), jumlah PCB setahun, dan resit bagi setiap pelepasan yang dituntut. Simpan rekod anda kerana LHDN boleh memintanya kemudian, dan jangkaan umum ialah menyimpannya selama tujuh tahun.",
   "## Tarikh akhir",
   "Bagi TA 2025, tarikh akhir bagi pekerja yang memfailkan Borang BE ialah 15 Mei 2026, selepas LHDN mengalihkannya daripada 30 April. Tarikh akhir bagi TA 2026, yang difailkan pada 2027, belum diumumkan, jadi semak dengan LHDN sebelum memfailkan. Lewat memfailkan boleh menyebabkan penalti di bawah Akta Cukai Pendapatan 1967.",
+  "## Pelepasan, potongan dan rebat: apa bezanya?",
+  "Ketiga-tiganya mengurangkan cukai anda tetapi pada peringkat berbeza. Pelepasan mengurangkan pendapatan bercukai anda, jadi ia menjimatkan cukai pada kadar cukai anda sendiri. Potongan, seperti derma yang diluluskan, mengurangkan pendapatan anda sebelum pelepasan dikenakan. Rebat mengurangkan cukai itu sendiri ringgit demi ringgit. Zakat pendapatan yang dibayar ialah rebat, jadi zakat RM1,000 mengurangkan cukai anda sebanyak RM1,000 sehingga jumlah cukai kena dibayar, yang biasanya lebih bernilai daripada menuntut jumlah sama sebagai pelepasan.",
+  "## Kesilapan yang perlu dielakkan",
+  "Menuntut satu perbelanjaan dua kali. Resit yang sama tidak boleh dituntut di bawah dua kategori, jadi pilih kategori yang paling sesuai.",
+  "Menuntut lebih daripada yang dibayar. Pelepasan meliputi apa yang anda benar-benar bayar sehingga had masing-masing, dan had serta sub-had ialah maksimum, bukan elaun automatik. Hanya pelepasan individu yang automatik.",
+  "Mengelirukan pelepasan dengan rebat. Zakat pendapatan ialah rebat terhadap cukai anda, bukan pelepasan terhadap pendapatan anda, jadi isi di tempat yang betul.",
+  "Menggunakan tahun yang salah. Pendapatan yang anda peroleh pada 2025 dituntut di bawah TA 2025 apabila anda memfailkan pada 2026, bukan di bawah jumlah yang diumumkan untuk tahun kemudian.",
+  "Mengira KWSP majikan. Pelepasan KWSP meliputi caruman anda sendiri sebagai pekerja, sehingga RM4,000, bukan bahagian majikan.",
+  "Membuang resit. Simpan resit kerana LHDN boleh memintanya kemudian.",
+  "## Senarai semak sebelum menghantar",
+  "1. Borang EA daripada setiap majikan yang anda ada sepanjang tahun.",
+  "2. Jumlah PCB yang dipotong, daripada Borang EA atau slip gaji anda.",
+  "3. Resit bagi setiap pelepasan yang dituntut, dikumpulkan mengikut kategori.",
+  "4. Akaun bank yang betul, supaya bayaran balik tidak lewat.",
+  "5. Borang yang betul: BE bagi pendapatan pekerjaan sahaja, atau B jika anda ada pendapatan perniagaan.",
+  "## Dari mana angka ini datang",
+  "Jumlah pelepasan mengikut senarai pelepasan peribadi yang diterbitkan LHDN bagi TA 2025, dan kadar cukai ialah kadar individu pemastautin LHDN. Kami menyemak semula apabila Bajet mengubahnya, dan tarikh di bahagian atas halaman menunjukkan bila panduan ini dikemas kini. Panduan ini ialah maklumat am, bukan nasihat cukai, jadi sahkan butirannya dengan LHDN sebelum memfailkan.",
 ];
+
+const COMPARE: GuideTable = {
+  afterIndex: 28,
+  caption: "Pelepasan, potongan dan rebat dibandingkan",
+  headers: ["Jenis", "Apa yang dikurangkan", "Contoh", "Kesan"],
+  rows: [
+    ["Pelepasan", "Pendapatan bercukai anda", "Individu, KWSP, gaya hidup, perubatan", "Menjimatkan cukai pada kadar cukai anda sendiri"],
+    ["Potongan", "Pendapatan anda sebelum pelepasan", "Derma yang diluluskan, biasanya terhad kepada 10% pendapatan agregat", "Mengurangkan pendapatan yang menjadi asas pelepasan dan cukai"],
+    ["Rebat", "Cukai itu sendiri", "Rebat RM400 (pendapatan bercukai RM35,000 atau kurang), zakat yang dibayar", "Mengurangkan cukai ringgit demi ringgit"],
+  ],
+};
 
 const SAVING: GuideTable = {
   afterIndex: 14,
@@ -75,6 +103,10 @@ const TABLE: GuideTable = {
 };
 
 const FAQ = [
+  {
+    q: "Apakah beza pelepasan cukai, potongan dan rebat?",
+    a: "Pelepasan mengurangkan pendapatan bercukai anda, potongan (seperti derma yang diluluskan) mengurangkan pendapatan anda sebelum pelepasan, dan rebat mengurangkan cukai itu sendiri ringgit demi ringgit. Zakat pendapatan ialah rebat.",
+  },
   {
     q: "Bagaimana cara menuntut pelepasan cukai di Malaysia?",
     a: "Log masuk MyTax, pilih e-Filing dan borang e-BE bagi Tahun Taksiran yang betul, masukkan pendapatan daripada Borang EA, kemudian tuntut setiap pelepasan sehingga had masing-masing dengan resit disimpan. Semak dan hantar, dan simpan slip pengesahan.",
@@ -121,7 +153,7 @@ export default function Page() {
       breadcrumbName="Pelepasan Cukai 2026"
       body={BODY}
       table={TABLE}
-      extraTables={[SAVING]}
+      extraTables={[SAVING, COMPARE]}
       updatedDate="2026-10-19"
       updatedLabel="19 Oktober 2026"
       faq={FAQ}

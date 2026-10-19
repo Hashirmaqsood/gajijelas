@@ -1,5 +1,7 @@
 import { calculateSalary, DEFAULT_SALARY_INPUT } from "@/lib/calc";
+import { calculateEis } from "@/lib/calc/eis";
 import { calculateEpf } from "@/lib/calc/epf";
+import { calculateSocso } from "@/lib/calc/socso";
 import { taxOnChargeableIncome } from "@/lib/calc/pcb";
 import { calculateHourlyRate } from "@/lib/calc/hourlyRate";
 import { calculateMortgage } from "@/lib/calc/mortgage";
@@ -171,6 +173,22 @@ export function reliefSavingRows(): string[][] {
       `${top?.ratePct ?? 0}%`,
       formatRM(saved, { decimals: 0 }),
       formatRM(taxOnChargeableIncome(brackets, chargeable), { decimals: 0 }),
+    ];
+  });
+}
+
+/** SOCSO + EIS contributions for an employee under 60 (Malaysian), exact-percentage engine, wage ceiling RM6,000. */
+export function socsoEisRows(): string[][] {
+  const rates = getRates(CURRENT_RATE_YEAR);
+  return [1700, 2500, 3500, 5000, 6000, 8000].map((wage) => {
+    const socso = calculateSocso(rates.socso, wage, "below60", "malaysian");
+    const eis = calculateEis(rates.eis, wage, "below60", "malaysian");
+    return [
+      formatRM(wage, { decimals: 0 }),
+      formatRM(socso.employee),
+      formatRM(eis.employee),
+      formatRM(socso.employer),
+      formatRM(eis.employer),
     ];
   });
 }

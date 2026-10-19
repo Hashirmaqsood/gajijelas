@@ -1,5 +1,5 @@
 import { taxBySalaryRows } from "./taxBySalary";
-import { budget2027TaxSavingRows, dailyHourlyRows, dividendGrowthRows, dividendWhatIfRows, houseSalaryRows, pcbBySalaryRows, reliefSavingRows } from "./rateTables";
+import { budget2027TaxSavingRows, dailyHourlyRows, dividendGrowthRows, dividendWhatIfRows, houseSalaryRows, pcbBySalaryRows, reliefSavingRows, socsoEisRows } from "./rateTables";
 import { WORKPLACE_GUIDES } from "./workplaceGuides";
 
 export interface GuideTable {
@@ -542,8 +542,35 @@ const BASE_GUIDES: Guide[] = [
       "You need your EA form (employers must issue it by the end of February), the total PCB for the year, and receipts for each relief you claim. Keep your records, because LHDN can ask for them later, and the general expectation is to keep them for seven years.",
       "## Deadlines",
       "For YA 2025, the deadline for employees filing Form BE was 15 May 2026, after LHDN moved it from 30 April. The deadline for YA 2026, filed in 2027, has not been announced, so check LHDN before you file. Late filing can lead to penalties under the Income Tax Act 1967.",
+      "## Relief, deduction and rebate: what is the difference?",
+      "All three lower your tax, but at different stages. A relief reduces your chargeable income, so it saves tax at your own tax rate. A deduction, such as an approved donation, reduces your income before reliefs are applied. A rebate reduces the tax itself ringgit for ringgit. Zakat paid on income is a rebate, so RM1,000 of zakat cuts your tax by RM1,000 up to the tax payable, which is usually worth more than claiming the same amount as a relief.",
+      "## Common mistakes to avoid",
+      "Claiming one expense twice. The same receipt cannot be claimed under two categories, so decide where it fits best.",
+      "Claiming more than you paid. Reliefs cover what you actually paid up to each cap, and the caps and sub-limits are maximums, not automatic allowances. Only the individual relief is automatic.",
+      "Mixing up relief and rebate. Zakat on income is a rebate against your tax, not a relief against your income, so enter it in the right place.",
+      "Using the wrong year. Income you earned in 2025 is claimed under YA 2025 when you file in 2026, not under amounts announced for later years.",
+      "Counting the employer's EPF. The EPF relief covers your own contributions as the employee, up to RM4,000, not your employer's share.",
+      "Throwing receipts away. Keep them, because LHDN can ask for them later.",
+      "## Checklist before you submit",
+      "1. The EA form from every employer you had during the year.",
+      "2. The total PCB deducted, from the EA form or your payslips.",
+      "3. Receipts for each relief you claim, grouped by category.",
+      "4. The correct bank account, so a refund is not delayed.",
+      "5. The right form: BE for employment income only, or B if you have business income.",
+      "## Where these figures come from",
+      "Relief amounts follow LHDN's published list of personal reliefs for YA 2025, and the tax rates are LHDN's resident individual rates. We re-check them whenever a Budget changes them, and the date at the top of this page shows when this guide was last updated. This guide is general information, not tax advice, so confirm the details with LHDN before you file.",
     ],
     extraTables: [
+      {
+        afterIndex: 28,
+        caption: "Relief, deduction and rebate compared",
+        headers: ["Type", "What it reduces", "Examples", "Effect"],
+        rows: [
+          ["Relief", "Your chargeable income", "Individual, EPF, lifestyle, medical", "Saves tax at your own tax rate"],
+          ["Deduction", "Your income before reliefs", "Approved donations, usually limited to 10% of aggregate income", "Lowers the income that reliefs and tax are based on"],
+          ["Rebate", "The tax itself", "RM400 rebate (chargeable income RM35,000 or less), zakat paid", "Cuts tax ringgit for ringgit"],
+        ],
+      },
       {
         afterIndex: 14,
         caption: "Tax saved by an extra RM2,500 of relief, by chargeable income (resident rates)",
@@ -581,6 +608,10 @@ const BASE_GUIDES: Guide[] = [
       ],
     },
     faq: [
+      {
+        q: "What is the difference between a tax relief, a deduction and a rebate?",
+        a: "A relief reduces your chargeable income, a deduction (such as an approved donation) reduces your income before reliefs, and a rebate reduces the tax itself ringgit for ringgit. Zakat on income is a rebate.",
+      },
       {
         q: "How do I claim tax relief in Malaysia?",
         a: "Log in to MyTax, choose e-Filing and the e-BE form for the right Year of Assessment, enter your income from the EA form, then claim each relief up to its limit with receipts kept. Review and submit, and keep the acknowledgement.",
@@ -673,9 +704,42 @@ const BASE_GUIDES: Guide[] = [
       "EIS, or Sistem Insurans Pekerjaan (SIP), is the Employment Insurance System. It is the part of PERKESO that supports employees who lose their jobs, and it is paid for by separate contributions from both employee and employer. It is not the same as the SOCSO contribution, but both appear on your payslip.",
       "## How much do you and your employer contribute?",
       "SOCSO and EIS contributions are calculated on monthly wages up to a RM6,000 ceiling. For an employee under 60 earning RM5,000 a month, the employee pays RM25.00 SOCSO and RM10.00 EIS, and the employer pays RM87.50 SOCSO and RM10.00 EIS. Wages above RM6,000 do not raise the contribution.",
+      "## PERKESO and KWSP: what is the difference?",
+      "People often mix the two because both appear on your payslip. KWSP (EPF) is a retirement savings fund: the money is yours and builds up in your own accounts. PERKESO (SOCSO) is insurance: contributions are pooled and benefits are paid only when a covered event happens, such as an accident at work, invalidity or job loss. A SOCSO deduction does not build a balance you can withdraw.",
+      "## Who has to contribute?",
+      "SOCSO is compulsory for eligible employees, and the employer registers staff and pays the contributions to PERKESO. For Malaysian citizens and permanent residents under 60, both the employee and the employer contribute to SOCSO and EIS. Employees aged 60 and above are covered by the employment injury part only, paid by the employer at 1.25%, with no EIS. Foreign workers are covered under the employment injury scheme with an employer-paid contribution of 1.25%, and they are outside EIS.",
+      "## Contribution examples by salary",
+      "The table uses current rates and the RM6,000 wage ceiling for an employee under 60. Official PERKESO tables group wages in bands, so your payslip can differ by a few sen.",
+      "## What the schemes pay for",
+      "The Employment Injury Scheme provides medical care and compensation after an accident at work. The Invalidity Scheme supports an employee who can no longer work because of invalidity, and it also supports dependants after a death. EIS gives job-loss support, and our guide on how to claim EIS explains the steps. Exact benefit amounts and conditions are set by PERKESO, so check perkeso.gov.my before relying on a figure.",
+      "## LINDUNG 24 Jam: the newest scheme",
+      "From 1 June 2026, LINDUNG 24 Jam extends protection to accidents outside work. It is paid by the employee at a phased rate that starts at 0.75%, and it is voluntary for citizens and permanent residents but mandatory for foreign workers. Our LINDUNG 24 Jam guide explains who it covers and how the rate phases in.",
+      "## Common mix-ups",
+      "Three confusions come up often. PERKESO and SOCSO are the same organisation, not two. SOCSO is not retirement savings, which is what KWSP is for. And EIS is not paid if you resign or are dismissed for misconduct, only for job loss that is not your choice or fault. On SOCSO the employer pays a larger share than the employee, 1.75% against 0.5%.",
       "## Calculate your own contribution",
       "Use the SOCSO calculator to see the exact PERKESO and EIS amounts for your wage, including the contribution table by salary.",
     ],
+    extraTables: [
+      {
+        afterIndex: 8,
+        caption: "KWSP (EPF) versus PERKESO (SOCSO)",
+        headers: ["Feature", "KWSP (EPF)", "PERKESO (SOCSO)"],
+        rows: [
+          ["Purpose", "Retirement savings", "Social insurance protection"],
+          ["Whose money", "Yours, held in your own accounts", "Pooled, paid out as benefits when a covered event happens"],
+          ["When you receive it", "At retirement or approved early withdrawals", "When a covered event happens, such as an accident, invalidity or job loss"],
+          ["Employee rate (under 60)", "11%", "0.5% SOCSO plus 0.2% EIS"],
+          ["Employer rate", "13% (RM5,000 or less) or 12%", "1.75% SOCSO plus 0.2% EIS"],
+        ],
+      },
+      {
+        afterIndex: 12,
+        caption: "SOCSO and EIS contributions by monthly wage (employee under 60)",
+        headers: ["Monthly wage", "Employee SOCSO", "Employee EIS", "Employer SOCSO", "Employer EIS"],
+        rows: socsoEisRows(),
+      },
+    ],
+    updatedDate: "2026-10-19",
     table: {
       afterIndex: 2,
       caption: "What PERKESO (SOCSO) administers",
@@ -693,6 +757,18 @@ const BASE_GUIDES: Guide[] = [
         a: "Yes. PERKESO is the Malay name (Pertubuhan Keselamatan Sosial) and SOCSO is the English name (Social Security Organisation) of the same organisation.",
       },
       {
+        q: "How much SOCSO is deducted from a RM3,000 salary?",
+        a: "For an employee under 60, SOCSO is 0.5%, which is RM15.00, and EIS is 0.2%, which is RM6.00, so RM21.00 in total. The employer pays RM52.50 SOCSO and RM6.00 EIS on top.",
+      },
+      {
+        q: "Is SOCSO compulsory in Malaysia?",
+        a: "Yes for eligible employees. The employer registers staff and pays the contributions to PERKESO. Employees aged 60 and above and foreign workers have different arrangements, described above.",
+      },
+      {
+        q: "Is PERKESO the same as KWSP?",
+        a: "No. KWSP (EPF) is a retirement savings fund that builds a balance in your own accounts. PERKESO (SOCSO) is social insurance that pays benefits when a covered event such as a work accident, invalidity or job loss happens.",
+      },
+      {
         q: "What does PERKESO mean?",
         a: "PERKESO stands for Pertubuhan Keselamatan Sosial, which is Malay for Social Security Organisation.",
       },
@@ -703,6 +779,7 @@ const BASE_GUIDES: Guide[] = [
     ],
     relatedLinks: [
       { href: "/socso-calculator", label: "SOCSO Calculator (PERKESO & EIS)" },
+      { href: "/guides/eis-perkeso-how-to-claim-benefits-malaysia", label: "How to Claim EIS (PERKESO) Benefits" },
       { href: "/guides/lindung-24-jam-socso-new-scheme-2026", label: "LINDUNG 24 Jam Explained" },
       { href: "/", label: "Full Salary Calculator" },
     ],

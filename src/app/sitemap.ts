@@ -51,7 +51,7 @@ const staticRoutes: { path: string; lastModified: string }[] = [
   { path: "/ms/pelepasan-cukai-2026", lastModified: "2026-10-19" },
   { path: "/ms/notis-berhenti-kerja", lastModified: "2026-10-06" },
   { path: "/ms/dividen-kwsp-2026", lastModified: "2026-10-19" },
-  { path: "/ms/apa-itu-perkeso", lastModified: "2026-10-06" },
+  { path: "/ms/apa-itu-perkeso", lastModified: "2026-10-19" },
   { path: "/ms/gaji-berapa-kena-cukai-pendapatan", lastModified: "2026-10-06" },
   { path: "/ms/semak-penyata-kwsp", lastModified: "2026-10-06" },
   { path: "/ms/no-cukai-pendapatan-tin", lastModified: "2026-10-06" },
